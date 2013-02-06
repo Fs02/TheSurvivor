@@ -9,3 +9,4 @@ Description
   - Language  : C++
   - Ext. Api  : - SFML (Multimedia API)
                 - Box2D (Physic API)
+  - Credit to DravenX for his Sprite :)
