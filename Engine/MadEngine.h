@@ -26,8 +26,17 @@ class MadEngine
 {
 public:
     static void Start();
-    static void GameLoading();
-    static void GameSimulation();
+
+    static void GameLoader();
+    static void GamePlayLogic();
+
+    static void SplashScreen();
+    static void MainMenuScreen();
+    static void InGameMenuScreen();
+    static void LoadScreen();
+    static void GameHUD();
+    static void GamePlay();
+
     static void MainLoop();
 
     static void DebugRender();

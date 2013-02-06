@@ -20,6 +20,10 @@
 
 void MadEngine::Start()
 {
+    //-------------------------------------------------------------------------------------------------
+    //Start the MadEngine
+    //-------------------------------------------------------------------------------------------------
+
     if (_gameState != gs_Uninitialized)
         return;
 
@@ -27,7 +31,7 @@ void MadEngine::Start()
     _mainWindow.setFramerateLimit(60);
     _mainWindow.setVerticalSyncEnabled(true);
 
-    _gameState = gs_Loading;
+    _gameState = gs_ShowingSplash;
 
     while (_gameState != gs_Exiting)
     {
@@ -37,8 +41,12 @@ void MadEngine::Start()
     _mainWindow.close();
 }
 
-void MadEngine::GameLoading()
+void MadEngine::GameLoader()
 {
+    //-------------------------------------------------------------------------------------------------
+    //Load All Game Objects
+    //-------------------------------------------------------------------------------------------------
+
     Car         = new CarBody(&_mainWorld);
 
     dummyLevelTexture.loadFromFile("Assets\\Level\\Asphalt.png");
@@ -47,49 +55,138 @@ void MadEngine::GameLoading()
     _gameState  = gs_Playing;
 }
 
+void MadEngine::GamePlayLogic()
+{
+    //-------------------------------------------------------------------------------------------------
+    //Update The Game Play Logic
+    //-------------------------------------------------------------------------------------------------
+
+    _mainWorld.Step(1/60.f,6,2); // Run The Simulation
+
+    for (float x = 0; x <= 2560; x+=256)
+    {
+        for (float y=0; y<=2560; y+=256)
+        {
+            dummyLevelSprite.setPosition(x,y);
+            _mainWindow.draw(dummyLevelSprite);
+        }
+    }
+
+    Car->update();              //Update The Physic Simulation
+    Car->getControl();          //Get The Car Control
+    Car->render(&_mainWindow);  //Draw To the Screen
+}
+
+void MadEngine::SplashScreen()
+{
+    //-------------------------------------------------------------------------------------------------
+    //Splash Screen
+    //-------------------------------------------------------------------------------------------------
+
+    _gameState  = gs_ShowingMenu;
+}
+
+void MadEngine::MainMenuScreen()
+{
+    //-------------------------------------------------------------------------------------------------
+    //Menu Screen
+    //-------------------------------------------------------------------------------------------------
+
+    _gameState = gs_Loading; //Must Call LoadScreen() function before start the GamePlay()
+}
+
+void MadEngine::InGameMenuScreen()
+{
+    //-------------------------------------------------------------------------------------------------
+    //Pause Menu
+    //-------------------------------------------------------------------------------------------------
+}
+
+void MadEngine::LoadScreen()
+{
+    //-------------------------------------------------------------------------------------------------
+    //Display The Loading Screen
+    //-------------------------------------------------------------------------------------------------
+
+
+    //-------------------------------------------------------------------------------------------------
+    //Call The GameLoader() function
+    //-------------------------------------------------------------------------------------------------
+    GameLoader();
+
+    _gameState  = gs_Playing; //Proceed to the playing screen
+}
+
+void MadEngine::GameHUD()
+{
+    //-------------------------------------------------------------------------------------------------
+    //The HUD (Heads-Up-Display)
+    //-------------------------------------------------------------------------------------------------
+
+}
+
+void MadEngine::GamePlay()
+{
+    //-------------------------------------------------------------------------------------------------
+    //Main Screen For Game Play
+    //-------------------------------------------------------------------------------------------------
+
+    GamePlayLogic();    //Render and view the game in action
+
+    GameHUD();          //Render The HUD
+}
+
 void MadEngine::MainLoop()
 {
+    //-------------------------------------------------------------------------------------------------
+    //The Main Game Loop
+    //-------------------------------------------------------------------------------------------------
+
     newDebugDraw.setRenderWindow(_mainWindow);
     _mainWorld.SetDebugDraw(&newDebugDraw);
+
     sf::Event CurrentEvent;
     while (_mainWindow.isOpen())
     {
         switch (_gameState)
         {
+            case gs_ShowingSplash:
+            {
+                SplashScreen();         //Show The Spalsh Screen
+                break;
+            }
+
+            case gs_ShowingMenu:
+            {
+                MainMenuScreen();       //Show The Menu Screen
+                break;
+            }
+
+            case gs_Paused:
+            {
+                _mainWorld.Step(0,0,0); //Pause The Simulation
+
+                InGameMenuScreen();     //Show The Pause Menu
+
+                _mainWorld.Step(1/60.f, 6, 2);//Continue Simulation
+            }
 
             case gs_Loading:
             {
-                GameLoading();
+                LoadScreen();           //Load The Game
                 break;
             }
             case gs_Playing:
             {
                 _mainWindow.clear(sf::Color::White);
-                _mainWorld.Step(1/60.f,6,2);
 
-                for (float x = 0; x <= 2560; x+=256)
-                {
-                    for (float y=0; y<=2560; y+=256)
-                    {
-                        dummyLevelSprite.setPosition(x,y);
-                        _mainWindow.draw(dummyLevelSprite);
-                    }
-                }
+                GamePlay();             //Play The Game
 
-                Car->update();
-                Car->getControl();
-                Car->render(&_mainWindow);
-
-
-                //--------------------------------------------------------------------------------------------------------------------------------
-                //Uncoment For debug render mode
                 //DebugRender();
-                //--------------------------------------------------------------------------------------------------------------------------------
                 _mainCamera.reset(sf::FloatRect(Car->getPosition().x - _mainCamera.getSize().x/2, Car->getPosition().y - _mainCamera.getSize().y/2, 800, 600));
                 _mainCamera.rotate(Car->getAngle());
                 _mainWindow.setView(_mainCamera);
 
-                //_mainWindow.draw(text);
                 _mainWindow.display();
                 break;
             }
@@ -105,6 +202,10 @@ void MadEngine::MainLoop()
 
 void MadEngine::DebugRender()
 {
+    //-------------------------------------------------------------------------------------------------
+    //Use Debug Draw Mode
+    //-------------------------------------------------------------------------------------------------
+
     for (b2Body* b = _mainWorld.GetBodyList(); b; b = b->GetNext())
     {
         const b2Transform& xf = b->GetTransform();

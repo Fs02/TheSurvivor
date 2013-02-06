@@ -57,6 +57,7 @@ Tire::Tire(b2World* World, bool EnableMotor)
 Tire::~Tire()
 {
     m_Body->GetWorld()->DestroyBody(m_Body);
+    m_Body = NULL;
 }
 
 b2Vec2 Tire::getLateralVelocity()
@@ -224,6 +225,16 @@ CarBody::CarBody(b2World* World, std::string spriteFileName, b2Vec2 dimension)
     texture.loadFromFile(spriteDir+spriteFile);
     m_Sprite.setTexture(texture);
     m_Sprite.setOrigin(m_Sprite.getLocalBounds().width/2, m_Sprite.getLocalBounds().height/2);
+}
+
+CarBody::~CarBody()
+{
+    for (unsigned int i = 0; i < m_Tires.size(); i++)
+        delete m_Tires[i];
+    m_Tires.clear();
+
+    m_Body->GetWorld()->DestroyBody(m_Body);
+    m_Body = NULL;
 }
 
 void CarBody::update()

@@ -20,8 +20,6 @@
 
 #include "../Engine/stdafx.h"
 
-enum { IDLE, FOWARD, BACKWARD, TURNLEFT, TURNRIGHT};
-
 class Tire
 {
 private:
@@ -67,10 +65,10 @@ public:
     CarBody(b2World* World, std::string spriteFileName = "default.png", b2Vec2 dimension = b2Vec2(1.f , 2.5f));
     ~CarBody();
 
-    void update();
-    void getControl();
+    virtual void update();
+    virtual void getControl();
 
-    void render(sf::RenderWindow* Window);
+    virtual void render(sf::RenderWindow* Window);
 
     sf::Vector2f getPosition();
     float getAngle();
