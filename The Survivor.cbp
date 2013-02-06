@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="The Survivor" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin\Debug\The Survivor" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj\Debug\" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add directory="D:\CBLIB\Box2D_v2.2.1" />
+				</Compiler>
+				<Linker>
+					<Add library="D:\CBLIB\Box2D_v2.2.1\Library\libBox2D.a" />
+					<Add directory="D:\CBLIB\Box2D_v2.2.1" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin\Release\The Survivor" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj\Release\" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+		</Compiler>
+		<Linker>
+			<Add directory="D:\CBLIB\Box2D_v2.2.1" />
+		</Linker>
+		<Unit filename="Engine\DebugDraw.cpp" />
+		<Unit filename="Engine\DebugDraw.h" />
+		<Unit filename="Engine\Global.h" />
+		<Unit filename="Engine\MadEngine.cpp" />
+		<Unit filename="Engine\MadEngine.h" />
+		<Unit filename="Engine\stdafx.h" />
+		<Unit filename="The Survivor.cpp" />
+		<Unit filename="Vehicle\CarPhysic.cpp" />
+		<Unit filename="Vehicle\CarPhysic.h" />
+		<Extensions>
+			<code_completion />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
