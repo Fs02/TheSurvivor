@@ -13,7 +13,7 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "DebugDraw.h"
+#include "DebugDraw.hpp"
 
 void DebugDraw::setRenderWindow(sf::RenderWindow &window)
 {

@@ -15,12 +15,15 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef MADENGINE_H_INCLUDED
-#define MADENGINE_H_INCLUDED
+#ifndef MADENGINE_HPP_INCLUDED
+#define MADENGINE_HPP_INCLUDED
 
-#include "stdafx.h"
-#include "../Vehicle/CarPhysic.h"
-#include "DebugDraw.h"
+#include "stdafx.hpp"
+#include "libs/EntityFactory.hpp"
+#include "libs/DebugDraw.hpp"
+#include "libs/ContactListener.hpp"
+
+enum {C_CAR,C_HUMMER};
 
 class MadEngine
 {
@@ -44,17 +47,21 @@ public:
 private:
     enum gameState {gs_Uninitialized, gs_ShowingSplash, gs_Paused, gs_ShowingMenu, gs_Loading, gs_Playing, gs_Exiting};
     static b2World _mainWorld;
+    static ContactListener _ContactListener;
 
     static sf::RenderWindow _mainWindow;
     static sf::View _mainCamera;
+    static sf::Event* _EventListener;
     static DebugDraw newDebugDraw;
 
     static gameState _gameState;
 
-    static CarBody* Car;
-
     static sf::Texture dummyLevelTexture;
     static sf::Sprite dummyLevelSprite;
+
+    static int playerControl;
+
+    static EntityFactory* MadFactory;
 };
 
-#endif // MADENGINE_H_INCLUDED
+#endif // MADENGINE_HPP_INCLUDED

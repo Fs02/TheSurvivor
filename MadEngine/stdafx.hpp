@@ -1,5 +1,5 @@
-#ifndef STDAFX_H_INCLUDED
-#define STDAFX_H_INCLUDED
+#ifndef STDAFX_HPP_INCLUDED
+#define STDAFX_HPP_INCLUDED
 
 #include <SFML/System.hpp>
 #include <SFML/Graphics.hpp>
@@ -14,6 +14,6 @@
 #include <set>
 #include <iostream>
 
-#include "Global.h"
+#include "Global.hpp"
 
-#endif // STDAFX_H_INCLUDED
+#endif // STDAFX_HPP_INCLUDED

@@ -15,30 +15,31 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "CarPhysic.h"
+#include "Vehicle.hpp"
 
 //-----------------------------------------------------------------------------------------------------
 //Tire's Physic Behavior
 //-----------------------------------------------------------------------------------------------------
 
-Tire::Tire(b2World* World, bool EnableMotor)
+Tire::Tire(b2World* World, sf::Sprite* sprite, bool EnableMotor)
 {
     //-------------------------------------------------------------------------------------------------
     // Constructing the Tire
     //-------------------------------------------------------------------------------------------------
-    m_MaxFowardSpeed    = 120;
+    m_MaxFowardSpeed    = 160;
     m_MaxBackwardSpeed  = -40;
-    m_MaxDriveForce     = 100;
+    m_MaxDriveForce     = 160;
 
     b2BodyDef def;
     def.type            = b2_dynamicBody;
-    def.angle           = -5 * DEGTORAD;
     m_Body              = World->CreateBody(&def);
 
     b2PolygonShape shape;
     shape.SetAsBox(0.15f, 0.45f);
 
-    m_Body->CreateFixture(&shape, 1.f);
+    b2FixtureDef fixDef;
+    fixDef.shape        = &shape;
+    m_Body->CreateFixture(&shape, 5.f);
 
     enableMotor = EnableMotor;
     //-------------------------------------------------------------------------------------------------
@@ -47,11 +48,9 @@ Tire::Tire(b2World* World, bool EnableMotor)
     m_Body->SetUserData(this);
 
     //-------------------------------------------------------------------------------------------------
-    //Adjusting Sprite
+    //Sprite
     //-------------------------------------------------------------------------------------------------
-    texture.loadFromFile("Assets\\Vehicle\\tire.png");
-    m_Sprite.setTexture(texture);
-    m_Sprite.setOrigin(m_Sprite.getLocalBounds().width/2, m_Sprite.getLocalBounds().height/2);
+    m_Sprite = sprite;
 }
 
 Tire::~Tire()
@@ -113,6 +112,7 @@ void Tire::updateFriction()
     {
         case FOWARD     : desiredSpeed = m_MaxFowardSpeed;      break;
         case BACKWARD   : desiredSpeed = m_MaxBackwardSpeed;    break;
+        case HANDBRAKE  : desiredSpeed = 0;                     break;
         default:return;
     }
 
@@ -146,16 +146,16 @@ void Tire::updateTurn()
 
 void Tire::render(sf::RenderWindow* Window)
 {
-    m_Sprite.setPosition(m_Body->GetPosition().x * RATIO, m_Body->GetPosition().y * RATIO);
-    m_Sprite.setRotation(m_Body->GetAngle() * RADTODEG);
-    Window->draw(m_Sprite);
+    m_Sprite->setPosition(m_Body->GetPosition().x * RATIO, m_Body->GetPosition().y * RATIO);
+    m_Sprite->setRotation(m_Body->GetAngle() * RADTODEG);
+    Window->draw(*m_Sprite);
 }
 //-----------------------------------------------------------------------------------------------------
 //Car Physic
 //-----------------------------------------------------------------------------------------------------
 
 
-CarBody::CarBody(b2World* World, std::string spriteFileName, b2Vec2 dimension)
+Vehicle::Vehicle(b2World* World, sf::Sprite* carSprite, sf::Sprite* tireSprite, b2Vec2 dimension)
 {
     b2BodyDef def;
     def.type        = b2_dynamicBody;
@@ -166,7 +166,12 @@ CarBody::CarBody(b2World* World, std::string spriteFileName, b2Vec2 dimension)
     b2PolygonShape shape;
     shape.SetAsBox(dimension.x ,dimension.y);
 
-    m_Body->CreateFixture(&shape, 1.f);
+    b2FixtureDef fixDef;
+    fixDef.shape    = &shape;
+    fixDef.density  = 0.5f;
+    fixDef.filter.categoryBits  = VEHICLE;
+
+    m_Body->CreateFixture(&fixDef);
 
     //-------------------------------------------------------------------------------------------------
     //The Tire Joints setting
@@ -181,7 +186,7 @@ CarBody::CarBody(b2World* World, std::string spriteFileName, b2Vec2 dimension)
     //-------------------------------------------------------------------------------------------------
     //Front Left Tire
     //-------------------------------------------------------------------------------------------------
-    Tire* pTire             = new Tire(World);
+    Tire* pTire             = new Tire(World, tireSprite);
     jointDef.bodyB          = pTire->getBody();
     jointDef.localAnchorA.Set( -(dimension.x - 0.25f), (dimension.y - 0.8));
     flJoint                 = (b2RevoluteJoint*)World->CreateJoint(&jointDef);
@@ -190,7 +195,7 @@ CarBody::CarBody(b2World* World, std::string spriteFileName, b2Vec2 dimension)
     //-------------------------------------------------------------------------------------------------
     //Front Right Tire
     //-------------------------------------------------------------------------------------------------
-    pTire                   = new Tire(World);
+    pTire                   = new Tire(World, tireSprite);
     jointDef.bodyB          = pTire->getBody();
     jointDef.localAnchorA.Set( (dimension.x - 0.25f), (dimension.y - 0.8) );
     frJoint                 = (b2RevoluteJoint*)World->CreateJoint(&jointDef);
@@ -199,35 +204,32 @@ CarBody::CarBody(b2World* World, std::string spriteFileName, b2Vec2 dimension)
     //-------------------------------------------------------------------------------------------------
     //Back Tires
     //-------------------------------------------------------------------------------------------------
-    pTire                   = new Tire(World, true);
+    pTire                   = new Tire(World, tireSprite, true);
     jointDef.bodyB          = pTire->getBody();
     jointDef.localAnchorA.Set( -(dimension.x - 0.25f), -(dimension.y - 0.8));
     World->CreateJoint(&jointDef);
     m_Tires.push_back(pTire);
 
-    pTire                   = new Tire(World, true);
+    pTire                   = new Tire(World, tireSprite, true);
     jointDef.bodyB          = pTire->getBody();
     jointDef.localAnchorA.Set( (dimension.x - 0.25f), -(dimension.y - 0.8));
     World->CreateJoint(&jointDef);
     m_Tires.push_back(pTire);
 
     //-------------------------------------------------------------------------------------------------
-    //Set this object as User Data
+    //Set this pointer as User Data
     //-------------------------------------------------------------------------------------------------
     m_Body->SetUserData(this);
 
     //-------------------------------------------------------------------------------------------------
-    //Adjusting Sprite
+    //Sprite
     //-------------------------------------------------------------------------------------------------
-    spriteFile              = spriteFileName;
-    std::string spriteDir   = "Assets\\Vehicle\\";
+    m_Sprite                   = carSprite;
 
-    texture.loadFromFile(spriteDir+spriteFile);
-    m_Sprite.setTexture(texture);
-    m_Sprite.setOrigin(m_Sprite.getLocalBounds().width/2, m_Sprite.getLocalBounds().height/2);
+    m_Controlled               = false;
 }
 
-CarBody::~CarBody()
+Vehicle::~Vehicle()
 {
     for (unsigned int i = 0; i < m_Tires.size(); i++)
         delete m_Tires[i];
@@ -237,8 +239,23 @@ CarBody::~CarBody()
     m_Body = NULL;
 }
 
-void CarBody::update()
+void Vehicle::update()
 {
+    //-------------------------------------------------------------------------------------------------
+    //Control Car if it being controlled
+    //-------------------------------------------------------------------------------------------------
+    if (m_Controlled)
+    {
+        int throttleState   = 0;
+        int steerDirection  = 0;
+        if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space))throttleState   = HANDBRAKE;
+        if (sf::Keyboard::isKeyPressed(sf::Keyboard::W))    throttleState   = FOWARD;
+        if (sf::Keyboard::isKeyPressed(sf::Keyboard::S))    throttleState   = BACKWARD;
+        if (sf::Keyboard::isKeyPressed(sf::Keyboard::A))    steerDirection  = TURNLEFT;
+        if (sf::Keyboard::isKeyPressed(sf::Keyboard::D))    steerDirection  = TURNRIGHT;
+
+        controller(throttleState, steerDirection);
+    }
     //-------------------------------------------------------------------------------------------------
     //Update All Tires at once
     //-------------------------------------------------------------------------------------------------
@@ -246,18 +263,8 @@ void CarBody::update()
         m_Tires[i]->updateFriction();
 }
 
-void CarBody::getControl()
+void Vehicle::controller(int throttleState, int steerState)
 {
-    //-------------------------------------------------------------------------------------------------
-    //Keyboard Configuratiom
-    //-------------------------------------------------------------------------------------------------
-    int throttleState   = 0;
-    int steerDirection  = 0;
-    if (sf::Keyboard::isKeyPressed(sf::Keyboard::W))    throttleState   = FOWARD;
-    if (sf::Keyboard::isKeyPressed(sf::Keyboard::S))    throttleState   = BACKWARD;
-    if (sf::Keyboard::isKeyPressed(sf::Keyboard::A))    steerDirection  = TURNLEFT;
-    if (sf::Keyboard::isKeyPressed(sf::Keyboard::D))    steerDirection  = TURNRIGHT;
-
     //-------------------------------------------------------------------------------------------------
     //Control The Throtle and Brake
     //-------------------------------------------------------------------------------------------------
@@ -271,10 +278,10 @@ void CarBody::getControl()
     float turnPerStep   = turnPerSec / 60.f;
     float lockAngle     = 40 * DEGTORAD;
     float linearSpeed   = m_Body->GetLinearVelocity().Normalize();
-    lockAngle           = lockAngle - ((linearSpeed/120) * lockAngle);
+    lockAngle           = lockAngle - ((linearSpeed/100) * lockAngle);
 
     float desiredAngle;
-    switch (steerDirection)
+    switch (steerState)
     {
         case TURNLEFT  : desiredAngle = -lockAngle;  break;
         case TURNRIGHT : desiredAngle = lockAngle;   break;
@@ -291,7 +298,17 @@ void CarBody::getControl()
     frJoint->SetLimits(newAngle, newAngle);
 }
 
-void CarBody::render(sf::RenderWindow* Window)
+void Vehicle::acquireControl()
+{
+    m_Controlled    = true;
+}
+
+void Vehicle::releaseControl()
+{
+    m_Controlled    = false;
+}
+
+void Vehicle::render(sf::RenderWindow* Window)
 {
     //-------------------------------------------------------------------------------------------------
     //Render four Tires
@@ -302,23 +319,28 @@ void CarBody::render(sf::RenderWindow* Window)
     //-------------------------------------------------------------------------------------------------
     //Render the Body
     //-------------------------------------------------------------------------------------------------
-    m_Sprite.setPosition(m_Body->GetPosition().x * RATIO, m_Body->GetPosition().y * RATIO);
-    m_Sprite.setRotation(m_Body->GetAngle() * RADTODEG);
-    Window->draw(m_Sprite);
+    m_Sprite->setPosition(m_Body->GetPosition().x * RATIO, m_Body->GetPosition().y * RATIO);
+    m_Sprite->setRotation(m_Body->GetAngle() * RADTODEG);
+    Window->draw(*m_Sprite);
 }
 
-sf::Vector2f CarBody::getPosition()
+sf::Vector2f Vehicle::getPosition()
 {
     return sf::Vector2f(m_Body->GetPosition().x * RATIO, m_Body->GetPosition().y * RATIO);
 }
 
-float CarBody::getAngle()
+b2Body* Vehicle::getBody()
+{
+    return m_Body;
+}
+
+float Vehicle::getAngle()
 {
     return m_Body->GetAngle() * DEGTORAD;
 }
 
-int CarBody::getCurrentSpeed()
+int Vehicle::getCurrentSpeed()
 {
-    return (int)m_Tires[0]->getFowardVelocity().Normalize();
+    return (float)m_Tires[0]->getFowardVelocity().Normalize();
 }
 

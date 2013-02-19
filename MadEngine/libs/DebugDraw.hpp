@@ -13,10 +13,10 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef DEBUGDRAW_H
-#define DEBUGDRAW_H
+#ifndef DEBUGDRAW_HPP
+#define DEBUGDRAW_HPP
 
-#include "stdafx.h"
+#include "../stdafx.hpp"
 
 class DebugDraw : public b2Draw
 {
@@ -39,5 +39,5 @@ class DebugDraw : public b2Draw
         sf::RenderWindow *window;
 };
 
-#endif // DEBUGDRAW_H
+#endif // DEBUGDRAW_HPP
 

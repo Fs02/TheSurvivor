@@ -15,18 +15,16 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef CARPHYSIC_H_INCLUDED
-#define CARPHYSIC_H_INCLUDED
+#ifndef VEHICLE_HPP_INCLUDED
+#define VEHICLE_HPP_INCLUDED
 
-#include "../Engine/stdafx.h"
+#include "../MadEngine/stdafx.hpp"
 
 class Tire
 {
 private:
     b2Body* m_Body;
-
-    sf::Texture texture;
-    sf::Sprite m_Sprite;
+    sf::Sprite* m_Sprite;
 
     float m_MaxFowardSpeed;
     float m_MaxBackwardSpeed;
@@ -35,7 +33,7 @@ private:
     bool enableMotor;
 
 public:
-    Tire(b2World* World, bool EnableMotor = false);
+    Tire(b2World* World, sf::Sprite* sprite, bool EnableMotor = false);
     ~Tire();
 
     b2Vec2 getLateralVelocity();
@@ -50,29 +48,33 @@ public:
     void render(sf::RenderWindow* Window);
 };
 
-class CarBody
+class Vehicle
 {
 private:
     b2Body* m_Body;
     b2RevoluteJoint *frJoint, *flJoint;
     std::vector<Tire*> m_Tires;
 
-    sf::Texture texture;
-    sf::Sprite m_Sprite;
-    std::string spriteFile;
+    sf::Sprite* m_Sprite;
+
+    bool m_Controlled;
 
 public:
-    CarBody(b2World* World, std::string spriteFileName = "default.png", b2Vec2 dimension = b2Vec2(1.f , 2.5f));
-    ~CarBody();
+    Vehicle(b2World* World, sf::Sprite* carSprite, sf::Sprite* tireSprite, b2Vec2 dimension = b2Vec2(1.f , 2.5f));
+    ~Vehicle();
 
     virtual void update();
-    virtual void getControl();
+    virtual void controller(int throttleState, int steerState);
+
+    void acquireControl();
+    void releaseControl();
 
     virtual void render(sf::RenderWindow* Window);
 
     sf::Vector2f getPosition();
+    b2Body* getBody();
     float getAngle();
     int getCurrentSpeed();
 };
 
-#endif // CARPHYSIC_H_INCLUDED
+#endif // CARPHYSIC_HPP_INCLUDED

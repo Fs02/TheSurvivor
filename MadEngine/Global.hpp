@@ -1,5 +1,5 @@
-#ifndef ME_MATH_H_INCLUDED
-#define ME_MATH_H_INCLUDED
+#ifndef ME_MATH_HPP_INCLUDED
+#define ME_MATH_HPP_INCLUDED
 
 #define DEGTORAD (b2_pi /180)
 #define RADTODEG (180/b2_pi)
@@ -15,6 +15,15 @@
 #define BACKWARD 2
 #define TURNLEFT 3
 #define TURNRIGHT 4
+#define HANDBRAKE 5
 
 
-#endif // ME_MATH_H_INCLUDED
+//-------------------------------------------------------------------------------------------------
+//Fixture Category Bits
+//-------------------------------------------------------------------------------------------------
+#define PLAYER 1
+#define VEHICLE 2
+#define ENEMY 3
+#define H_VEHICLE_SENSOR 4
+
+#endif // ME_MATH_HPP_INCLUDED

@@ -15,7 +15,7 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "MadEngine.h"
+#include "MadEngine.hpp"
 
 
 void MadEngine::Start()
@@ -47,10 +47,9 @@ void MadEngine::GameLoader()
     //Load All Game Objects
     //-------------------------------------------------------------------------------------------------
 
-    Car         = new CarBody(&_mainWorld);
+    MadFactory  = new EntityFactory(&_mainWorld, &_mainWindow);
+    _mainWorld.SetContactListener(&_ContactListener);
 
-    dummyLevelTexture.loadFromFile("Assets\\Level\\Asphalt.png");
-    dummyLevelSprite.setTexture(dummyLevelTexture);
 
     _gameState  = gs_Playing;
 }
@@ -63,18 +62,7 @@ void MadEngine::GamePlayLogic()
 
     _mainWorld.Step(1/60.f,6,2); // Run The Simulation
 
-    for (float x = 0; x <= 2560; x+=256)
-    {
-        for (float y=0; y<=2560; y+=256)
-        {
-            dummyLevelSprite.setPosition(x,y);
-            _mainWindow.draw(dummyLevelSprite);
-        }
-    }
-
-    Car->update();              //Update The Physic Simulation
-    Car->getControl();          //Get The Car Control
-    Car->render(&_mainWindow);  //Draw To the Screen
+    MadFactory->Update();
 }
 
 void MadEngine::SplashScreen()
@@ -144,10 +132,12 @@ void MadEngine::MainLoop()
 
     newDebugDraw.setRenderWindow(_mainWindow);
     _mainWorld.SetDebugDraw(&newDebugDraw);
+    _EventListener  = new sf::Event;
 
-    sf::Event CurrentEvent;
     while (_mainWindow.isOpen())
     {
+        _mainWindow.pollEvent(*_EventListener);
+
         switch (_gameState)
         {
             case gs_ShowingSplash:
@@ -182,20 +172,20 @@ void MadEngine::MainLoop()
 
                 GamePlay();             //Play The Game
 
-                //DebugRender();
-                _mainCamera.reset(sf::FloatRect(Car->getPosition().x - _mainCamera.getSize().x/2, Car->getPosition().y - _mainCamera.getSize().y/2, 800, 600));
-                _mainCamera.rotate(Car->getAngle());
+                DebugRender();
+                _mainCamera.setCenter(MadFactory->getPlayerPosition());
+                //_mainCamera.setRotation(MadFactory->getPlayerRotation());
                 _mainWindow.setView(_mainCamera);
-
                 _mainWindow.display();
                 break;
             }
         }
-
-        _mainWindow.pollEvent(CurrentEvent);
-        if (CurrentEvent.type == sf::Event::Closed)
+        if (_EventListener->type == sf::Event::Closed)
         {
+            delete MadFactory;
+            delete _EventListener;
             _mainWindow.close();
+            exit(false);
         }
     }
 }
@@ -205,7 +195,6 @@ void MadEngine::DebugRender()
     //-------------------------------------------------------------------------------------------------
     //Use Debug Draw Mode
     //-------------------------------------------------------------------------------------------------
-
     for (b2Body* b = _mainWorld.GetBodyList(); b; b = b->GetNext())
     {
         const b2Transform& xf = b->GetTransform();
@@ -280,12 +269,16 @@ MadEngine::gameState MadEngine::_gameState = MadEngine::gs_Uninitialized;
 
 sf::RenderWindow MadEngine::_mainWindow;
 sf::View MadEngine::_mainCamera;
+sf::Event* MadEngine::_EventListener;
 
 b2Vec2 Gravity(0.f,0.f);
 b2World MadEngine::_mainWorld(Gravity);
 DebugDraw MadEngine::newDebugDraw;
 
-CarBody* MadEngine::Car;
 
-sf::Texture MadEngine::dummyLevelTexture;
-sf::Sprite MadEngine::dummyLevelSprite;
+
+int MadEngine::playerControl;
+
+
+EntityFactory* MadEngine::MadFactory;
+ContactListener MadEngine::_ContactListener;
