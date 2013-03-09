@@ -1,0 +1,540 @@
+# depslib dependency file v1.0
+1361290152 source:e:\dropbox\project\the survivor\the survivor.cpp
+	"MadEngine/MadEngine.hpp"
+
+1360337728 e:\dropbox\project\the survivor\engine\madengine.h
+	"stdafx.h"
+	"../Entity/EntityFactory.h"
+	"DebugDraw.h"
+
+1360086497 e:\dropbox\project\the survivor\engine\stdafx.h
+	<SFML/System.hpp>
+	<SFML/Graphics.hpp>
+	<SFML/Window.hpp>
+	<SFML/Audio.hpp>
+	<Box2D/Box2D.h>
+	<string>
+	<map>
+	<vector>
+	<set>
+	<iostream>
+	"Global.h"
+
+1314988740 d:\cblib\box2d_v2.2.1\box2d\box2d.h
+	<Box2D/Common/b2Settings.h>
+	<Box2D/Common/b2Draw.h>
+	<Box2D/Common/b2Timer.h>
+	<Box2D/Collision/Shapes/b2CircleShape.h>
+	<Box2D/Collision/Shapes/b2EdgeShape.h>
+	<Box2D/Collision/Shapes/b2ChainShape.h>
+	<Box2D/Collision/Shapes/b2PolygonShape.h>
+	<Box2D/Collision/b2BroadPhase.h>
+	<Box2D/Collision/b2Distance.h>
+	<Box2D/Collision/b2DynamicTree.h>
+	<Box2D/Collision/b2TimeOfImpact.h>
+	<Box2D/Dynamics/b2Body.h>
+	<Box2D/Dynamics/b2Fixture.h>
+	<Box2D/Dynamics/b2WorldCallbacks.h>
+	<Box2D/Dynamics/b2TimeStep.h>
+	<Box2D/Dynamics/b2World.h>
+	<Box2D/Dynamics/Contacts/b2Contact.h>
+	<Box2D/Dynamics/Joints/b2DistanceJoint.h>
+	<Box2D/Dynamics/Joints/b2FrictionJoint.h>
+	<Box2D/Dynamics/Joints/b2GearJoint.h>
+	<Box2D/Dynamics/Joints/b2WheelJoint.h>
+	<Box2D/Dynamics/Joints/b2MouseJoint.h>
+	<Box2D/Dynamics/Joints/b2PrismaticJoint.h>
+	<Box2D/Dynamics/Joints/b2PulleyJoint.h>
+	<Box2D/Dynamics/Joints/b2RevoluteJoint.h>
+	<Box2D/Dynamics/Joints/b2RopeJoint.h>
+	<Box2D/Dynamics/Joints/b2WeldJoint.h>
+
+1314992962 d:\cblib\box2d_v2.2.1\box2d\common\b2settings.h
+	<cassert>
+	<cmath>
+
+1301200302 d:\cblib\box2d_v2.2.1\box2d\common\b2draw.h
+	<Box2D/Common/b2Math.h>
+
+1315050482 d:\cblib\box2d_v2.2.1\box2d\common\b2math.h
+	<Box2D/Common/b2Settings.h>
+	<cmath>
+	<cfloat>
+	<cstddef>
+	<limits>
+
+1315759596 d:\cblib\box2d_v2.2.1\box2d\common\b2timer.h
+	<Box2D/Common/b2Settings.h>
+
+1300936620 d:\cblib\box2d_v2.2.1\box2d\collision\shapes\b2circleshape.h
+	<Box2D/Collision/Shapes/b2Shape.h>
+
+1313930994 d:\cblib\box2d_v2.2.1\box2d\collision\shapes\b2shape.h
+	<Box2D/Common/b2BlockAllocator.h>
+	<Box2D/Common/b2Math.h>
+	<Box2D/Collision/b2Collision.h>
+
+1300936620 d:\cblib\box2d_v2.2.1\box2d\common\b2blockallocator.h
+	<Box2D/Common/b2Settings.h>
+
+1307254962 d:\cblib\box2d_v2.2.1\box2d\collision\b2collision.h
+	<Box2D/Common/b2Math.h>
+	<climits>
+
+1314809588 d:\cblib\box2d_v2.2.1\box2d\collision\shapes\b2edgeshape.h
+	<Box2D/Collision/Shapes/b2Shape.h>
+
+1314808944 d:\cblib\box2d_v2.2.1\box2d\collision\shapes\b2chainshape.h
+	<Box2D/Collision/Shapes/b2Shape.h>
+
+1300936620 d:\cblib\box2d_v2.2.1\box2d\collision\shapes\b2polygonshape.h
+	<Box2D/Collision/Shapes/b2Shape.h>
+
+1301210604 d:\cblib\box2d_v2.2.1\box2d\collision\b2broadphase.h
+	<Box2D/Common/b2Settings.h>
+	<Box2D/Collision/b2Collision.h>
+	<Box2D/Collision/b2DynamicTree.h>
+	<algorithm>
+
+1308937590 d:\cblib\box2d_v2.2.1\box2d\collision\b2dynamictree.h
+	<Box2D/Collision/b2Collision.h>
+	<Box2D/Common/b2GrowableStack.h>
+
+1300936620 d:\cblib\box2d_v2.2.1\box2d\common\b2growablestack.h
+	<Box2D/Common/b2Settings.h>
+	<cstring>
+
+1300936620 d:\cblib\box2d_v2.2.1\box2d\collision\b2distance.h
+	<Box2D/Common/b2Math.h>
+
+1300936620 d:\cblib\box2d_v2.2.1\box2d\collision\b2timeofimpact.h
+	<Box2D/Common/b2Math.h>
+	<Box2D/Collision/b2Distance.h>
+
+1315037544 d:\cblib\box2d_v2.2.1\box2d\dynamics\b2body.h
+	<Box2D/Common/b2Math.h>
+	<Box2D/Collision/Shapes/b2Shape.h>
+	<memory>
+
+1315021942 d:\cblib\box2d_v2.2.1\box2d\dynamics\b2fixture.h
+	<Box2D/Dynamics/b2Body.h>
+	<Box2D/Collision/b2Collision.h>
+	<Box2D/Collision/Shapes/b2Shape.h>
+
+1314023202 d:\cblib\box2d_v2.2.1\box2d\dynamics\b2worldcallbacks.h
+	<Box2D/Common/b2Settings.h>
+
+1315758732 d:\cblib\box2d_v2.2.1\box2d\dynamics\b2timestep.h
+	<Box2D/Common/b2Math.h>
+
+1315123598 d:\cblib\box2d_v2.2.1\box2d\dynamics\b2world.h
+	<Box2D/Common/b2Math.h>
+	<Box2D/Common/b2BlockAllocator.h>
+	<Box2D/Common/b2StackAllocator.h>
+	<Box2D/Dynamics/b2ContactManager.h>
+	<Box2D/Dynamics/b2WorldCallbacks.h>
+	<Box2D/Dynamics/b2TimeStep.h>
+
+1300936620 d:\cblib\box2d_v2.2.1\box2d\common\b2stackallocator.h
+	<Box2D/Common/b2Settings.h>
+
+1300936620 d:\cblib\box2d_v2.2.1\box2d\dynamics\b2contactmanager.h
+	<Box2D/Collision/b2BroadPhase.h>
+
+1305736420 d:\cblib\box2d_v2.2.1\box2d\dynamics\contacts\b2contact.h
+	<Box2D/Common/b2Math.h>
+	<Box2D/Collision/b2Collision.h>
+	<Box2D/Collision/Shapes/b2Shape.h>
+	<Box2D/Dynamics/b2Fixture.h>
+
+1315112584 d:\cblib\box2d_v2.2.1\box2d\dynamics\joints\b2distancejoint.h
+	<Box2D/Dynamics/Joints/b2Joint.h>
+
+1315124800 d:\cblib\box2d_v2.2.1\box2d\dynamics\joints\b2joint.h
+	<Box2D/Common/b2Math.h>
+
+1315123878 d:\cblib\box2d_v2.2.1\box2d\dynamics\joints\b2frictionjoint.h
+	<Box2D/Dynamics/Joints/b2Joint.h>
+
+1315124134 d:\cblib\box2d_v2.2.1\box2d\dynamics\joints\b2gearjoint.h
+	<Box2D/Dynamics/Joints/b2Joint.h>
+
+1315124752 d:\cblib\box2d_v2.2.1\box2d\dynamics\joints\b2wheeljoint.h
+	<Box2D/Dynamics/Joints/b2Joint.h>
+
+1315124812 d:\cblib\box2d_v2.2.1\box2d\dynamics\joints\b2mousejoint.h
+	<Box2D/Dynamics/Joints/b2Joint.h>
+
+1315315528 d:\cblib\box2d_v2.2.1\box2d\dynamics\joints\b2prismaticjoint.h
+	<Box2D/Dynamics/Joints/b2Joint.h>
+
+1315124520 d:\cblib\box2d_v2.2.1\box2d\dynamics\joints\b2pulleyjoint.h
+	<Box2D/Dynamics/Joints/b2Joint.h>
+
+1315121974 d:\cblib\box2d_v2.2.1\box2d\dynamics\joints\b2revolutejoint.h
+	<Box2D/Dynamics/Joints/b2Joint.h>
+
+1315143814 d:\cblib\box2d_v2.2.1\box2d\dynamics\joints\b2ropejoint.h
+	<Box2D/Dynamics/Joints/b2Joint.h>
+
+1315120264 d:\cblib\box2d_v2.2.1\box2d\dynamics\joints\b2weldjoint.h
+	<Box2D/Dynamics/Joints/b2Joint.h>
+
+1359796196 source:e:\dropbox\project\the survivor\vehicle\car.cpp
+
+1360500496 source:e:\dropbox\project\the survivor\engine\madengine.cpp
+	"MadEngine.h"
+
+1360138674 source:e:\dropbox\project\the survivor\vehicle\carphysic.cpp
+	"CarPhysic.h"
+
+1360148921 e:\dropbox\project\the survivor\vehicle\carphysic.h
+	"../Engine/stdafx.h"
+
+1359811770 e:\dropbox\project\the survivor\engine\mathtemplate.h
+
+1359886720 e:\dropbox\project\the survivor\engine\me_math.h
+	"stdafx.h"
+
+1359886704 source:e:\dropbox\project\the survivor\engine\me_math.cpp
+	"ME_Math.h"
+
+1360165293 e:\dropbox\project\the survivor\engine\global.h
+
+1359976081 e:\dropbox\project\the survivor\engine\debugdraw.h
+	"stdafx.h"
+
+1348478046 source:e:\dropbox\project\the survivor\engine\debugrender.cpp
+	"debugrender.h"
+
+1359904741 e:\dropbox\project\the survivor\engine\debugrender.h
+	"stdafx.h"
+
+1359978356 source:e:\dropbox\project\the survivor\engine\debugdraw.cpp
+	"DebugDraw.h"
+
+1360148830 e:\dropbox\project\the survivor\vehicle\hummer.h
+	"CarPhysic.h"
+
+1360149405 source:e:\dropbox\project\the survivor\vehicle\hummer.cpp
+	"Hummer.h"
+
+1360165957 source:e:\dropbox\project\the survivor\entity\vehicle\carphysic.cpp
+	"CarPhysic.h"
+
+1360248247 e:\dropbox\project\the survivor\entity\vehicle\carphysic.h
+	"../../Engine/stdafx.h"
+
+1360149405 source:e:\dropbox\project\the survivor\entity\vehicle\hummer.cpp
+	"Hummer.h"
+
+1360337700 e:\dropbox\project\the survivor\entity\vehicle\hummer.h
+
+1360257612 source:e:\dropbox\project\the survivor\entity\spritelib\spritecreator.cpp
+	"SpriteCreator.h"
+
+1360255348 e:\dropbox\project\the survivor\entity\spritelib\spritecreator.h
+	"../../Engine/stdafx.h"
+
+1360315227 e:\dropbox\project\the survivor\entity\vehicle\deathcar.h
+
+1360416261 e:\dropbox\project\the survivor\entity\vehicle\carcreator.h
+	"../../Engine/stdafx.h"
+
+1360501821 source:e:\dropbox\project\the survivor\entity\vehicle\carcreator.cpp
+	"CarCreator.h"
+
+1360315440 source:e:\dropbox\project\the survivor\entity\spritefactory.cpp
+	"SpriteFactory.h"
+
+1360267870 e:\dropbox\project\the survivor\entity\spritefactory.h
+	"../Engine/stdafx.h"
+
+1360492238 e:\dropbox\project\the survivor\entity\entityfactory.h
+	"../Engine/stdafx.h"
+	"SpriteFactory.h"
+	"Vehicle/CarCreator.h"
+	"Character/Character.h"
+	"AniSprite.h"
+
+1360260460 e:\dropbox\project\the survivor\entity\libentity.h
+	"Vehicle/deathCar.h"
+	"Vehicle/Hummer.h"
+
+1360253895 e:\dropbox\project\the survivor\entity\spritelib\libsprite.h
+	"Tire.h"
+	"deathCar.h"
+	"Hummer.h"
+
+1360248581 e:\dropbox\project\the survivor\entity\spritelib\tire.h
+	"SpriteCreator.h"
+
+1360248516 e:\dropbox\project\the survivor\entity\spritelib\deathcar.h
+	"SpriteCreator.h"
+
+1360256836 e:\dropbox\project\the survivor\entity\spritelib\hummer.h
+	"SpriteCreator.h"
+
+1360500687 source:e:\dropbox\project\the survivor\entity\entityfactory.cpp
+	"EntityFactory.h"
+
+1360499222 e:\dropbox\project\the survivor\entity\character\character.h
+	"../../Engine/stdafx.h"
+	"../Vehicle/CarCreator.h"
+	"../AniSprite.h"
+
+1360500773 source:e:\dropbox\project\the survivor\entity\character\character.cpp
+	"Character.h"
+
+1360499797 e:\dropbox\project\the survivor\entity\anisprite.h
+	"../Engine/stdafx.h"
+
+1360500480 source:e:\dropbox\project\the survivor\entity\anisprite.cpp
+	"AniSprite.h"
+
+1362498204 source:e:\dropbox\project\the survivor\madengine\madengine.cpp
+	"MadEngine.hpp"
+
+1361288568 e:\dropbox\project\the survivor\madengine\madengine.h
+	"stdafx.h"
+	"libs/EntityFactory.h"
+	"libs/DebugDraw.h"
+	"libs/ContactListener.h"
+
+1360086497 e:\dropbox\project\the survivor\madengine\stdafx.h
+	<SFML/System.hpp>
+	<SFML/Graphics.hpp>
+	<SFML/Window.hpp>
+	<SFML/Audio.hpp>
+	<Box2D/Box2D.h>
+	<string>
+	<map>
+	<vector>
+	<set>
+	<iostream>
+	"Global.h"
+
+1360633690 e:\dropbox\project\the survivor\madengine\global.h
+
+1360999325 e:\dropbox\project\the survivor\madengine\lib\entityfactory.h
+	"../stdafx.h"
+	"SpriteFactory.h"
+	"../../Entity/Vehicle.h"
+	"../../Entity/Character.h"
+	"AniSprite.h"
+
+1361156028 e:\dropbox\project\the survivor\madengine\lib\spritefactory.h
+	"../stdafx.h"
+
+1361280511 e:\dropbox\project\the survivor\entity\character.h
+	"../MadEngine/stdafx.h"
+	"Vehicle.h"
+	"Bullet.h"
+	"../MadEngine/libs/AniSprite.h"
+
+1360597497 e:\dropbox\project\the survivor\entity\vehicle.h
+	"../MadEngine/stdafx.h"
+
+1360508273 e:\dropbox\project\the survivor\madengine\lib\anisprite.h
+	"../stdafx.h"
+
+1360508282 e:\dropbox\project\the survivor\madengine\lib\debugdraw.h
+	"../stdafx.h"
+
+1360500480 source:e:\dropbox\project\the survivor\madengine\lib\anisprite.cpp
+	"AniSprite.h"
+
+1359978356 source:e:\dropbox\project\the survivor\madengine\lib\debugdraw.cpp
+	"DebugDraw.h"
+
+1361155428 source:e:\dropbox\project\the survivor\madengine\lib\entityfactory.cpp
+	"EntityFactory.h"
+
+1361156078 source:e:\dropbox\project\the survivor\madengine\lib\spritefactory.cpp
+	"SpriteFactory.h"
+
+1361289997 source:e:\dropbox\project\the survivor\entity\character.cpp
+	"Character.hpp"
+
+1362547998 source:e:\dropbox\project\the survivor\entity\vehicle.cpp
+	"Vehicle.hpp"
+
+1360634932 source:e:\dropbox\project\the survivor\madengine\lib\collosionlistener.cpp
+	"CollosionListener.h"
+
+1360634636 e:\dropbox\project\the survivor\madengine\lib\collosionlistener.h
+	"../stdafx.h"
+	"../../Entity/Character.h"
+	"../../Entity/Vehicle.h"
+
+1360821188 e:\dropbox\project\the survivor\madengine\lib\contactlistener.h
+	"../stdafx.h"
+	"../../Entity/Character.h"
+	"../../Entity/Vehicle.h"
+
+1360821754 source:e:\dropbox\project\the survivor\madengine\lib\contactlistener.cpp
+	"ContactListener.h"
+
+1361289828 source:e:\dropbox\project\the survivor\entity\bullet.cpp
+	"Bullet.hpp"
+
+1361280504 e:\dropbox\project\the survivor\entity\bullet.h
+	"../MadEngine/stdafx.h"
+	"../MadEngine/libs/SpriteFactory.h"
+
+1361156028 e:\dropbox\project\the survivor\madengine\libs\spritefactory.h
+	"../stdafx.h"
+
+1360508273 e:\dropbox\project\the survivor\madengine\libs\anisprite.h
+	"../stdafx.h"
+
+1361290115 source:e:\dropbox\project\the survivor\madengine\libs\anisprite.cpp
+	"AniSprite.hpp"
+
+1361290122 source:e:\dropbox\project\the survivor\madengine\libs\contactlistener.cpp
+	"ContactListener.hpp"
+
+1360821188 e:\dropbox\project\the survivor\madengine\libs\contactlistener.h
+	"../stdafx.h"
+	"../../Entity/Character.h"
+	"../../Entity/Vehicle.h"
+
+1361290129 source:e:\dropbox\project\the survivor\madengine\libs\debugdraw.cpp
+	"DebugDraw.hpp"
+
+1360508282 e:\dropbox\project\the survivor\madengine\libs\debugdraw.h
+	"../stdafx.h"
+
+1362493408 source:e:\dropbox\project\the survivor\madengine\libs\entityfactory.cpp
+	"EntityFactory.hpp"
+
+1361287454 e:\dropbox\project\the survivor\madengine\libs\entityfactory.h
+	"../stdafx.h"
+	"SpriteFactory.h"
+	"../../Entity/Vehicle.h"
+	"../../Entity/Character.h"
+	"AniSprite.h"
+	"Level.hpp"
+	"../../Level/Level1.h"
+
+1362793318 source:e:\dropbox\project\the survivor\madengine\libs\spritefactory.cpp
+	"SpriteFactory.hpp"
+
+1362794240 source:e:\dropbox\project\the survivor\madengine\libs\level.cpp
+	"Level.hpp"
+
+1362668076 e:\dropbox\project\the survivor\madengine\libs\level.hpp
+	"../stdafx.hpp"
+	"SpriteFactory.hpp"
+	"StaticObject.hpp"
+
+1362670822 e:\dropbox\project\the survivor\madengine\libs\staticobject.hpp
+	"../stdafx.hpp"
+	"Object.hpp"
+
+1362671050 source:e:\dropbox\project\the survivor\madengine\libs\staticobject.cpp
+	"StaticObject.hpp"
+
+1361288718 e:\dropbox\project\the survivor\level\level1.h
+	"../MadEngine/stdafx.h"
+	"../MadEngine/libs/Level.hpp"
+
+1361289837 e:\dropbox\project\the survivor\entity\bullet.hpp
+	"../MadEngine/stdafx.hpp"
+	"../MadEngine/libs/SpriteFactory.hpp"
+
+1362231093 e:\dropbox\project\the survivor\madengine\stdafx.hpp
+	<SFML/System.hpp>
+	<SFML/Graphics.hpp>
+	<SFML/Window.hpp>
+	<SFML/Audio.hpp>
+	<Box2D/Box2D.h>
+	"../libs/rapidxml/rapidxml.hpp"
+	<string>
+	<map>
+	<vector>
+	<set>
+	<fstream>
+	<iostream>
+	"Global.hpp"
+
+1362495573 e:\dropbox\project\the survivor\madengine\global.hpp
+
+1362793297 e:\dropbox\project\the survivor\madengine\libs\spritefactory.hpp
+	"../stdafx.hpp"
+
+1361290010 e:\dropbox\project\the survivor\entity\character.hpp
+	"../MadEngine/stdafx.hpp"
+	"Vehicle.hpp"
+	"Bullet.hpp"
+	"../MadEngine/libs/AniSprite.hpp"
+
+1361290021 e:\dropbox\project\the survivor\entity\vehicle.hpp
+	"../MadEngine/stdafx.hpp"
+
+1361290027 e:\dropbox\project\the survivor\madengine\libs\anisprite.hpp
+	"../stdafx.hpp"
+
+1362495765 e:\dropbox\project\the survivor\madengine\madengine.hpp
+	"stdafx.hpp"
+	"libs/GameFactory.hpp"
+	"libs/DebugDraw.hpp"
+	"libs/ContactListener.hpp"
+
+1362493319 e:\dropbox\project\the survivor\madengine\libs\entityfactory.hpp
+	"../stdafx.hpp"
+	"SpriteFactory.hpp"
+	"../../Entity/Vehicle.hpp"
+	"../../Entity/Character.hpp"
+	"AniSprite.hpp"
+	"Level.hpp"
+	"../../Level/Level1.hpp"
+
+1362306434 e:\dropbox\project\the survivor\level\level1.hpp
+	"../MadEngine/stdafx.hpp"
+	"../MadEngine/libs/Level.hpp"
+
+1361290097 e:\dropbox\project\the survivor\madengine\libs\debugdraw.hpp
+	"../stdafx.hpp"
+
+1361290108 e:\dropbox\project\the survivor\madengine\libs\contactlistener.hpp
+	"../stdafx.hpp"
+	"../../Entity/Character.hpp"
+	"../../Entity/Vehicle.hpp"
+
+1242153978 e:\dropbox\project\the survivor\libs\rapidxml\rapidxml.hpp
+	<cstdlib>
+	<cassert>
+	<new>
+	<exception>
+
+1242402556 e:\dropbox\project\the survivor\libs\rapidxml\rapidxml_iterators.hpp
+	"rapidxml.hpp"
+
+1242402560 e:\dropbox\project\the survivor\libs\rapidxml\rapidxml_print.hpp
+	"rapidxml.hpp"
+	<ostream>
+	<iterator>
+
+1242402562 e:\dropbox\project\the survivor\libs\rapidxml\rapidxml_utils.hpp
+	"rapidxml.hpp"
+	<vector>
+	<string>
+	<fstream>
+	<stdexcept>
+
+1362493319 e:\dropbox\project\the survivor\madengine\libs\gamefactory.hpp
+	"../stdafx.hpp"
+	"SpriteFactory.hpp"
+	"../../Entity/Vehicle.hpp"
+	"../../Entity/Character.hpp"
+	"AniSprite.hpp"
+	"Level.hpp"
+	"../../Level/Level1.hpp"
+
+1362793427 source:e:\dropbox\project\the survivor\madengine\libs\gamefactory.cpp
+	"GameFactory.hpp"
+
+1362668449 e:\dropbox\project\the survivor\madengine\libs\object.hpp
+	"../stdafx.hpp"
+

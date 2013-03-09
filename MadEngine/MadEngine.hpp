@@ -19,7 +19,7 @@
 #define MADENGINE_HPP_INCLUDED
 
 #include "stdafx.hpp"
-#include "libs/EntityFactory.hpp"
+#include "libs/GameFactory.hpp"
 #include "libs/DebugDraw.hpp"
 #include "libs/ContactListener.hpp"
 
@@ -44,6 +44,7 @@ public:
 
     static void DebugRender();
 
+    static float str2float(std::string input);
 private:
     enum gameState {gs_Uninitialized, gs_ShowingSplash, gs_Paused, gs_ShowingMenu, gs_Loading, gs_Playing, gs_Exiting};
     static b2World _mainWorld;
@@ -61,7 +62,7 @@ private:
 
     static int playerControl;
 
-    static EntityFactory* MadFactory;
+    static GameFactory* Game;
 };
 
 #endif // MADENGINE_HPP_INCLUDED

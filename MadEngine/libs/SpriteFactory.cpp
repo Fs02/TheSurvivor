@@ -24,6 +24,28 @@ SpriteFactory::~SpriteFactory()
     m_TextureList.clear();
 }
 
+void SpriteFactory::loadSprite(const std::string& xmlfile)
+{
+    std::ifstream texturePack(xmlfile.c_str());
+    std::vector<char> buffer((std::istreambuf_iterator<char>(texturePack)), std::istreambuf_iterator<char>());
+    buffer.push_back('\0');
+
+    rapidxml::xml_document<> data;
+    data.parse<rapidxml::parse_declaration_node|rapidxml::parse_no_data_nodes>(&buffer[0]);
+
+    rapidxml::xml_node<>* root = data.first_node("texture_pack");
+    std::string path = root->first_attribute("path")->value();
+
+    rapidxml::xml_node<>* cur_node = root->first_node("texture");
+    while (cur_node != NULL)
+    {
+        newSprite(cur_node->first_attribute("id")->value(), path + cur_node->first_attribute("filename")->value());
+
+        cur_node = cur_node->next_sibling();
+    }
+}
+
+
 void SpriteFactory::newSprite(std::string id, std::string fileName)
 {
     sf::Texture *pTexture   = new sf::Texture;

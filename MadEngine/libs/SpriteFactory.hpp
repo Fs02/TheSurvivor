@@ -14,6 +14,7 @@ public:
     SpriteFactory();
     ~SpriteFactory();
 
+    void loadSprite(const std::string& xmlfile);
     void newSprite(std::string id, std::string fileName);
     sf::Sprite* getSprite(std::string id);
 };

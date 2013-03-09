@@ -17,7 +17,6 @@
 #define TURNRIGHT 4
 #define HANDBRAKE 5
 
-
 //-------------------------------------------------------------------------------------------------
 //Fixture Category Bits
 //-------------------------------------------------------------------------------------------------
@@ -25,5 +24,6 @@
 #define VEHICLE 2
 #define ENEMY 3
 #define H_VEHICLE_SENSOR 4
+
 
 #endif // ME_MATH_HPP_INCLUDED

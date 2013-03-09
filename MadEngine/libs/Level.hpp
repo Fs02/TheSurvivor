@@ -8,29 +8,32 @@
 class Level
 {
 private:
-    sf::Sprite* m_LevelSprite;
-    std::vector<StaticObject*> m_ObjectList;
+    std::vector<sf::Sprite*> m_terrainSprite;
+    std::vector<Object*> m_ObjectList;
+
+    b2World* m_World;
+    SpriteFactory* m_SpriteFactory;
 
     sf::RenderWindow* m_Window;
 
 public:
-    b2World* m_World;
-    SpriteFactory* m_SpriteFactory;
+    std::string name;
 
+//    Level();
+ //   ~Level();
 
-    Level();
-    ~Level();
+    void loadLevel(const std::string& xml_map);
 
     void setRenderWindow(sf::RenderWindow* Window);
     void setPhysicWorld(b2World* World);
     void setSpriteFactory(SpriteFactory* spriteFactory);
 
-    void setLevelSprite(sf::Sprite* sprite);
+//    void setLevelSprite(sf::Sprite* sprite);
 
     void AddObject(StaticObject* newStaticObject);
     void DrawLevel();
 
-    virtual void Create() = 0;
+//    virtual void Create();
 };
 
 #endif // LEVEL_HPP_INCLUDED

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<level name="LevelExample" version="1.0">
+	<terrain>
+		<sprite id="Level_001" pos-x="-3000" pos-y="-500"/>
+		<sprite id="Level_002" pos-x="-2100" pos-y="-500"/>
+		<sprite id="Level_003" pos-x="-1200" pos-y="-500"/>
+		<sprite id="Level_004" pos-x="-300" pos-y="-500"/>
+		<sprite id="Level_005" pos-x="600" pos-y="-500"/>
+		<sprite id="Level_006" pos-x="1500" pos-y="-500"/>
+		<sprite id="Level_007" pos-x="2400" pos-y="-500"/>
+		
+		<sprite id="Level_008" pos-x="-3000" pos-y="400"/>
+		<sprite id="Level_009" pos-x="-2100" pos-y="400"/>
+		<sprite id="Level_010" pos-x="-1200" pos-y="400"/>
+		<sprite id="Level_011" pos-x="-300" pos-y="400"/>
+		<sprite id="Level_012" pos-x="600" pos-y="400"/>
+		<sprite id="Level_013" pos-x="1500" pos-y="400"/>
+		<sprite id="Level_014" pos-x="2400" pos-y="400"/>
+		
+		<sprite id="Level_015" pos-x="-3000" pos-y="1300"/>
+		<sprite id="Level_016" pos-x="-2100" pos-y="1300"/>
+		<sprite id="Level_017" pos-x="-1200" pos-y="1300"/>
+		<sprite id="Level_018" pos-x="-300" pos-y="1300"/>
+		<sprite id="Level_019" pos-x="600" pos-y="1300"/>
+		<sprite id="Level_020" pos-x="1500" pos-y="1300"/>
+		<sprite id="Level_021" pos-x="2400" pos-y="1300"/>
+		
+		<sprite id="Level_022" pos-x="-3000" pos-y="2200"/>
+		<sprite id="Level_023" pos-x="-2100" pos-y="2200"/>
+		<sprite id="Level_024" pos-x="-1200" pos-y="2200"/>
+		<sprite id="Level_025" pos-x="-300" pos-y="2200"/>
+		<sprite id="Level_026" pos-x="600" pos-y="2200"/>
+		<sprite id="Level_027" pos-x="1500" pos-y="2200"/>
+		<sprite id="Level_028" pos-x="2400" pos-y="2200"/>
+		
+		<sprite id="Level_029" pos-x="-3000" pos-y="3100"/>
+		<sprite id="Level_030" pos-x="-2100" pos-y="3100"/>
+		<sprite id="Level_031" pos-x="-1200" pos-y="3100"/>
+		<sprite id="Level_032" pos-x="-300" pos-y="3100"/>
+		<sprite id="Level_033" pos-x="600" pos-y="3100"/>
+		<sprite id="Level_034" pos-x="1500" pos-y="3100"/>
+		<sprite id="Level_035" pos-x="2400" pos-y="3100"/>
+
+		<sprite id="Level_036" pos-x="-3000" pos-y="4000"/>
+		<sprite id="Level_037" pos-x="-2100" pos-y="4000"/>
+		<sprite id="Level_038" pos-x="-1200" pos-y="4000"/>
+		<sprite id="Level_039" pos-x="-300" pos-y="4000"/>
+		<sprite id="Level_040" pos-x="600" pos-y="4000"/>
+		<sprite id="Level_041" pos-x="1500" pos-y="4000"/>
+		<sprite id="Level_042" pos-x="2400" pos-y="4000"/>
+		</terrain>
+	<map type="building">
+		<building model="hauntedhouse" pos-x="0" pos-y="5" rot="0"/>
+		<building model="smallhouse" pos-x="20" pos-y="0" rot="15"/>
+	</map>
+</level>
+

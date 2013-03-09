@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="The Survivor" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin\Debug\The Survivor" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj\Debug\" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add directory="D:\CBLIB\Box2D_v2.2.1" />
+				</Compiler>
+				<Linker>
+					<Add library="D:\CBLIB\Box2D_v2.2.1\Library\libBox2D.a" />
+					<Add directory="D:\CBLIB\Box2D_v2.2.1" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin\Release\The Survivor" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj\Release\" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+		</Compiler>
+		<Linker>
+			<Add directory="D:\CBLIB\Box2D_v2.2.1" />
+		</Linker>
+		<Unit filename="Entity\Bullet.cpp" />
+		<Unit filename="Entity\Bullet.hpp" />
+		<Unit filename="Entity\Character.cpp" />
+		<Unit filename="Entity\Character.hpp" />
+		<Unit filename="Entity\Vehicle.cpp" />
+		<Unit filename="Entity\Vehicle.hpp" />
+		<Unit filename="Level\Level1.hpp" />
+		<Unit filename="MadEngine\Global.hpp" />
+		<Unit filename="MadEngine\MadEngine.cpp" />
+		<Unit filename="MadEngine\MadEngine.hpp" />
+		<Unit filename="MadEngine\libs\AniSprite.cpp" />
+		<Unit filename="MadEngine\libs\AniSprite.hpp" />
+		<Unit filename="MadEngine\libs\ContactListener.cpp" />
+		<Unit filename="MadEngine\libs\ContactListener.hpp" />
+		<Unit filename="MadEngine\libs\DebugDraw.cpp" />
+		<Unit filename="MadEngine\libs\DebugDraw.hpp" />
+		<Unit filename="MadEngine\libs\GameFactory.cpp" />
+		<Unit filename="MadEngine\libs\GameFactory.hpp" />
+		<Unit filename="MadEngine\libs\Level.cpp" />
+		<Unit filename="MadEngine\libs\Level.hpp" />
+		<Unit filename="MadEngine\libs\Object.hpp">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="MadEngine\libs\SpriteFactory.cpp" />
+		<Unit filename="MadEngine\libs\SpriteFactory.hpp" />
+		<Unit filename="MadEngine\libs\StaticObject.cpp" />
+		<Unit filename="MadEngine\libs\StaticObject.hpp" />
+		<Unit filename="MadEngine\stdafx.hpp" />
+		<Unit filename="The Survivor.cpp" />
+		<Unit filename="libs\rapidxml\rapidxml.hpp" />
+		<Unit filename="libs\rapidxml\rapidxml_iterators.hpp" />
+		<Unit filename="libs\rapidxml\rapidxml_print.hpp" />
+		<Unit filename="libs\rapidxml\rapidxml_utils.hpp" />
+		<Extensions>
+			<code_completion />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

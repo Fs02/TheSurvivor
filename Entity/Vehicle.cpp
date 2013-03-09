@@ -26,9 +26,9 @@ Tire::Tire(b2World* World, sf::Sprite* sprite, bool EnableMotor)
     //-------------------------------------------------------------------------------------------------
     // Constructing the Tire
     //-------------------------------------------------------------------------------------------------
-    m_MaxFowardSpeed    = 160;
-    m_MaxBackwardSpeed  = -40;
-    m_MaxDriveForce     = 160;
+    m_MaxFowardSpeed    = 100;
+    m_MaxBackwardSpeed  = -20;
+    m_MaxDriveForce     = 150;
 
     b2BodyDef def;
     def.type            = b2_dynamicBody;
@@ -39,7 +39,7 @@ Tire::Tire(b2World* World, sf::Sprite* sprite, bool EnableMotor)
 
     b2FixtureDef fixDef;
     fixDef.shape        = &shape;
-    m_Body->CreateFixture(&shape, 5.f);
+    m_Body->CreateFixture(&shape, 2.f);
 
     enableMotor = EnableMotor;
     //-------------------------------------------------------------------------------------------------
@@ -87,7 +87,7 @@ void Tire::updateFriction()
     m_Body->ApplyLinearImpulse(impulse, m_Body->GetWorldCenter());
 
     //-------------------------------------------------------------------------------------------------
-    //Decreace angular velocity
+    //Decrease angular velocity
     //-------------------------------------------------------------------------------------------------
     m_Body->ApplyAngularImpulse( 0.05 * m_Body->GetInertia() * - m_Body->GetAngularVelocity());
 
@@ -278,7 +278,7 @@ void Vehicle::controller(int throttleState, int steerState)
     float turnPerStep   = turnPerSec / 60.f;
     float lockAngle     = 40 * DEGTORAD;
     float linearSpeed   = m_Body->GetLinearVelocity().Normalize();
-    lockAngle           = lockAngle - ((linearSpeed/100) * lockAngle);
+    lockAngle           = lockAngle - ((linearSpeed/80) * lockAngle);
 
     float desiredAngle;
     switch (steerState)

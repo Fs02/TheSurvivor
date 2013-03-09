@@ -47,7 +47,7 @@ void MadEngine::GameLoader()
     //Load All Game Objects
     //-------------------------------------------------------------------------------------------------
 
-    MadFactory  = new EntityFactory(&_mainWorld, &_mainWindow);
+    Game        = new GameFactory(&_mainWorld, &_mainWindow);
     _mainWorld.SetContactListener(&_ContactListener);
 
 
@@ -62,7 +62,7 @@ void MadEngine::GamePlayLogic()
 
     _mainWorld.Step(1/60.f,6,2); // Run The Simulation
 
-    MadFactory->Update();
+    Game->Update();
 }
 
 void MadEngine::SplashScreen()
@@ -140,6 +140,11 @@ void MadEngine::MainLoop()
 
         switch (_gameState)
         {
+            case gs_Uninitialized:
+            {
+                _gameState = gs_Exiting;
+            }
+
             case gs_ShowingSplash:
             {
                 SplashScreen();         //Show The Spalsh Screen
@@ -173,7 +178,7 @@ void MadEngine::MainLoop()
                 GamePlay();             //Play The Game
 
                 DebugRender();
-                _mainCamera.setCenter(MadFactory->getPlayerPosition());
+                _mainCamera.setCenter(Game->getPlayerPosition());
                 //_mainCamera.setRotation(MadFactory->getPlayerRotation());
                 _mainWindow.setView(_mainCamera);
                 _mainWindow.display();
@@ -182,7 +187,7 @@ void MadEngine::MainLoop()
         }
         if (_EventListener->type == sf::Event::Closed)
         {
-            delete MadFactory;
+            delete Game;
             delete _EventListener;
             _mainWindow.close();
             exit(false);
@@ -265,6 +270,7 @@ void MadEngine::DebugRender()
     }
 }
 
+
 MadEngine::gameState MadEngine::_gameState = MadEngine::gs_Uninitialized;
 
 sf::RenderWindow MadEngine::_mainWindow;
@@ -280,5 +286,5 @@ DebugDraw MadEngine::newDebugDraw;
 int MadEngine::playerControl;
 
 
-EntityFactory* MadEngine::MadFactory;
+GameFactory* MadEngine::Game;
 ContactListener MadEngine::_ContactListener;
