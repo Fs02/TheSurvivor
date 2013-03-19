@@ -12,19 +12,21 @@ private:
     b2Body* m_Body;
     AniSprite* m_AniSprite;
     int Health;
-    Vehicle* m_Vehicle;
-    bool isDrive;
     int m_AnimState;
     int keyTemp;
 
     sf::RenderWindow* m_Window;
 
 public:
+    Vehicle* m_Vehicle;
+    bool isDrive;
+
     Character(b2World* World, sf::RenderWindow* Window, sf::Sprite* spriteSheet, int fwidth = 50, int fheight = 50);
     ~Character();
 
+    virtual void updateAll();
     void updateFriction();
-    void controller();
+    void controller(int walkState, int turnState);
     void playAnim(int animState);
     void draw();
 
@@ -32,12 +34,14 @@ public:
 
     void setVehicle(Vehicle* vehicle);
     void unsetCat();
-    void driveHandler();
+    void driveHandler(bool control = true);
 
+    void setTransform(float _x, float _y, float _deg);
     sf::Vector2f getPosition();
     float getRotation();
 
     std::vector<Vehicle*>VehicleCache;
+
 };
 
 #endif // CHARACTER_HPP_INCLUDED

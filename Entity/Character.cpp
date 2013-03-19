@@ -41,6 +41,18 @@ Character::~Character()
     m_Body->GetWorld()->DestroyBody(m_Body);
 }
 
+void Character::updateAll()
+{
+    updateFriction();
+    int walkState = 0;
+    int turnState = 0;
+    if (sf::Keyboard::isKeyPressed(sf::Keyboard::W))    walkState = FOWARD;
+    if (sf::Keyboard::isKeyPressed(sf::Keyboard::S))    walkState = BACKWARD;
+    if (sf::Keyboard::isKeyPressed(sf::Keyboard::A))    turnState = TURNLEFT;
+    if (sf::Keyboard::isKeyPressed(sf::Keyboard::D))    turnState = TURNRIGHT;
+    controller(walkState, turnState);
+}
+
 void Character::updateFriction()
 {
     m_Body->ApplyForce(-2 * m_Body->GetLinearVelocity(), m_Body->GetWorldCenter());
@@ -57,17 +69,17 @@ void Character::unsetCat()
     if (!isDrive)   m_Vehicle       = NULL;
 }
 
-void Character::driveHandler()
+void Character::driveHandler(bool control)
 {
     if ((!isDrive) && (m_Vehicle != NULL))
     {
-        m_Vehicle->acquireControl();
+        if (control)    m_Vehicle->acquireControl();
         m_Body->SetActive(false);
         isDrive     = true;
     }
     else if ((isDrive) && (m_Vehicle != NULL))
     {
-        m_Vehicle->releaseControl();
+        if (control)    m_Vehicle->releaseControl();
         m_Body->SetTransform(m_Vehicle->getBody()->GetWorldPoint(b2Vec2(1.5,1)), m_Vehicle->getAngle());
         m_Body->SetActive(true);
         isDrive     = false;
@@ -75,17 +87,22 @@ void Character::driveHandler()
     else return;
 }
 
-void Character::controller()
+void Character::setTransform(float _x, float _y, float _deg)
+{
+    m_Body->SetTransform(b2Vec2(_x * RATIO, _y *RATIO), _deg * DEGTORAD);
+}
+void Character::controller(int walkState, int turnState)
 {
     b2Vec2 desiredVelocity;
     b2Vec2 vel = m_Body->GetLinearVelocity();
 
-    b2Vec2 direction(0,0);
-    int animState   = IDLE;
-    if (sf::Keyboard::isKeyPressed(sf::Keyboard::W)) { direction.y = -1;     animState = FOWARD;     }
-    if (sf::Keyboard::isKeyPressed(sf::Keyboard::S)) { direction.y = 1;    animState = BACKWARD;   }
-    if (sf::Keyboard::isKeyPressed(sf::Keyboard::A)) direction.x = -1;
-    if (sf::Keyboard::isKeyPressed(sf::Keyboard::D)) direction.x = 1;
+    b2Vec2 direction ;
+    float desiredAngle = m_Body->GetAngle();
+    int animState = IDLE;
+    if (walkState == FOWARD)   { animState = FOWARD;   direction = m_Body->GetWorldVector(b2Vec2(0,1.f)); }
+    if (walkState == BACKWARD) { animState = BACKWARD; direction = m_Body->GetWorldVector(b2Vec2(0,-1.f)); }
+    if (turnState == TURNLEFT)  desiredAngle += 5.f * DEGTORAD;
+    if (turnState == TURNRIGHT) desiredAngle += -5.f * DEGTORAD;
 
     playAnim(animState);
     m_AniSprite->Update();
@@ -98,8 +115,8 @@ void Character::controller()
 
 
     float nextAngle = m_Body->GetAngle() + m_Body->GetAngularVelocity()/ 60;
-    sf::Vector2i targetPos   = sf::Mouse::getPosition(*m_Window) - sf::Vector2i(m_Window->getSize().x/2, m_Window->getSize().y/2);
-    float desiredAngle             = atan2f(-targetPos.x, targetPos.y);
+    //sf::Vector2i targetPos   = sf::Mouse::getPosition(*m_Window) - sf::Vector2i(m_Window->getSize().x/2, m_Window->getSize().y/2);
+    //float desiredAngle             = atan2f(-targetPos.x, targetPos.y);
     float totalRotation = desiredAngle - nextAngle;
     while (totalRotation < -180 * DEGTORAD) totalRotation+=360 * DEGTORAD;
     while (totalRotation > 180 * DEGTORAD)  totalRotation-=360 * DEGTORAD;

@@ -18,6 +18,7 @@ public:
 
     void createSquareFixture(float width, float height, b2Vec2 center, int angle = 0);
     void createCircleFixture(float radius, b2Vec2 center);
+    void createNodeFixture(b2Vec2& vertices, int count);
 
     void setSprite(sf::Sprite* sprite);
     void setPosition(float x, float y);

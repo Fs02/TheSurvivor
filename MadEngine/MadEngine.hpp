@@ -20,8 +20,10 @@
 
 #include "stdafx.hpp"
 #include "libs/GameFactory.hpp"
+#include "libs/GUIFactory.hpp"
 #include "libs/DebugDraw.hpp"
 #include "libs/ContactListener.hpp"
+#include "libs/GameStates.hpp"
 
 enum {C_CAR,C_HUMMER};
 
@@ -29,7 +31,6 @@ class MadEngine
 {
 public:
     static void Start();
-
     static void GameLoader();
     static void GamePlayLogic();
 
@@ -46,16 +47,13 @@ public:
 
     static float str2float(std::string input);
 private:
-    enum gameState {gs_Uninitialized, gs_ShowingSplash, gs_Paused, gs_ShowingMenu, gs_Loading, gs_Playing, gs_Exiting};
     static b2World _mainWorld;
     static ContactListener _ContactListener;
 
     static sf::RenderWindow _mainWindow;
     static sf::View _mainCamera;
-    static sf::Event* _EventListener;
+    static sf::Event _EventListener;
     static DebugDraw newDebugDraw;
-
-    static gameState _gameState;
 
     static sf::Texture dummyLevelTexture;
     static sf::Sprite dummyLevelSprite;
@@ -63,6 +61,7 @@ private:
     static int playerControl;
 
     static GameFactory* Game;
+    static GUIFactory* _GUI;
 };
 
 #endif // MADENGINE_HPP_INCLUDED

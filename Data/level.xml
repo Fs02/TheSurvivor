@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <level name="LevelExample" version="1.0">
-	<terrain>
+	<map type="terrain">
 		<sprite id="Level_001" pos-x="-3000" pos-y="-4000"/>
 		<sprite id="Level_002" pos-x="-2100" pos-y="-4000"/>
 		<sprite id="Level_003" pos-x="-1200" pos-y="-4000"/>
@@ -80,7 +80,100 @@
 		<sprite id="Level_068" pos-x="600" pos-y="4100"/>
 		<sprite id="Level_069" pos-x="1500" pos-y="4100"/>
 		<sprite id="Level_070" pos-x="2400" pos-y="4100"/>
-		</terrain>
+	</map>
+	<map type="edges" count="76">
+		<edge pos-x="-3000" pos-y="4552"/> <! x-3000 y-4000 >
+		<edge pos-x="1014" pos-y="4552"/>
+		<edge pos-x="1098" pos-y="4532"/>
+		<edge pos-x="1159" pos-y="4473"/>
+		<edge pos-x="1200" pos-y="4399"/>
+		
+		<edge pos-x="1206" pos-y="4379"/>
+		<edge pos-x="1140" pos-y="4379"/>
+		<edge pos-x="1139" pos-y="2560"/>
+		<edge pos-x="1127" pos-y="2235"/>
+		<edge pos-x="1098" pos-y="1918"/>
+		
+		<edge pos-x="1080" pos-y="1766"/>
+		<edge pos-x="985" pos-y="1106"/>
+		<edge pos-x="951" pos-y="580"/>
+		<edge pos-x="952" pos-y="248"/>
+		<edge pos-x="982" pos-y="-211"/>
+
+		<edge pos-x="1040" pos-y="-653"/>
+		<edge pos-x="-930" pos-y="-1699"/>
+		<edge pos-x="-991" pos-y="-1185"/>
+		<edge pos-x="-1009" pos-y="-536"/>
+		<edge pos-x="-992" pos-y="-205"/>
+		
+		<edge pos-x="-879" pos-y="646"/>
+		<edge pos-x="-841" pos-y="993"/>
+		<edge pos-x="-825" pos-y="1800"/>
+		<edge pos-x="-873" pos-y="2367"/>
+		<edge pos-x="-828" pos-y="2713"/>
+		
+		<edge pos-x="-784" pos-y="2821"/>
+		<edge pos-x="-813" pos-y="2965"/>
+		<edge pos-x="-871" pos-y="3075"/>
+		<edge pos-x="-984" pos-y="3154"/>
+		<edge pos-x="-1091" pos-y="3171"/>
+
+		<edge pos-x="-1256" pos-y="3158"/>
+		<edge pos-x="-1346" pos-y="3071"/>
+		<edge pos-x="-1414" pos-y="2956"/>
+		<edge pos-x="-1414" pos-y="2746"/>
+		<edge pos-x="-1393" pos-y="2690"/>
+		
+		<edge pos-x="-1310" pos-y="2613"/>
+		<edge pos-x="-1246" pos-y="2118"/>
+		<edge pos-x="-1223" pos-y="1808"/>
+		<edge pos-x="-1219" pos-y="1476"/>
+		<edge pos-x="-1227" pos-y="1172"/>
+		
+		<edge pos-x="-1258" pos-y="838"/>
+		<edge pos-x="-1288" pos-y="588"/>
+		<edge pos-x="-1341" pos-y="258"/>
+		<edge pos-x="-1369" pos-y="46"/>
+		<edge pos-x="-1399" pos-y="-300"/>
+		
+		<edge pos-x="-1407" pos-y="-522"/>
+		<edge pos-x="-1407" pos-y="-860"/>
+		<edge pos-x="-1398" pos-y="-1106"/>
+		<edge pos-x="-1363" pos-y="-1452"/>
+		<edge pos-x="-1319" pos-y="-1774"/>
+		
+		<edge pos-x="-1447" pos-y="-1996"/>
+		<edge pos-x="-1342" pos-y="-2224"/>
+		<edge pos-x="-1012" pos-y="-2307"/>
+		<edge pos-x="-845" pos-y="-2190"/>
+		<edge pos-x="-818" pos-y="-2147"/>
+		
+		<edge pos-x="-796" pos-y="-2080"/>
+		<edge pos-x="1094" pos-y="-1080"/>
+		<edge pos-x="1290" pos-y="-1180"/>
+		<edge pos-x="1549" pos-y="-1058"/>
+		<edge pos-x="1638" pos-y="-877"/>
+		
+		<edge pos-x="1465" pos-y="-583"/>
+		<edge pos-x="1441" pos-y="-572"/>
+		<edge pos-x="1378" pos-y="-103"/>
+		<edge pos-x="1352" pos-y="228"/>
+		<edge pos-x="1349" pos-y="495"/>
+		
+		<edge pos-x="1358" pos-y="842"/>
+		<edge pos-x="1418" pos-y="1432"/>
+		<edge pos-x="1458" pos-y="1667"/>
+		<edge pos-x="1506" pos-y="2009"/>
+		<edge pos-x="1539" pos-y="2593"/>
+		
+		<edge pos-x="1541" pos-y="4381"/>
+		<edge pos-x="1479" pos-y="4379"/>
+		<edge pos-x="1502" pos-y="4448"/>
+		<edge pos-x="1557" pos-y="4510"/>
+		<edge pos-x="1655" pos-y="4555"/>
+		
+		<edge pos-x="3272" pos-y="4555"/>
+	</map>
 	<map type="building">
 		<building model="hauntedhouse" pos-x="0" pos-y="5" rot="0"/>
 		<building model="smallhouse" pos-x="20" pos-y="0" rot="15"/>

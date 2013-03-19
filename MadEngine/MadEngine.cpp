@@ -24,19 +24,20 @@ void MadEngine::Start()
     //Start the MadEngine
     //-------------------------------------------------------------------------------------------------
 
-    if (_gameState != gs_Uninitialized)
+    if (GameStates::CurrentState() != GameStates::Uninitialized)
         return;
 
-    _mainWindow.create(sf::VideoMode(1024,800,32),"The Survivor");
+    _mainWindow.create(sf::VideoMode(1024,768,32),"The Survivor", sf::Style::Fullscreen);
     _mainWindow.setFramerateLimit(60);
     _mainWindow.setVerticalSyncEnabled(true);
+    _mainWindow.setMouseCursorVisible(false);
 
-    _gameState = gs_ShowingSplash;
+    _GUI        = new GUIFactory(&_mainWindow);
+    _GUI->initialize();
 
-    while (_gameState != gs_Exiting)
-    {
-        MainLoop();
-    }
+    GameStates::ChangeState(GameStates::Splash);
+
+    MainLoop();
 
     _mainWindow.close();
 }
@@ -46,12 +47,13 @@ void MadEngine::GameLoader()
     //-------------------------------------------------------------------------------------------------
     //Load All Game Objects
     //-------------------------------------------------------------------------------------------------
-
+    if (Game == NULL){
     Game        = new GameFactory(&_mainWorld, &_mainWindow);
     _mainWorld.SetContactListener(&_ContactListener);
 
 
-    _gameState  = gs_Playing;
+    GameStates::ChangeState(GameStates::Play);
+    }
 }
 
 void MadEngine::GamePlayLogic()
@@ -63,6 +65,7 @@ void MadEngine::GamePlayLogic()
     _mainWorld.Step(1/60.f,6,2); // Run The Simulation
 
     Game->Update();
+    Game->Draw();
 }
 
 void MadEngine::SplashScreen()
@@ -71,7 +74,7 @@ void MadEngine::SplashScreen()
     //Splash Screen
     //-------------------------------------------------------------------------------------------------
 
-    _gameState  = gs_ShowingMenu;
+    GameStates::ChangeState(GameStates::Menu);
 }
 
 void MadEngine::MainMenuScreen()
@@ -80,7 +83,7 @@ void MadEngine::MainMenuScreen()
     //Menu Screen
     //-------------------------------------------------------------------------------------------------
 
-    _gameState = gs_Loading; //Must Call LoadScreen() function before start the GamePlay()
+    //ChangeState(gs_Loading); //Must Call LoadScreen() function before start the GamePlay()
 }
 
 void MadEngine::InGameMenuScreen()
@@ -96,13 +99,12 @@ void MadEngine::LoadScreen()
     //Display The Loading Screen
     //-------------------------------------------------------------------------------------------------
 
-
     //-------------------------------------------------------------------------------------------------
     //Call The GameLoader() function
     //-------------------------------------------------------------------------------------------------
     GameLoader();
 
-    _gameState  = gs_Playing; //Proceed to the playing screen
+    GameStates::ChangeState(GameStates::Play); //Proceed to the playing screen
 }
 
 void MadEngine::GameHUD()
@@ -132,66 +134,82 @@ void MadEngine::MainLoop()
 
     newDebugDraw.setRenderWindow(_mainWindow);
     _mainWorld.SetDebugDraw(&newDebugDraw);
-    _EventListener  = new sf::Event;
 
     while (_mainWindow.isOpen())
     {
-        _mainWindow.pollEvent(*_EventListener);
+        _mainWindow.pollEvent(_EventListener);
 
-        switch (_gameState)
+        _mainWindow.clear(sf::Color::White);
+        _mainWindow.pushGLStates();
+
+        switch (GameStates::CurrentState())
         {
-            case gs_Uninitialized:
+            case GameStates::Uninitialized:
             {
-                _gameState = gs_Exiting;
+                GameStates::ChangeState(GameStates::Exit);
+                break;
             }
 
-            case gs_ShowingSplash:
+            case GameStates::Splash:
             {
                 SplashScreen();         //Show The Spalsh Screen
                 break;
             }
 
-            case gs_ShowingMenu:
+            case GameStates::Menu:
             {
                 MainMenuScreen();       //Show The Menu Screen
                 break;
             }
 
-            case gs_Paused:
+            case GameStates::Pause:
             {
                 _mainWorld.Step(0,0,0); //Pause The Simulation
-
+                Game->Draw();
                 InGameMenuScreen();     //Show The Pause Menu
-
-                _mainWorld.Step(1/60.f, 6, 2);//Continue Simulation
+                break;
             }
 
-            case gs_Loading:
+            case GameStates::Resume:
+            {
+                GameStates::ChangeState(GameStates::Play);
+                break;
+            }
+
+            case GameStates::Load:
             {
                 LoadScreen();           //Load The Game
                 break;
             }
-            case gs_Playing:
+            case GameStates::Play:
             {
-                _mainWindow.clear(sf::Color::White);
-
                 GamePlay();             //Play The Game
-
                 DebugRender();
                 _mainCamera.setCenter(Game->getPlayerPosition());
                 //_mainCamera.setRotation(MadFactory->getPlayerRotation());
                 _mainWindow.setView(_mainCamera);
-                _mainWindow.display();
+
+                if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape))   GameStates::ChangeState(GameStates::Pause);
+
+                break;
+            }
+
+            case GameStates::Exit:
+            {
+                delete Game;
+                _mainWindow.close();
+                exit(false);
                 break;
             }
         }
-        if (_EventListener->type == sf::Event::Closed)
-        {
-            delete Game;
-            delete _EventListener;
-            _mainWindow.close();
-            exit(false);
-        }
+
+        _mainWindow.popGLStates();
+
+        _GUI->update(_EventListener);
+        _GUI->draw();
+
+        _mainWindow.display();
+
     }
 }
 
@@ -271,11 +289,9 @@ void MadEngine::DebugRender()
 }
 
 
-MadEngine::gameState MadEngine::_gameState = MadEngine::gs_Uninitialized;
-
 sf::RenderWindow MadEngine::_mainWindow;
 sf::View MadEngine::_mainCamera;
-sf::Event* MadEngine::_EventListener;
+sf::Event MadEngine::_EventListener;
 
 b2Vec2 Gravity(0.f,0.f);
 b2World MadEngine::_mainWorld(Gravity);
@@ -288,3 +304,4 @@ int MadEngine::playerControl;
 
 GameFactory* MadEngine::Game;
 ContactListener MadEngine::_ContactListener;
+GUIFactory* MadEngine::_GUI;

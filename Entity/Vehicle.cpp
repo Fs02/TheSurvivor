@@ -278,7 +278,7 @@ void Vehicle::controller(int throttleState, int steerState)
     float turnPerStep   = turnPerSec / 60.f;
     float lockAngle     = 40 * DEGTORAD;
     float linearSpeed   = m_Body->GetLinearVelocity().Normalize();
-    lockAngle           = lockAngle - ((linearSpeed/80) * lockAngle);
+    lockAngle           = lockAngle - ((linearSpeed/50) * lockAngle);
 
     float desiredAngle;
     switch (steerState)

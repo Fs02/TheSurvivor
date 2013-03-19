@@ -32,6 +32,14 @@ void StaticObject::createCircleFixture(float radius, b2Vec2 center)
     m_Body->CreateFixture(&shape, 1.f);
 }
 
+void StaticObject::createNodeFixture(b2Vec2 &vertices, int count)
+{
+    b2PolygonShape shape;
+    shape.Set(&vertices, count);
+
+    m_Body->CreateFixture(&shape, 1.f);
+}
+
 void StaticObject::setSprite(sf::Sprite* sprite)
 {
     m_Sprite    = sprite;

@@ -14,10 +14,18 @@
 				<Compiler>
 					<Add option="-g" />
 					<Add directory="D:\CBLIB\Box2D_v2.2.1" />
+					<Add directory="D:\CBLIB\CEGUI-0.7.9\cegui\include" />
 				</Compiler>
 				<Linker>
 					<Add library="D:\CBLIB\Box2D_v2.2.1\Library\libBox2D.a" />
+					<Add library="D:\CBLIB\CEGUI-0.7.9\bin\libCEGUIBase.dll.a" />
+					<Add library="D:\CBLIB\CEGUI-0.7.9\bin\libCEGUIExpatParser.dll.a" />
+					<Add library="D:\CBLIB\CEGUI-0.7.9\bin\libCEGUIFalagardWRBase.dll.a" />
+					<Add library="D:\CBLIB\CEGUI-0.7.9\bin\libCEGUIOpenGLRenderer.dll.a" />
+					<Add library="D:\CBLIB\CEGUI-0.7.9\bin\libCEGUISILLYImageCodec.dll.a" />
+					<Add library="D:\CBLIB\CEGUI-0.7.9\bin\libtolua++.dll.a" />
 					<Add directory="D:\CBLIB\Box2D_v2.2.1" />
+					<Add directory="D:\CBLIB\CEGUI-0.7.9\lib" />
 				</Linker>
 			</Target>
 			<Target title="Release">
@@ -35,10 +43,18 @@
 		</Build>
 		<Compiler>
 			<Add option="-Wall" />
+			<Add directory="D:\CBLIB\Box2D_v2.2.1" />
+			<Add directory="D:\CBLIB\CEGUI-0.7.9\cegui\include" />
 		</Compiler>
+		<ResourceCompiler>
+			<Add directory="D:\CBLIB\CEGUI-0.7.9\cegui\include" />
+		</ResourceCompiler>
 		<Linker>
 			<Add directory="D:\CBLIB\Box2D_v2.2.1" />
+			<Add directory="D:\CBLIB\CEGUI-0.7.9\lib" />
 		</Linker>
+		<Unit filename="Entity\AICharacter.cpp" />
+		<Unit filename="Entity\AICharacter.hpp" />
 		<Unit filename="Entity\Bullet.cpp" />
 		<Unit filename="Entity\Bullet.hpp" />
 		<Unit filename="Entity\Character.cpp" />
@@ -55,13 +71,21 @@
 		<Unit filename="MadEngine\libs\ContactListener.hpp" />
 		<Unit filename="MadEngine\libs\DebugDraw.cpp" />
 		<Unit filename="MadEngine\libs\DebugDraw.hpp" />
-		<Unit filename="MadEngine\libs\GameFactory.cpp" />
-		<Unit filename="MadEngine\libs\GameFactory.hpp" />
-		<Unit filename="MadEngine\libs\Level.cpp" />
-		<Unit filename="MadEngine\libs\Level.hpp" />
-		<Unit filename="MadEngine\libs\Object.hpp">
+		<Unit filename="MadEngine\libs\GUI.cpp" />
+		<Unit filename="MadEngine\libs\GUI.hpp" />
+		<Unit filename="MadEngine\libs\GUIFactory.cpp" />
+		<Unit filename="MadEngine\libs\GUIFactory.hpp">
 			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
+		<Unit filename="MadEngine\libs\GameFactory.cpp" />
+		<Unit filename="MadEngine\libs\GameFactory.hpp" />
+		<Unit filename="MadEngine\libs\GameStates.cpp" />
+		<Unit filename="MadEngine\libs\GameStates.hpp">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="MadEngine\libs\Level.cpp" />
+		<Unit filename="MadEngine\libs\Level.hpp" />
+		<Unit filename="MadEngine\libs\Object.hpp" />
 		<Unit filename="MadEngine\libs\SpriteFactory.cpp" />
 		<Unit filename="MadEngine\libs\SpriteFactory.hpp" />
 		<Unit filename="MadEngine\libs\StaticObject.cpp" />
@@ -72,6 +96,8 @@
 		<Unit filename="libs\rapidxml\rapidxml_iterators.hpp" />
 		<Unit filename="libs\rapidxml\rapidxml_print.hpp" />
 		<Unit filename="libs\rapidxml\rapidxml_utils.hpp" />
+		<Unit filename="path\path.cpp" />
+		<Unit filename="path\path.hpp" />
 		<Extensions>
 			<code_completion />
 			<debugger />

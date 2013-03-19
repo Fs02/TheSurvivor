@@ -6,6 +6,8 @@
 #include <SFML/Window.hpp>
 #include <SFML/Audio.hpp>
 
+#include <CEGUI.h>
+
 #include <Box2D/Box2D.h>
 
 #include "../libs/rapidxml/rapidxml.hpp"

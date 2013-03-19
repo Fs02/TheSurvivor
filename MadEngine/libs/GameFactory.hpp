@@ -5,6 +5,7 @@
 #include "SpriteFactory.hpp"
 #include "../../Entity/Vehicle.hpp"
 #include "../../Entity/Character.hpp"
+#include "../../Entity/AICharacter.hpp"
 #include "AniSprite.hpp"
 #include "Level.hpp"
 #include "../../Level/Level1.hpp"
@@ -16,6 +17,7 @@ private:
     sf::RenderWindow* m_Window;
 
     std::vector<Vehicle*> m_VehicleList;
+    std::vector<AICharacter*> m_AICharacter;
     Character* Player;
 
     SpriteFactory m_SpriteFactory;
@@ -27,6 +29,8 @@ public:
     ~GameFactory();
 
     void Update();
+    void Draw();
+
     Character* getCharacter();
     sf::Vector2f getPlayerPosition();
     float getPlayerRotation();

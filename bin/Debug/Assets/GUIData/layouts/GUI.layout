@@ -1,0 +1,104 @@
+<GUILayout>
+    <Window Name="DefaultWindow" Type="DefaultWindow">
+        <Property Name="UnifiedAreaRect" Value="{{0,0},{0,0},{1,0},{1,0}}" />
+        <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+        <Window Name="DefaultWindow/Menu" Type="DefaultWindow">
+            <Property Name="UnifiedAreaRect" Value="{{0,0},{0,0},{1,0},{1,0}}" />
+            <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+            <Window Name="DefaultWindow/Menu/PoweredLogo" Type="TaharezLook/StaticImage">
+                <Property Name="UnifiedAreaRect" Value="{{0,0},{0,44},{0.330078,168},{0.153646,66}}" />
+                <Property Name="Image" Value="set:MadEngine image:PoweredLogo" />
+                <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+                <Property Name="FrameEnabled" Value="False" />
+                <Property Name="BackgroundEnabled" Value="False" />
+                <Property Name="HorizontalAlignment" Value="Centre" />
+            </Window>
+            <Window Name="DefaultWindow/Menu/Quit" Type="TaharezLook/Button">
+                <Property Name="UnifiedAreaRect" Value="{{0,0},{0,340},{0,218},{0,380}}" />
+                <Property Name="Text" Value="QUIT" />
+                <Property Name="HorizontalAlignment" Value="Centre" />
+            </Window>
+            <Window Name="DefaultWindow/Menu/Start" Type="TaharezLook/Button">
+                <Property Name="UnifiedAreaRect" Value="{{0,0},{0,240},{0,218},{0,280}}" />
+                <Property Name="Text" Value="START" />
+                <Property Name="HorizontalAlignment" Value="Centre" />
+            </Window>
+            <Window Name="DefaultWindow/Menu/Options" Type="TaharezLook/Button">
+                <Property Name="UnifiedAreaRect" Value="{{0,0},{0,290.5},{0,218},{0,330.5}}" />
+                <Property Name="Text" Value="Options" />
+                <Property Name="HorizontalAlignment" Value="Centre" />
+            </Window>
+        </Window>
+        <Window Name="DefaultWindow/Options" Type="DefaultWindow">
+            <Property Name="UnifiedAreaRect" Value="{{0,0},{0,0},{1,0},{1,0}}" />
+            <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+            <Window Name="DefaultWindow/Options/Apply" Type="TaharezLook/Button">
+                <Property Name="UnifiedAreaRect" Value="{{0,-60},{0,-40},{0,158},{0,0}}" />
+                <Property Name="Text" Value="Apply" />
+                <Property Name="VerticalAlignment" Value="Bottom" />
+                <Property Name="HorizontalAlignment" Value="Right" />
+            </Window>
+            <Window Name="DefaultWindow/Options/Back" Type="TaharezLook/Button">
+                <Property Name="UnifiedAreaRect" Value="{{0,-312},{0,-40},{0,-94},{0,0}}" />
+                <Property Name="Text" Value="Back" />
+                <Property Name="VerticalAlignment" Value="Bottom" />
+                <Property Name="HorizontalAlignment" Value="Right" />
+            </Window>
+            <Window Name="DefaultWindow/Options/Header" Type="TaharezLook/StaticImage">
+                <Property Name="UnifiedAreaRect" Value="{{0,56},{0,44},{0.371094,56},{0.148438,44}}" />
+                <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+                <Property Name="FrameEnabled" Value="False" />
+                <Property Name="BackgroundEnabled" Value="False" />
+                <Property Name="RiseOnClick" Value="False" />
+				<Property Name="Image" Value="set:MadEngine image:Options" />
+            </Window>
+            <Window Name="DefaultWindow/Options/PoweredLogo" Type="TaharezLook/StaticImage">
+                <Property Name="UnifiedAreaRect" Value="{{0.0322266,0},{-0.0182292,1.07288e-006},{0.0322266,352},{-0.0182292,92}}" />
+                <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+                <Property Name="FrameEnabled" Value="False" />
+                <Property Name="BackgroundEnabled" Value="False" />
+                <Property Name="VerticalAlignment" Value="Bottom" />
+				<Property Name="Image" Value="set:MadEngine image:PoweredLogo" />
+            </Window>
+        </Window>
+		<Window Name="DefaultWindow/Loading" Type="DefaultWindow">
+            <Property Name="UnifiedAreaRect" Value="{{0,0},{0,0},{1,0},{1,0}}" />
+            <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+            <Window Name="DefaultWindow/Loading/PoweredLogo" Type="TaharezLook/StaticImage">
+                <Property Name="UnifiedAreaRect" Value="{{0.0322266,0},{-0.0182292,1.07288e-006},{0.0322266,352},{-0.0182292,92}}" />
+                <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+                <Property Name="FrameEnabled" Value="False" />
+                <Property Name="BackgroundEnabled" Value="False" />
+                <Property Name="VerticalAlignment" Value="Bottom" />
+				<Property Name="Image" Value="set:MadEngine image:PoweredLogo" />
+            </Window>
+            <Window Name="DefaultWindow/Loading/LoadingBar" Type="TaharezLook/StaticImage">
+                <Property Name="UnifiedAreaRect" Value="{{-0.0341797,0},{-0.0182292,1.07288e-006},{-0.133789,352},{-0.0364584,92}}" />
+                <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+                <Property Name="FrameEnabled" Value="False" />
+                <Property Name="BackgroundEnabled" Value="False" />
+                <Property Name="VerticalAlignment" Value="Bottom" />
+                <Property Name="HorizontalAlignment" Value="Right" />
+				<Property Name="Image" Value="set:MadEngine image:Loading" />
+            </Window>
+        </Window>
+        <Window Name="DefaultWindow/Pause" Type="TaharezLook/FrameWindow">
+            <Property Name="UnifiedAreaRect" Value="{{0,0},{0,0},{0,332},{0,308}}" />
+            <Property Name="Text" Value="Pause" />
+            <Property Name="RollUpEnabled" Value="False" />
+            <Property Name="VerticalAlignment" Value="Centre" />
+            <Property Name="CloseButtonEnabled" Value="False" />
+            <Property Name="HorizontalAlignment" Value="Centre" />
+            <Window Name="DefaultWindow/Pause/Resume" Type="TaharezLook/Button">
+                <Property Name="UnifiedAreaRect" Value="{{0,0},{0,11},{0,218},{0,51}}" />
+                <Property Name="Text" Value="Resume" />
+                <Property Name="HorizontalAlignment" Value="Centre" />
+            </Window>
+            <Window Name="DefaultWindow/Pause/Quit" Type="TaharezLook/Button">
+                <Property Name="UnifiedAreaRect" Value="{{0,0},{0,66},{0,218},{0,106}}" />
+                <Property Name="Text" Value="Quit" />
+                <Property Name="HorizontalAlignment" Value="Centre" />
+            </Window>
+        </Window>
+    </Window>
+</GUILayout>

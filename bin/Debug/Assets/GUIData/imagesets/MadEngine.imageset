@@ -1,0 +1,5 @@
+<Imageset AutoScaled="false" Imagefile="MadEngine.png" Name="MadEngine" NativeHorzRes="800" NativeVertRes="600">
+    <Image Height="139" Name="PoweredLogo" Width="515" XPos="0" YPos="1" />
+    <Image Height="96" Name="Options" Width="251" XPos="0" YPos="140" />
+    <Image Height="96" Name="Loading" Width="264" XPos="251" YPos="140" />
+</Imageset>
