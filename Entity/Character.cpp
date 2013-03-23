@@ -10,7 +10,7 @@ Character::Character(b2World* World, sf::RenderWindow* Window, sf::Sprite* sprit
     m_Body          = World->CreateBody(&def);
 
     b2PolygonShape shape;
-    shape.SetAsBox(0.4,0.2);
+    shape.SetAsBox(0.25,0.2);
 
     b2FixtureDef fixDef;
     fixDef.shape    = &shape;
@@ -22,8 +22,8 @@ Character::Character(b2World* World, sf::RenderWindow* Window, sf::Sprite* sprit
     circleShape.m_radius = 1.5f;
     fixDef.shape    = &circleShape;
     fixDef.isSensor = true;
-    fixDef.filter.categoryBits = H_VEHICLE_SENSOR;
-    fixDef.density  = 0.f;
+    fixDef.filter.categoryBits = ENEMY_CENCOR;
+    fixDef.density  = 1.f;
     m_Body->CreateFixture(&fixDef);
     m_Body->SetUserData(this);
 
@@ -31,9 +31,15 @@ Character::Character(b2World* World, sf::RenderWindow* Window, sf::Sprite* sprit
     isDrive         = false;
 
     m_AniSprite     = new AniSprite(spriteSheet, fwidth, fheight);
-    m_AniSprite->SetLoopSpeed(30);
+    m_AniSprite->SetLoopSpeed(10);
+    m_AniSprite->setOrigin(64,76);
+    m_AniSprite->SetInvert(true);
 
     keyTemp         = 0;
+
+    footStepsBuffer.loadFromFile("Audio//SFX//footsteps.ogg");
+    footStepsFX.setBuffer(footStepsBuffer);
+    footStepsFX.setLoop(true);
 }
 
 Character::~Character()
@@ -46,10 +52,14 @@ void Character::updateAll()
     updateFriction();
     int walkState = 0;
     int turnState = 0;
-    if (sf::Keyboard::isKeyPressed(sf::Keyboard::W))    walkState = FOWARD;
-    if (sf::Keyboard::isKeyPressed(sf::Keyboard::S))    walkState = BACKWARD;
-    if (sf::Keyboard::isKeyPressed(sf::Keyboard::A))    turnState = TURNLEFT;
-    if (sf::Keyboard::isKeyPressed(sf::Keyboard::D))    turnState = TURNRIGHT;
+    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up))           walkState = FOWARD;
+    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down))         walkState = BACKWARD;
+    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left))         turnState = TURNLEFT;
+    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right))        turnState = TURNRIGHT;
+
+    if (sf::Keyboard::isKeyPressed(sf::Keyboard::LControl))     isAttacking = true;
+    else                                                        isAttacking = false;
+
     controller(walkState, turnState);
 }
 
@@ -91,26 +101,27 @@ void Character::setTransform(float _x, float _y, float _deg)
 {
     m_Body->SetTransform(b2Vec2(_x * RATIO, _y *RATIO), _deg * DEGTORAD);
 }
+
 void Character::controller(int walkState, int turnState)
 {
     b2Vec2 desiredVelocity;
     b2Vec2 vel = m_Body->GetLinearVelocity();
 
     b2Vec2 direction ;
+    PlayerState State = STEADY;
     float desiredAngle = m_Body->GetAngle();
-    int animState = IDLE;
-    if (walkState == FOWARD)   { animState = FOWARD;   direction = m_Body->GetWorldVector(b2Vec2(0,1.f)); }
-    if (walkState == BACKWARD) { animState = BACKWARD; direction = m_Body->GetWorldVector(b2Vec2(0,-1.f)); }
-    if (turnState == TURNLEFT)  desiredAngle += 5.f * DEGTORAD;
-    if (turnState == TURNRIGHT) desiredAngle += -5.f * DEGTORAD;
+    if (walkState == FOWARD)   { State = WALK; direction = m_Body->GetWorldVector(b2Vec2(0,1.f));  }
+    if (walkState == BACKWARD) { State = WALK; direction = m_Body->GetWorldVector(b2Vec2(0,-1.f)); }
+    if (turnState == TURNLEFT)  desiredAngle += -5.f * DEGTORAD;
+    if (turnState == TURNRIGHT) desiredAngle += 5.f * DEGTORAD;
 
-    playAnim(animState);
+    runState(State);
     m_AniSprite->Update();
     draw();
 
     desiredVelocity = m_Body->GetWorldVector(direction);
 
-    m_Body->ApplyLinearImpulse( direction , m_Body->GetWorldCenter());
+    m_Body->ApplyLinearImpulse(direction , m_Body->GetWorldCenter());
     m_Body->ApplyLinearImpulse(-0.1 * m_Body->GetMass() * m_Body->GetLinearVelocity(), m_Body->GetWorldCenter());
 
 
@@ -145,17 +156,27 @@ void Character::controller(int walkState, int turnState)
     VehicleCache.clear();
 }
 
-void Character::playAnim(int animState)
+void Character::runState(PlayerState State)
 {
-    if (m_AnimState != animState)
+    if (isAttacking)
     {
-        m_AnimState = animState;
-        switch (animState)
+        if (State == WALK)   State   = WALK_SHOOT;
+        if (State == STEADY) State   = STAND_SHOOT;
+    }
+
+    if (CurrentState != State)
+    {
+        CurrentState    = State;
+        switch (State)
         {
-            case IDLE       : m_AniSprite->Play(4, 4);  break;
-            case FOWARD     : m_AniSprite->Play(0, 15); break;
-            case BACKWARD   : m_AniSprite->Play(0, 15); break;
+            case STAND      : m_AniSprite->Play(0, 0);  break;
+            case STEADY     : m_AniSprite->Play(1, 1);  break;
+            case STAND_SHOOT: m_AniSprite->Play(2, 9);  break;
+            case WALK       : m_AniSprite->Play(10,17); break;
+            case WALK_SHOOT : m_AniSprite->Play(18,25); break;
+            case THROW      : m_AniSprite->Play(26,30); break;
         }
+        prevState   = CurrentState;
     }
 }
 
@@ -184,4 +205,11 @@ float Character::getRotation()
 {
     if (isDrive)    return m_Vehicle->getAngle();
     else            return m_Body->GetAngle() * RADTODEG;
+}
+
+b2Vec2 Character::b2_getPositon()
+{
+    //if (isDrive)    return m_Vehicle->getPosition();
+    //else
+    return m_Body->GetPosition();
 }

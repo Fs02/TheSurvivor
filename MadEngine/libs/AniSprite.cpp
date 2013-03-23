@@ -130,7 +130,18 @@ void AniSprite::setRotation(float angle)
     m_Sprite->setRotation(angle);
 }
 
+void AniSprite::setOrigin(float x, float y)
+{
+    m_Sprite->setOrigin(x,y);
+}
+
+void AniSprite::SetInvert(bool invert)
+{
+    isInvert    = invert;
+}
+
 void AniSprite::Draw(sf::RenderWindow* Window)
 {
+    if (isInvert)   m_Sprite->setRotation(m_Sprite->getRotation()+180);
     Window->draw(*m_Sprite);
 }

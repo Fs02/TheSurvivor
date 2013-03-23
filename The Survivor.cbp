@@ -13,6 +13,7 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-g" />
+					<Add option="-DSFML_STATIC" />
 					<Add directory="D:\CBLIB\Box2D_v2.2.1" />
 					<Add directory="D:\CBLIB\CEGUI-0.7.9\cegui\include" />
 				</Compiler>
@@ -24,6 +25,10 @@
 					<Add library="D:\CBLIB\CEGUI-0.7.9\bin\libCEGUIOpenGLRenderer.dll.a" />
 					<Add library="D:\CBLIB\CEGUI-0.7.9\bin\libCEGUISILLYImageCodec.dll.a" />
 					<Add library="D:\CBLIB\CEGUI-0.7.9\bin\libtolua++.dll.a" />
+					<Add library="D:\CBLIB\SFML-2.0-rc\lib\libsfml-audio-s.a" />
+					<Add library="D:\CBLIB\SFML-2.0-rc\lib\libsfml-graphics-s.a" />
+					<Add library="D:\CBLIB\SFML-2.0-rc\lib\libsfml-system-s.a" />
+					<Add library="D:\CBLIB\SFML-2.0-rc\lib\libsfml-window-s.a" />
 					<Add directory="D:\CBLIB\Box2D_v2.2.1" />
 					<Add directory="D:\CBLIB\CEGUI-0.7.9\lib" />
 				</Linker>
@@ -35,9 +40,24 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-O2" />
+					<Add directory="D:\CBLIB\Box2D_v2.2.1" />
+					<Add directory="D:\CBLIB\CEGUI-0.7.9\cegui\include" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
+					<Add library="D:\CBLIB\Box2D_v2.2.1\Library\libBox2D.a" />
+					<Add library="D:\CBLIB\CEGUI-0.7.9\bin\libCEGUIBase.dll.a" />
+					<Add library="D:\CBLIB\CEGUI-0.7.9\bin\libCEGUIExpatParser.dll.a" />
+					<Add library="D:\CBLIB\CEGUI-0.7.9\bin\libCEGUIFalagardWRBase.dll.a" />
+					<Add library="D:\CBLIB\CEGUI-0.7.9\bin\libCEGUIOpenGLRenderer.dll.a" />
+					<Add library="D:\CBLIB\CEGUI-0.7.9\bin\libCEGUISILLYImageCodec.dll.a" />
+					<Add library="D:\CBLIB\CEGUI-0.7.9\bin\libtolua++.dll.a" />
+					<Add library="D:\CBLIB\SFML-2.0-rc\lib\libsfml-graphics-s.a" />
+					<Add library="D:\CBLIB\SFML-2.0-rc\lib\libsfml-window-s.a" />
+					<Add library="D:\CBLIB\SFML-2.0-rc\lib\libsfml-audio-s.a" />
+					<Add library="D:\CBLIB\SFML-2.0-rc\lib\libsfml-system-s.a" />
+					<Add directory="D:\CBLIB\Box2D_v2.2.1" />
+					<Add directory="D:\CBLIB\CEGUI-0.7.9\lib" />
 				</Linker>
 			</Target>
 		</Build>
@@ -61,10 +81,16 @@
 		<Unit filename="Entity\Character.hpp" />
 		<Unit filename="Entity\Vehicle.cpp" />
 		<Unit filename="Entity\Vehicle.hpp" />
+		<Unit filename="Entity\Zombie.cpp" />
+		<Unit filename="Entity\Zombie.hpp" />
 		<Unit filename="Level\Level1.hpp" />
+		<Unit filename="MadEngine\Common\Vector2.hpp" />
 		<Unit filename="MadEngine\Global.hpp" />
 		<Unit filename="MadEngine\MadEngine.cpp" />
 		<Unit filename="MadEngine\MadEngine.hpp" />
+		<Unit filename="MadEngine\System.hpp">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
 		<Unit filename="MadEngine\libs\AniSprite.cpp" />
 		<Unit filename="MadEngine\libs\AniSprite.hpp" />
 		<Unit filename="MadEngine\libs\ContactListener.cpp" />
@@ -74,15 +100,11 @@
 		<Unit filename="MadEngine\libs\GUI.cpp" />
 		<Unit filename="MadEngine\libs\GUI.hpp" />
 		<Unit filename="MadEngine\libs\GUIFactory.cpp" />
-		<Unit filename="MadEngine\libs\GUIFactory.hpp">
-			<Option target="&lt;{~None~}&gt;" />
-		</Unit>
+		<Unit filename="MadEngine\libs\GUIFactory.hpp" />
 		<Unit filename="MadEngine\libs\GameFactory.cpp" />
 		<Unit filename="MadEngine\libs\GameFactory.hpp" />
 		<Unit filename="MadEngine\libs\GameStates.cpp" />
-		<Unit filename="MadEngine\libs\GameStates.hpp">
-			<Option target="&lt;{~None~}&gt;" />
-		</Unit>
+		<Unit filename="MadEngine\libs\GameStates.hpp" />
 		<Unit filename="MadEngine\libs\Level.cpp" />
 		<Unit filename="MadEngine\libs\Level.hpp" />
 		<Unit filename="MadEngine\libs\Object.hpp" />
@@ -96,8 +118,6 @@
 		<Unit filename="libs\rapidxml\rapidxml_iterators.hpp" />
 		<Unit filename="libs\rapidxml\rapidxml_print.hpp" />
 		<Unit filename="libs\rapidxml\rapidxml_utils.hpp" />
-		<Unit filename="path\path.cpp" />
-		<Unit filename="path\path.hpp" />
 		<Extensions>
 			<code_completion />
 			<debugger />

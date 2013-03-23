@@ -1,230 +1,230 @@
-19/03/2013 20:59:07 (Std) 	+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-19/03/2013 20:59:07 (Std) 	+                     Crazy Eddie's GUI System - Event log                    +
-19/03/2013 20:59:07 (Std) 	+                          (http://www.cegui.org.uk/)                         +
-19/03/2013 20:59:07 (Std) 	+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+20/03/2013 10:08:42 (Std) 	+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+20/03/2013 10:08:42 (Std) 	+                     Crazy Eddie's GUI System - Event log                    +
+20/03/2013 10:08:42 (Std) 	+                          (http://www.cegui.org.uk/)                         +
+20/03/2013 10:08:42 (Std) 	+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
 
-19/03/2013 20:59:07 (Std) 	CEGUI::Logger singleton created. (01997DF8)
-19/03/2013 20:59:07 (Std) 	
-19/03/2013 20:59:07 (Std) 	********************************************************************************
-19/03/2013 20:59:07 (Std) 	* Important:                                                                   *
-19/03/2013 20:59:07 (Std) 	*     To get support at the CEGUI forums, you must post _at least_ the section *
-19/03/2013 20:59:07 (Std) 	*     of this log file indicated below.  Failure to do this will result in no  *
-19/03/2013 20:59:07 (Std) 	*     support being given; please do not waste our time.                       *
-19/03/2013 20:59:07 (Std) 	********************************************************************************
-19/03/2013 20:59:07 (Std) 	********************************************************************************
-19/03/2013 20:59:07 (Std) 	* -------- START OF ESSENTIAL SECTION TO BE POSTED ON THE FORUM       -------- *
-19/03/2013 20:59:07 (Std) 	********************************************************************************
-19/03/2013 20:59:07 (Std) 	---- Version 0.7.9 (Build: Mar 12 2013 Microsoft Windows g++ 4.4.1 32 bit) ----
-19/03/2013 20:59:07 (Std) 	---- Renderer module is: CEGUI::OpenGLRenderer - Official OpenGL based 2nd generation renderer module.  TextureTarget support enabled via FBO extension. ----
-19/03/2013 20:59:07 (Std) 	---- XML Parser module is: CEGUI::ExpatParser - Official expat based parser module for CEGUI ----
-19/03/2013 20:59:07 (Std) 	---- Image Codec module is: SILLYImageCodec - Official SILLY based image codec ----
-19/03/2013 20:59:07 (Std) 	---- Scripting module is: None ----
-19/03/2013 20:59:07 (Std) 	********************************************************************************
-19/03/2013 20:59:07 (Std) 	* -------- END OF ESSENTIAL SECTION TO BE POSTED ON THE FORUM         -------- *
-19/03/2013 20:59:07 (Std) 	********************************************************************************
-19/03/2013 20:59:07 (Std) 	
-19/03/2013 20:59:07 (Std) 	---- Begining CEGUI System initialisation ----
-19/03/2013 20:59:07 (Std) 	CEGUI::ImagesetManager singleton created (00C504A0)
-19/03/2013 20:59:07 (Std) 	CEGUI::FontManager singleton created. (019A1750)
-19/03/2013 20:59:07 (Std) 	CEGUI::WindowFactoryManager singleton created
-19/03/2013 20:59:07 (Std) 	CEGUI::WindowManager singleton created (019A1828)
-19/03/2013 20:59:07 (Std) 	CEGUI::SchemeManager singleton created. (019A1A90)
-19/03/2013 20:59:07 (Std) 	CEGUI::MouseCursor singleton created. (00C581A8)
-19/03/2013 20:59:07 (Std) 	CEGUI::GlobalEventSet singleton created. (01990E70)
-19/03/2013 20:59:07 (Std) 	CEGUI::AnimationManager singleton created (00C511E8)
-19/03/2013 20:59:07 (Std) 	CEGUI::WidgetLookManager singleton created. (019A23A8)
-19/03/2013 20:59:07 (Std) 	CEGUI::WindowRendererManager singleton created (019A23E8)
-19/03/2013 20:59:07 (Std) 	CEGUI::RenderEffectManager singleton created (0199FFD0)
-19/03/2013 20:59:07 (Std) 	Created WindowFactory for 'DefaultWindow' windows.
-19/03/2013 20:59:07 (Std) 	WindowFactory for 'DefaultWindow' windows added. (019A2DC0)
-19/03/2013 20:59:07 (Std) 	Created WindowFactory for 'DragContainer' windows.
-19/03/2013 20:59:07 (Std) 	WindowFactory for 'DragContainer' windows added. (019A2A18)
-19/03/2013 20:59:07 (Std) 	Created WindowFactory for 'ScrolledContainer' windows.
-19/03/2013 20:59:07 (Std) 	WindowFactory for 'ScrolledContainer' windows added. (019A2AC0)
-19/03/2013 20:59:07 (Std) 	Created WindowFactory for 'ClippedContainer' windows.
-19/03/2013 20:59:07 (Std) 	WindowFactory for 'ClippedContainer' windows added. (019A36B0)
-19/03/2013 20:59:07 (Std) 	Created WindowFactory for 'CEGUI/Checkbox' windows.
-19/03/2013 20:59:07 (Std) 	WindowFactory for 'CEGUI/Checkbox' windows added. (019A3758)
-19/03/2013 20:59:07 (Std) 	Created WindowFactory for 'CEGUI/PushButton' windows.
-19/03/2013 20:59:07 (Std) 	WindowFactory for 'CEGUI/PushButton' windows added. (019A3800)
-19/03/2013 20:59:07 (Std) 	Created WindowFactory for 'CEGUI/RadioButton' windows.
-19/03/2013 20:59:07 (Std) 	WindowFactory for 'CEGUI/RadioButton' windows added. (019A38A8)
-19/03/2013 20:59:07 (Std) 	Created WindowFactory for 'CEGUI/Combobox' windows.
-19/03/2013 20:59:07 (Std) 	WindowFactory for 'CEGUI/Combobox' windows added. (019A3950)
-19/03/2013 20:59:07 (Std) 	Created WindowFactory for 'CEGUI/ComboDropList' windows.
-19/03/2013 20:59:07 (Std) 	WindowFactory for 'CEGUI/ComboDropList' windows added. (019A39F8)
-19/03/2013 20:59:07 (Std) 	Created WindowFactory for 'CEGUI/Editbox' windows.
-19/03/2013 20:59:07 (Std) 	WindowFactory for 'CEGUI/Editbox' windows added. (019A3AA0)
-19/03/2013 20:59:07 (Std) 	Created WindowFactory for 'CEGUI/FrameWindow' windows.
-19/03/2013 20:59:07 (Std) 	WindowFactory for 'CEGUI/FrameWindow' windows added. (019A63D0)
-19/03/2013 20:59:07 (Std) 	Created WindowFactory for 'CEGUI/ItemEntry' windows.
-19/03/2013 20:59:07 (Std) 	WindowFactory for 'CEGUI/ItemEntry' windows added. (019A6478)
-19/03/2013 20:59:07 (Std) 	Created WindowFactory for 'CEGUI/Listbox' windows.
-19/03/2013 20:59:07 (Std) 	WindowFactory for 'CEGUI/Listbox' windows added. (019A6520)
-19/03/2013 20:59:07 (Std) 	Created WindowFactory for 'CEGUI/ListHeader' windows.
-19/03/2013 20:59:07 (Std) 	WindowFactory for 'CEGUI/ListHeader' windows added. (019A6E00)
-19/03/2013 20:59:07 (Std) 	Created WindowFactory for 'CEGUI/ListHeaderSegment' windows.
-19/03/2013 20:59:07 (Std) 	WindowFactory for 'CEGUI/ListHeaderSegment' windows added. (019A7368)
-19/03/2013 20:59:07 (Std) 	Created WindowFactory for 'CEGUI/Menubar' windows.
-19/03/2013 20:59:07 (Std) 	WindowFactory for 'CEGUI/Menubar' windows added. (019A7DE8)
-19/03/2013 20:59:07 (Std) 	Created WindowFactory for 'CEGUI/PopupMenu' windows.
-19/03/2013 20:59:07 (Std) 	WindowFactory for 'CEGUI/PopupMenu' windows added. (019A70C8)
-19/03/2013 20:59:07 (Std) 	Created WindowFactory for 'CEGUI/MenuItem' windows.
-19/03/2013 20:59:07 (Std) 	WindowFactory for 'CEGUI/MenuItem' windows added. (019A7560)
-19/03/2013 20:59:07 (Std) 	Created WindowFactory for 'CEGUI/MultiColumnList' windows.
-19/03/2013 20:59:07 (Std) 	WindowFactory for 'CEGUI/MultiColumnList' windows added. (019A7608)
-19/03/2013 20:59:07 (Std) 	Created WindowFactory for 'CEGUI/MultiLineEditbox' windows.
-19/03/2013 20:59:07 (Std) 	WindowFactory for 'CEGUI/MultiLineEditbox' windows added. (019A72C0)
-19/03/2013 20:59:07 (Std) 	Created WindowFactory for 'CEGUI/ProgressBar' windows.
-19/03/2013 20:59:07 (Std) 	WindowFactory for 'CEGUI/ProgressBar' windows added. (019A7B48)
-19/03/2013 20:59:07 (Std) 	Created WindowFactory for 'CEGUI/ScrollablePane' windows.
-19/03/2013 20:59:07 (Std) 	WindowFactory for 'CEGUI/ScrollablePane' windows added. (019A7800)
-19/03/2013 20:59:07 (Std) 	Created WindowFactory for 'CEGUI/Scrollbar' windows.
-19/03/2013 20:59:07 (Std) 	WindowFactory for 'CEGUI/Scrollbar' windows added. (019A7218)
-19/03/2013 20:59:07 (Std) 	Created WindowFactory for 'CEGUI/Slider' windows.
-19/03/2013 20:59:07 (Std) 	WindowFactory for 'CEGUI/Slider' windows added. (019A7C98)
-19/03/2013 20:59:07 (Std) 	Created WindowFactory for 'CEGUI/Spinner' windows.
-19/03/2013 20:59:07 (Std) 	WindowFactory for 'CEGUI/Spinner' windows added. (019A7170)
-19/03/2013 20:59:07 (Std) 	Created WindowFactory for 'CEGUI/TabButton' windows.
-19/03/2013 20:59:07 (Std) 	WindowFactory for 'CEGUI/TabButton' windows added. (019A78A8)
-19/03/2013 20:59:07 (Std) 	Created WindowFactory for 'CEGUI/TabControl' windows.
-19/03/2013 20:59:07 (Std) 	WindowFactory for 'CEGUI/TabControl' windows added. (019A7950)
-19/03/2013 20:59:07 (Std) 	Created WindowFactory for 'CEGUI/Thumb' windows.
-19/03/2013 20:59:07 (Std) 	WindowFactory for 'CEGUI/Thumb' windows added. (019A7D40)
-19/03/2013 20:59:07 (Std) 	Created WindowFactory for 'CEGUI/Titlebar' windows.
-19/03/2013 20:59:07 (Std) 	WindowFactory for 'CEGUI/Titlebar' windows added. (019A74B8)
-19/03/2013 20:59:07 (Std) 	Created WindowFactory for 'CEGUI/Tooltip' windows.
-19/03/2013 20:59:07 (Std) 	WindowFactory for 'CEGUI/Tooltip' windows added. (019A6ED0)
-19/03/2013 20:59:07 (Std) 	Created WindowFactory for 'CEGUI/ItemListbox' windows.
-19/03/2013 20:59:07 (Std) 	WindowFactory for 'CEGUI/ItemListbox' windows added. (019A7410)
-19/03/2013 20:59:07 (Std) 	Created WindowFactory for 'CEGUI/GroupBox' windows.
-19/03/2013 20:59:07 (Std) 	WindowFactory for 'CEGUI/GroupBox' windows added. (019A76B0)
-19/03/2013 20:59:07 (Std) 	Created WindowFactory for 'CEGUI/Tree' windows.
-19/03/2013 20:59:07 (Std) 	WindowFactory for 'CEGUI/Tree' windows added. (019A7020)
-19/03/2013 20:59:07 (Std) 	Created WindowFactory for 'HorizontalLayoutContainer' windows.
-19/03/2013 20:59:07 (Std) 	WindowFactory for 'HorizontalLayoutContainer' windows added. (019A7758)
-19/03/2013 20:59:07 (Std) 	Created WindowFactory for 'VerticalLayoutContainer' windows.
-19/03/2013 20:59:07 (Std) 	WindowFactory for 'VerticalLayoutContainer' windows added. (019A79F8)
-19/03/2013 20:59:07 (Std) 	Created WindowFactory for 'GridLayoutContainer' windows.
-19/03/2013 20:59:07 (Std) 	WindowFactory for 'GridLayoutContainer' windows added. (019A7AA0)
-19/03/2013 20:59:07 (Std) 	Window type alias named 'DefaultGUISheet' added for window type 'DefaultWindow'.
-19/03/2013 20:59:07 (Std) 	CEGUI::System singleton created. (0199FC48)
-19/03/2013 20:59:07 (Std) 	---- CEGUI System initialisation completed ----
-19/03/2013 20:59:07 (Std) 	
-19/03/2013 20:59:07 (Std) 	Started creation of Scheme from XML specification:
-19/03/2013 20:59:07 (Std) 	---- CEGUI GUIScheme name: TaharezLook
-19/03/2013 20:59:07 (Std) 	Started creation of Imageset from XML specification:
-19/03/2013 20:59:07 (Std) 	---- CEGUI Imageset name: TaharezLook
-19/03/2013 20:59:07 (Std) 	---- Source texture file: TaharezLook.tga in resource group: (Default)
-19/03/2013 20:59:07 (Std) 	Started creation of Font from XML specification:
-19/03/2013 20:59:07 (Std) 	---- CEGUI font name: DejaVuSans-10
-19/03/2013 20:59:07 (Std) 	----       Font type: FreeType
-19/03/2013 20:59:07 (Std) 	----     Source file: DejaVuSans.ttf in resource group: (Default)
-19/03/2013 20:59:07 (Std) 	---- Real point size: 10
-19/03/2013 20:59:07 (Std) 	===== Falagard 'root' element: look and feel parsing begins =====
-19/03/2013 20:59:07 (Std) 	===== Look and feel parsing completed =====
-19/03/2013 20:59:07 (Std) 	No window renderer factories specified for module 'CEGUIFalagardWRBase' - adding all available factories...
-19/03/2013 20:59:07 (Std) 	Created WindowRendererFactory for 'Falagard/Button' WindowRenderers.
-19/03/2013 20:59:07 (Std) 	WindowRendererFactory 'Falagard/Button' added. (019B0178)
-19/03/2013 20:59:07 (Std) 	Created WindowRendererFactory for 'Falagard/Default' WindowRenderers.
-19/03/2013 20:59:07 (Std) 	WindowRendererFactory 'Falagard/Default' added. (019B06B8)
-19/03/2013 20:59:07 (Std) 	Created WindowRendererFactory for 'Falagard/Editbox' WindowRenderers.
-19/03/2013 20:59:07 (Std) 	WindowRendererFactory 'Falagard/Editbox' added. (019AFA40)
-19/03/2013 20:59:07 (Std) 	Created WindowRendererFactory for 'Falagard/FrameWindow' WindowRenderers.
-19/03/2013 20:59:07 (Std) 	WindowRendererFactory 'Falagard/FrameWindow' added. (019AEF18)
-19/03/2013 20:59:07 (Std) 	Created WindowRendererFactory for 'Falagard/ItemEntry' WindowRenderers.
-19/03/2013 20:59:07 (Std) 	WindowRendererFactory 'Falagard/ItemEntry' added. (019AEDC8)
-19/03/2013 20:59:07 (Std) 	Created WindowRendererFactory for 'Falagard/ListHeader' WindowRenderers.
-19/03/2013 20:59:07 (Std) 	WindowRendererFactory 'Falagard/ListHeader' added. (019AFCE0)
-19/03/2013 20:59:07 (Std) 	Created WindowRendererFactory for 'Falagard/ListHeaderSegment' WindowRenderers.
-19/03/2013 20:59:07 (Std) 	WindowRendererFactory 'Falagard/ListHeaderSegment' added. (019AF650)
-19/03/2013 20:59:07 (Std) 	Created WindowRendererFactory for 'Falagard/Listbox' WindowRenderers.
-19/03/2013 20:59:07 (Std) 	WindowRendererFactory 'Falagard/Listbox' added. (019AEE70)
-19/03/2013 20:59:07 (Std) 	Created WindowRendererFactory for 'Falagard/Menubar' WindowRenderers.
-19/03/2013 20:59:07 (Std) 	WindowRendererFactory 'Falagard/Menubar' added. (019AF068)
-19/03/2013 20:59:07 (Std) 	Created WindowRendererFactory for 'Falagard/MenuItem' WindowRenderers.
-19/03/2013 20:59:07 (Std) 	WindowRendererFactory 'Falagard/MenuItem' added. (019AF848)
-19/03/2013 20:59:07 (Std) 	Created WindowRendererFactory for 'Falagard/MultiColumnList' WindowRenderers.
-19/03/2013 20:59:07 (Std) 	WindowRendererFactory 'Falagard/MultiColumnList' added. (019AF110)
-19/03/2013 20:59:07 (Std) 	Created WindowRendererFactory for 'Falagard/MultiLineEditbox' WindowRenderers.
-19/03/2013 20:59:07 (Std) 	WindowRendererFactory 'Falagard/MultiLineEditbox' added. (019AFD88)
-19/03/2013 20:59:07 (Std) 	Created WindowRendererFactory for 'Falagard/PopupMenu' WindowRenderers.
-19/03/2013 20:59:07 (Std) 	WindowRendererFactory 'Falagard/PopupMenu' added. (019AF8F0)
-19/03/2013 20:59:07 (Std) 	Created WindowRendererFactory for 'Falagard/ProgressBar' WindowRenderers.
-19/03/2013 20:59:07 (Std) 	WindowRendererFactory 'Falagard/ProgressBar' added. (019AED20)
-19/03/2013 20:59:07 (Std) 	Created WindowRendererFactory for 'Falagard/ScrollablePane' WindowRenderers.
-19/03/2013 20:59:07 (Std) 	WindowRendererFactory 'Falagard/ScrollablePane' added. (019AF6F8)
-19/03/2013 20:59:07 (Std) 	Created WindowRendererFactory for 'Falagard/Scrollbar' WindowRenderers.
-19/03/2013 20:59:07 (Std) 	WindowRendererFactory 'Falagard/Scrollbar' added. (019AF7A0)
-19/03/2013 20:59:07 (Std) 	Created WindowRendererFactory for 'Falagard/Slider' WindowRenderers.
-19/03/2013 20:59:07 (Std) 	WindowRendererFactory 'Falagard/Slider' added. (019AEFC0)
-19/03/2013 20:59:07 (Std) 	Created WindowRendererFactory for 'Falagard/Static' WindowRenderers.
-19/03/2013 20:59:07 (Std) 	WindowRendererFactory 'Falagard/Static' added. (019AFB90)
-19/03/2013 20:59:07 (Std) 	Created WindowRendererFactory for 'Falagard/StaticImage' WindowRenderers.
-19/03/2013 20:59:07 (Std) 	WindowRendererFactory 'Falagard/StaticImage' added. (019AF1B8)
-19/03/2013 20:59:07 (Std) 	Created WindowRendererFactory for 'Falagard/StaticText' WindowRenderers.
-19/03/2013 20:59:07 (Std) 	WindowRendererFactory 'Falagard/StaticText' added. (019AF5A8)
-19/03/2013 20:59:07 (Std) 	Created WindowRendererFactory for 'Falagard/SystemButton' WindowRenderers.
-19/03/2013 20:59:07 (Std) 	WindowRendererFactory 'Falagard/SystemButton' added. (019AEBD0)
-19/03/2013 20:59:07 (Std) 	Created WindowRendererFactory for 'Falagard/TabButton' WindowRenderers.
-19/03/2013 20:59:07 (Std) 	WindowRendererFactory 'Falagard/TabButton' added. (019AF3B0)
-19/03/2013 20:59:07 (Std) 	Created WindowRendererFactory for 'Falagard/TabControl' WindowRenderers.
-19/03/2013 20:59:07 (Std) 	WindowRendererFactory 'Falagard/TabControl' added. (019AFE30)
-19/03/2013 20:59:07 (Std) 	Created WindowRendererFactory for 'Falagard/Titlebar' WindowRenderers.
-19/03/2013 20:59:07 (Std) 	WindowRendererFactory 'Falagard/Titlebar' added. (019AF998)
-19/03/2013 20:59:07 (Std) 	Created WindowRendererFactory for 'Falagard/ToggleButton' WindowRenderers.
-19/03/2013 20:59:07 (Std) 	WindowRendererFactory 'Falagard/ToggleButton' added. (019AF260)
-19/03/2013 20:59:07 (Std) 	Created WindowRendererFactory for 'Falagard/Tooltip' WindowRenderers.
-19/03/2013 20:59:07 (Std) 	WindowRendererFactory 'Falagard/Tooltip' added. (019AEC78)
-19/03/2013 20:59:07 (Std) 	Created WindowRendererFactory for 'Falagard/ItemListbox' WindowRenderers.
-19/03/2013 20:59:07 (Std) 	WindowRendererFactory 'Falagard/ItemListbox' added. (019AFC38)
-19/03/2013 20:59:07 (Std) 	Created WindowRendererFactory for 'Falagard/Tree' WindowRenderers.
-19/03/2013 20:59:07 (Std) 	WindowRendererFactory 'Falagard/Tree' added. (019AE9D8)
-19/03/2013 20:59:07 (Std) 	Creating falagard mapping for type 'TaharezLook/Button' using base type 'CEGUI/PushButton', window renderer 'Falagard/Button' Look'N'Feel 'TaharezLook/Button' and RenderEffect ''. (0023CD20)
-19/03/2013 20:59:07 (Std) 	Creating falagard mapping for type 'TaharezLook/Checkbox' using base type 'CEGUI/Checkbox', window renderer 'Falagard/ToggleButton' Look'N'Feel 'TaharezLook/Checkbox' and RenderEffect ''. (0023CD20)
-19/03/2013 20:59:07 (Std) 	Creating falagard mapping for type 'TaharezLook/ImageButton' using base type 'CEGUI/PushButton', window renderer 'Falagard/Button' Look'N'Feel 'TaharezLook/ImageButton' and RenderEffect ''. (0023CD20)
-19/03/2013 20:59:07 (Std) 	Creating falagard mapping for type 'TaharezLook/RadioButton' using base type 'CEGUI/RadioButton', window renderer 'Falagard/ToggleButton' Look'N'Feel 'TaharezLook/RadioButton' and RenderEffect ''. (0023CD20)
-19/03/2013 20:59:07 (Std) 	Creating falagard mapping for type 'TaharezLook/FrameWindow' using base type 'CEGUI/FrameWindow', window renderer 'Falagard/FrameWindow' Look'N'Feel 'TaharezLook/FrameWindow' and RenderEffect ''. (0023CD20)
-19/03/2013 20:59:07 (Std) 	Creating falagard mapping for type 'TaharezLook/Titlebar' using base type 'CEGUI/Titlebar', window renderer 'Falagard/Titlebar' Look'N'Feel 'TaharezLook/Titlebar' and RenderEffect ''. (0023CD20)
-19/03/2013 20:59:07 (Std) 	Creating falagard mapping for type 'TaharezLook/SystemButton' using base type 'CEGUI/PushButton', window renderer 'Falagard/Button' Look'N'Feel 'TaharezLook/Button' and RenderEffect ''. (0023CD20)
-19/03/2013 20:59:07 (Std) 	Creating falagard mapping for type 'TaharezLook/Editbox' using base type 'CEGUI/Editbox', window renderer 'Falagard/Editbox' Look'N'Feel 'TaharezLook/Editbox' and RenderEffect ''. (0023CD20)
-19/03/2013 20:59:07 (Std) 	Creating falagard mapping for type 'TaharezLook/MultiLineEditbox' using base type 'CEGUI/MultiLineEditbox', window renderer 'Falagard/MultiLineEditbox' Look'N'Feel 'TaharezLook/MultiLineEditbox' and RenderEffect ''. (0023CD20)
-19/03/2013 20:59:07 (Std) 	Creating falagard mapping for type 'TaharezLook/Menubar' using base type 'CEGUI/Menubar', window renderer 'Falagard/Menubar' Look'N'Feel 'TaharezLook/Menubar' and RenderEffect ''. (0023CD20)
-19/03/2013 20:59:07 (Std) 	Creating falagard mapping for type 'TaharezLook/PopupMenu' using base type 'CEGUI/PopupMenu', window renderer 'Falagard/PopupMenu' Look'N'Feel 'TaharezLook/PopupMenu' and RenderEffect ''. (0023CD20)
-19/03/2013 20:59:07 (Std) 	Creating falagard mapping for type 'TaharezLook/MenuItem' using base type 'CEGUI/MenuItem', window renderer 'Falagard/MenuItem' Look'N'Feel 'TaharezLook/MenuItem' and RenderEffect ''. (0023CD20)
-19/03/2013 20:59:07 (Std) 	Creating falagard mapping for type 'TaharezLook/AlternateProgressBar' using base type 'CEGUI/ProgressBar', window renderer 'Falagard/ProgressBar' Look'N'Feel 'TaharezLook/AltProgressBar' and RenderEffect ''. (0023CD20)
-19/03/2013 20:59:07 (Std) 	Creating falagard mapping for type 'TaharezLook/ProgressBar' using base type 'CEGUI/ProgressBar', window renderer 'Falagard/ProgressBar' Look'N'Feel 'TaharezLook/ProgressBar' and RenderEffect ''. (0023CD20)
-19/03/2013 20:59:07 (Std) 	Creating falagard mapping for type 'TaharezLook/VUMeter' using base type 'CEGUI/ProgressBar', window renderer 'Falagard/ProgressBar' Look'N'Feel 'TaharezLook/VUMeter' and RenderEffect ''. (0023CD20)
-19/03/2013 20:59:07 (Std) 	Creating falagard mapping for type 'TaharezLook/VerticalScrollbar' using base type 'CEGUI/Scrollbar', window renderer 'Falagard/Scrollbar' Look'N'Feel 'TaharezLook/VerticalScrollbar' and RenderEffect ''. (0023CD20)
-19/03/2013 20:59:07 (Std) 	Creating falagard mapping for type 'TaharezLook/HorizontalScrollbar' using base type 'CEGUI/Scrollbar', window renderer 'Falagard/Scrollbar' Look'N'Feel 'TaharezLook/HorizontalScrollbar' and RenderEffect ''. (0023CD20)
-19/03/2013 20:59:07 (Std) 	Creating falagard mapping for type 'TaharezLook/VerticalScrollbarThumb' using base type 'CEGUI/Thumb', window renderer 'Falagard/Button' Look'N'Feel 'TaharezLook/VerticalScrollbarThumb' and RenderEffect ''. (0023CD20)
-19/03/2013 20:59:07 (Std) 	Creating falagard mapping for type 'TaharezLook/HorizontalScrollbarThumb' using base type 'CEGUI/Thumb', window renderer 'Falagard/Button' Look'N'Feel 'TaharezLook/HorizontalScrollbarThumb' and RenderEffect ''. (0023CD20)
-19/03/2013 20:59:07 (Std) 	Creating falagard mapping for type 'TaharezLook/LargeVerticalScrollbar' using base type 'CEGUI/Scrollbar', window renderer 'Falagard/Scrollbar' Look'N'Feel 'TaharezLook/LargeVerticalScrollbar' and RenderEffect ''. (0023CD20)
-19/03/2013 20:59:07 (Std) 	Creating falagard mapping for type 'TaharezLook/LargeVerticalScrollbarThumb' using base type 'CEGUI/Thumb', window renderer 'Falagard/Button' Look'N'Feel 'TaharezLook/LargeVerticalScrollbarThumb' and RenderEffect ''. (0023CD20)
-19/03/2013 20:59:07 (Std) 	Creating falagard mapping for type 'TaharezLook/TabButton' using base type 'CEGUI/TabButton', window renderer 'Falagard/TabButton' Look'N'Feel 'TaharezLook/TabButton' and RenderEffect ''. (0023CD20)
-19/03/2013 20:59:07 (Std) 	Creating falagard mapping for type 'TaharezLook/TabControl' using base type 'CEGUI/TabControl', window renderer 'Falagard/TabControl' Look'N'Feel 'TaharezLook/TabControl' and RenderEffect ''. (0023CD20)
-19/03/2013 20:59:07 (Std) 	Creating falagard mapping for type 'TaharezLook/TabContentPane' using base type 'DefaultWindow', window renderer 'Falagard/Default' Look'N'Feel 'TaharezLook/TabContentPane' and RenderEffect ''. (0023CD20)
-19/03/2013 20:59:07 (Std) 	Creating falagard mapping for type 'TaharezLook/TabButtonPane' using base type 'DefaultWindow', window renderer 'Falagard/Default' Look'N'Feel 'TaharezLook/TabButtonPane' and RenderEffect ''. (0023CD20)
-19/03/2013 20:59:07 (Std) 	Creating falagard mapping for type 'TaharezLook/ComboDropList' using base type 'CEGUI/ComboDropList', window renderer 'Falagard/Listbox' Look'N'Feel 'TaharezLook/ComboDropList' and RenderEffect ''. (0023CD20)
-19/03/2013 20:59:07 (Std) 	Creating falagard mapping for type 'TaharezLook/ComboEditbox' using base type 'CEGUI/Editbox', window renderer 'Falagard/Editbox' Look'N'Feel 'TaharezLook/ComboEditbox' and RenderEffect ''. (0023CD20)
-19/03/2013 20:59:07 (Std) 	Creating falagard mapping for type 'TaharezLook/Combobox' using base type 'CEGUI/Combobox', window renderer 'Falagard/Default' Look'N'Feel 'TaharezLook/Combobox' and RenderEffect ''. (0023CD20)
-19/03/2013 20:59:07 (Std) 	Creating falagard mapping for type 'TaharezLook/Listbox' using base type 'CEGUI/Listbox', window renderer 'Falagard/Listbox' Look'N'Feel 'TaharezLook/Listbox' and RenderEffect ''. (0023CD20)
-19/03/2013 20:59:07 (Std) 	Creating falagard mapping for type 'TaharezLook/ListHeader' using base type 'CEGUI/ListHeader', window renderer 'Falagard/ListHeader' Look'N'Feel 'TaharezLook/ListHeader' and RenderEffect ''. (0023CD20)
-19/03/2013 20:59:07 (Std) 	Creating falagard mapping for type 'TaharezLook/ListHeaderSegment' using base type 'CEGUI/ListHeaderSegment', window renderer 'Falagard/ListHeaderSegment' Look'N'Feel 'TaharezLook/ListHeaderSegment' and RenderEffect ''. (0023CD20)
-19/03/2013 20:59:07 (Std) 	Creating falagard mapping for type 'TaharezLook/MultiColumnList' using base type 'CEGUI/MultiColumnList', window renderer 'Falagard/MultiColumnList' Look'N'Feel 'TaharezLook/MultiColumnList' and RenderEffect ''. (0023CD20)
-19/03/2013 20:59:07 (Std) 	Creating falagard mapping for type 'TaharezLook/Slider' using base type 'CEGUI/Slider', window renderer 'Falagard/Slider' Look'N'Feel 'TaharezLook/Slider' and RenderEffect ''. (0023CD20)
-19/03/2013 20:59:07 (Std) 	Creating falagard mapping for type 'TaharezLook/SliderThumb' using base type 'CEGUI/Thumb', window renderer 'Falagard/Button' Look'N'Feel 'TaharezLook/SliderThumb' and RenderEffect ''. (0023CD20)
-19/03/2013 20:59:07 (Std) 	Creating falagard mapping for type 'TaharezLook/ScrollablePane' using base type 'CEGUI/ScrollablePane', window renderer 'Falagard/ScrollablePane' Look'N'Feel 'TaharezLook/ScrollablePane' and RenderEffect ''. (0023CD20)
-19/03/2013 20:59:07 (Std) 	Creating falagard mapping for type 'TaharezLook/Spinner' using base type 'CEGUI/Spinner', window renderer 'Falagard/Default' Look'N'Feel 'TaharezLook/Spinner' and RenderEffect ''. (0023CD20)
-19/03/2013 20:59:07 (Std) 	Creating falagard mapping for type 'TaharezLook/Tooltip' using base type 'CEGUI/Tooltip', window renderer 'Falagard/Tooltip' Look'N'Feel 'TaharezLook/Tooltip' and RenderEffect ''. (0023CD20)
-19/03/2013 20:59:07 (Std) 	Creating falagard mapping for type 'TaharezLook/StaticImage' using base type 'DefaultWindow', window renderer 'Falagard/StaticImage' Look'N'Feel 'TaharezLook/StaticImage' and RenderEffect ''. (0023CD20)
-19/03/2013 20:59:07 (Std) 	Creating falagard mapping for type 'TaharezLook/StaticText' using base type 'DefaultWindow', window renderer 'Falagard/StaticText' Look'N'Feel 'TaharezLook/StaticText' and RenderEffect ''. (0023CD20)
-19/03/2013 20:59:07 (Std) 	Creating falagard mapping for type 'TaharezLook/ItemListbox' using base type 'CEGUI/ItemListbox', window renderer 'Falagard/ItemListbox' Look'N'Feel 'TaharezLook/ItemListbox' and RenderEffect ''. (0023CD20)
-19/03/2013 20:59:07 (Std) 	Creating falagard mapping for type 'TaharezLook/ListboxItem' using base type 'CEGUI/ItemEntry', window renderer 'Falagard/ItemEntry' Look'N'Feel 'TaharezLook/ListboxItem' and RenderEffect ''. (0023CD20)
-19/03/2013 20:59:07 (Std) 	Creating falagard mapping for type 'TaharezLook/GroupBox' using base type 'CEGUI/GroupBox', window renderer 'Falagard/Default' Look'N'Feel 'TaharezLook/GroupBox' and RenderEffect ''. (0023CD20)
-19/03/2013 20:59:07 (Std) 	Creating falagard mapping for type 'TaharezLook/Tree' using base type 'CEGUI/Tree', window renderer 'Falagard/Tree' Look'N'Feel 'TaharezLook/Tree' and RenderEffect ''. (0023CD20)
-19/03/2013 20:59:07 (Std) 	Started creation of Imageset from XML specification:
-19/03/2013 20:59:07 (Std) 	---- CEGUI Imageset name: MadEngine
-19/03/2013 20:59:07 (Std) 	---- Source texture file: MadEngine.png in resource group: (Default)
-19/03/2013 20:59:07 (Std) 	---- Successfully completed loading of GUI layout from 'GUI.layout' ----
-19/03/2013 20:59:07 (Std) 	Attempting to create Imageset 'DejaVuSans-10_auto_glyph_images_ ' with texture only.
+20/03/2013 10:08:42 (Std) 	CEGUI::Logger singleton created. (01A46260)
+20/03/2013 10:08:42 (Std) 	
+20/03/2013 10:08:42 (Std) 	********************************************************************************
+20/03/2013 10:08:42 (Std) 	* Important:                                                                   *
+20/03/2013 10:08:42 (Std) 	*     To get support at the CEGUI forums, you must post _at least_ the section *
+20/03/2013 10:08:42 (Std) 	*     of this log file indicated below.  Failure to do this will result in no  *
+20/03/2013 10:08:42 (Std) 	*     support being given; please do not waste our time.                       *
+20/03/2013 10:08:42 (Std) 	********************************************************************************
+20/03/2013 10:08:42 (Std) 	********************************************************************************
+20/03/2013 10:08:42 (Std) 	* -------- START OF ESSENTIAL SECTION TO BE POSTED ON THE FORUM       -------- *
+20/03/2013 10:08:42 (Std) 	********************************************************************************
+20/03/2013 10:08:42 (Std) 	---- Version 0.7.9 (Build: Mar 12 2013 Microsoft Windows g++ 4.4.1 32 bit) ----
+20/03/2013 10:08:42 (Std) 	---- Renderer module is: CEGUI::OpenGLRenderer - Official OpenGL based 2nd generation renderer module.  TextureTarget support enabled via FBO extension. ----
+20/03/2013 10:08:42 (Std) 	---- XML Parser module is: CEGUI::ExpatParser - Official expat based parser module for CEGUI ----
+20/03/2013 10:08:42 (Std) 	---- Image Codec module is: SILLYImageCodec - Official SILLY based image codec ----
+20/03/2013 10:08:42 (Std) 	---- Scripting module is: None ----
+20/03/2013 10:08:42 (Std) 	********************************************************************************
+20/03/2013 10:08:42 (Std) 	* -------- END OF ESSENTIAL SECTION TO BE POSTED ON THE FORUM         -------- *
+20/03/2013 10:08:42 (Std) 	********************************************************************************
+20/03/2013 10:08:42 (Std) 	
+20/03/2013 10:08:42 (Std) 	---- Begining CEGUI System initialisation ----
+20/03/2013 10:08:42 (Std) 	CEGUI::ImagesetManager singleton created (01A47B00)
+20/03/2013 10:08:42 (Std) 	CEGUI::FontManager singleton created. (01A48788)
+20/03/2013 10:08:42 (Std) 	CEGUI::WindowFactoryManager singleton created
+20/03/2013 10:08:42 (Std) 	CEGUI::WindowManager singleton created (01A32F20)
+20/03/2013 10:08:42 (Std) 	CEGUI::SchemeManager singleton created. (01A48860)
+20/03/2013 10:08:42 (Std) 	CEGUI::MouseCursor singleton created. (003C8228)
+20/03/2013 10:08:42 (Std) 	CEGUI::GlobalEventSet singleton created. (003C27A8)
+20/03/2013 10:08:42 (Std) 	CEGUI::AnimationManager singleton created (003CD4F0)
+20/03/2013 10:08:42 (Std) 	CEGUI::WidgetLookManager singleton created. (01A48318)
+20/03/2013 10:08:42 (Std) 	CEGUI::WindowRendererManager singleton created (01A48178)
+20/03/2013 10:08:42 (Std) 	CEGUI::RenderEffectManager singleton created (003C3F98)
+20/03/2013 10:08:42 (Std) 	Created WindowFactory for 'DefaultWindow' windows.
+20/03/2013 10:08:42 (Std) 	WindowFactory for 'DefaultWindow' windows added. (01A46F10)
+20/03/2013 10:08:42 (Std) 	Created WindowFactory for 'DragContainer' windows.
+20/03/2013 10:08:42 (Std) 	WindowFactory for 'DragContainer' windows added. (01A47570)
+20/03/2013 10:08:42 (Std) 	Created WindowFactory for 'ScrolledContainer' windows.
+20/03/2013 10:08:42 (Std) 	WindowFactory for 'ScrolledContainer' windows added. (01A46FB8)
+20/03/2013 10:08:42 (Std) 	Created WindowFactory for 'ClippedContainer' windows.
+20/03/2013 10:08:42 (Std) 	WindowFactory for 'ClippedContainer' windows added. (01A47060)
+20/03/2013 10:08:42 (Std) 	Created WindowFactory for 'CEGUI/Checkbox' windows.
+20/03/2013 10:08:42 (Std) 	WindowFactory for 'CEGUI/Checkbox' windows added. (01A47108)
+20/03/2013 10:08:42 (Std) 	Created WindowFactory for 'CEGUI/PushButton' windows.
+20/03/2013 10:08:42 (Std) 	WindowFactory for 'CEGUI/PushButton' windows added. (01A471B0)
+20/03/2013 10:08:42 (Std) 	Created WindowFactory for 'CEGUI/RadioButton' windows.
+20/03/2013 10:08:42 (Std) 	WindowFactory for 'CEGUI/RadioButton' windows added. (01A47258)
+20/03/2013 10:08:42 (Std) 	Created WindowFactory for 'CEGUI/Combobox' windows.
+20/03/2013 10:08:42 (Std) 	WindowFactory for 'CEGUI/Combobox' windows added. (01A49FC0)
+20/03/2013 10:08:42 (Std) 	Created WindowFactory for 'CEGUI/ComboDropList' windows.
+20/03/2013 10:08:42 (Std) 	WindowFactory for 'CEGUI/ComboDropList' windows added. (01A4A068)
+20/03/2013 10:08:42 (Std) 	Created WindowFactory for 'CEGUI/Editbox' windows.
+20/03/2013 10:08:42 (Std) 	WindowFactory for 'CEGUI/Editbox' windows added. (01A4A110)
+20/03/2013 10:08:42 (Std) 	Created WindowFactory for 'CEGUI/FrameWindow' windows.
+20/03/2013 10:08:42 (Std) 	WindowFactory for 'CEGUI/FrameWindow' windows added. (01A4A1B8)
+20/03/2013 10:08:42 (Std) 	Created WindowFactory for 'CEGUI/ItemEntry' windows.
+20/03/2013 10:08:42 (Std) 	WindowFactory for 'CEGUI/ItemEntry' windows added. (01A4A260)
+20/03/2013 10:08:42 (Std) 	Created WindowFactory for 'CEGUI/Listbox' windows.
+20/03/2013 10:08:42 (Std) 	WindowFactory for 'CEGUI/Listbox' windows added. (01A4A308)
+20/03/2013 10:08:42 (Std) 	Created WindowFactory for 'CEGUI/ListHeader' windows.
+20/03/2013 10:08:42 (Std) 	WindowFactory for 'CEGUI/ListHeader' windows added. (01A4A3B0)
+20/03/2013 10:08:42 (Std) 	Created WindowFactory for 'CEGUI/ListHeaderSegment' windows.
+20/03/2013 10:08:42 (Std) 	WindowFactory for 'CEGUI/ListHeaderSegment' windows added. (01A4A7C8)
+20/03/2013 10:08:42 (Std) 	Created WindowFactory for 'CEGUI/Menubar' windows.
+20/03/2013 10:08:42 (Std) 	WindowFactory for 'CEGUI/Menubar' windows added. (01A4B1A0)
+20/03/2013 10:08:42 (Std) 	Created WindowFactory for 'CEGUI/PopupMenu' windows.
+20/03/2013 10:08:42 (Std) 	WindowFactory for 'CEGUI/PopupMenu' windows added. (01A4B398)
+20/03/2013 10:08:42 (Std) 	Created WindowFactory for 'CEGUI/MenuItem' windows.
+20/03/2013 10:08:42 (Std) 	WindowFactory for 'CEGUI/MenuItem' windows added. (01A4B248)
+20/03/2013 10:08:42 (Std) 	Created WindowFactory for 'CEGUI/MultiColumnList' windows.
+20/03/2013 10:08:42 (Std) 	WindowFactory for 'CEGUI/MultiColumnList' windows added. (01A4ADB0)
+20/03/2013 10:08:42 (Std) 	Created WindowFactory for 'CEGUI/MultiLineEditbox' windows.
+20/03/2013 10:08:42 (Std) 	WindowFactory for 'CEGUI/MultiLineEditbox' windows added. (01A4A918)
+20/03/2013 10:08:42 (Std) 	Created WindowFactory for 'CEGUI/ProgressBar' windows.
+20/03/2013 10:08:42 (Std) 	WindowFactory for 'CEGUI/ProgressBar' windows added. (01A4AD08)
+20/03/2013 10:08:42 (Std) 	Created WindowFactory for 'CEGUI/ScrollablePane' windows.
+20/03/2013 10:08:42 (Std) 	WindowFactory for 'CEGUI/ScrollablePane' windows added. (01A4B2F0)
+20/03/2013 10:08:42 (Std) 	Created WindowFactory for 'CEGUI/Scrollbar' windows.
+20/03/2013 10:08:42 (Std) 	WindowFactory for 'CEGUI/Scrollbar' windows added. (01A4A9C0)
+20/03/2013 10:08:42 (Std) 	Created WindowFactory for 'CEGUI/Slider' windows.
+20/03/2013 10:08:42 (Std) 	WindowFactory for 'CEGUI/Slider' windows added. (01A4A480)
+20/03/2013 10:08:42 (Std) 	Created WindowFactory for 'CEGUI/Spinner' windows.
+20/03/2013 10:08:42 (Std) 	WindowFactory for 'CEGUI/Spinner' windows added. (01A4AE58)
+20/03/2013 10:08:42 (Std) 	Created WindowFactory for 'CEGUI/TabButton' windows.
+20/03/2013 10:08:42 (Std) 	WindowFactory for 'CEGUI/TabButton' windows added. (01A4B0F8)
+20/03/2013 10:08:42 (Std) 	Created WindowFactory for 'CEGUI/TabControl' windows.
+20/03/2013 10:08:42 (Std) 	WindowFactory for 'CEGUI/TabControl' windows added. (01A4AF00)
+20/03/2013 10:08:42 (Std) 	Created WindowFactory for 'CEGUI/Thumb' windows.
+20/03/2013 10:08:42 (Std) 	WindowFactory for 'CEGUI/Thumb' windows added. (01A4A5D0)
+20/03/2013 10:08:42 (Std) 	Created WindowFactory for 'CEGUI/Titlebar' windows.
+20/03/2013 10:08:42 (Std) 	WindowFactory for 'CEGUI/Titlebar' windows added. (01A4A528)
+20/03/2013 10:08:42 (Std) 	Created WindowFactory for 'CEGUI/Tooltip' windows.
+20/03/2013 10:08:42 (Std) 	WindowFactory for 'CEGUI/Tooltip' windows added. (01A4AFA8)
+20/03/2013 10:08:42 (Std) 	Created WindowFactory for 'CEGUI/ItemListbox' windows.
+20/03/2013 10:08:42 (Std) 	WindowFactory for 'CEGUI/ItemListbox' windows added. (01A4B050)
+20/03/2013 10:08:42 (Std) 	Created WindowFactory for 'CEGUI/GroupBox' windows.
+20/03/2013 10:08:42 (Std) 	WindowFactory for 'CEGUI/GroupBox' windows added. (01A4AA68)
+20/03/2013 10:08:42 (Std) 	Created WindowFactory for 'CEGUI/Tree' windows.
+20/03/2013 10:08:42 (Std) 	WindowFactory for 'CEGUI/Tree' windows added. (01A4ABB8)
+20/03/2013 10:08:42 (Std) 	Created WindowFactory for 'HorizontalLayoutContainer' windows.
+20/03/2013 10:08:42 (Std) 	WindowFactory for 'HorizontalLayoutContainer' windows added. (01A4AB10)
+20/03/2013 10:08:42 (Std) 	Created WindowFactory for 'VerticalLayoutContainer' windows.
+20/03/2013 10:08:42 (Std) 	WindowFactory for 'VerticalLayoutContainer' windows added. (01A4AC60)
+20/03/2013 10:08:42 (Std) 	Created WindowFactory for 'GridLayoutContainer' windows.
+20/03/2013 10:08:42 (Std) 	WindowFactory for 'GridLayoutContainer' windows added. (01A4A678)
+20/03/2013 10:08:42 (Std) 	Window type alias named 'DefaultGUISheet' added for window type 'DefaultWindow'.
+20/03/2013 10:08:42 (Std) 	CEGUI::System singleton created. (01A45FE8)
+20/03/2013 10:08:42 (Std) 	---- CEGUI System initialisation completed ----
+20/03/2013 10:08:42 (Std) 	
+20/03/2013 10:08:42 (Std) 	Started creation of Scheme from XML specification:
+20/03/2013 10:08:42 (Std) 	---- CEGUI GUIScheme name: TaharezLook
+20/03/2013 10:08:42 (Std) 	Started creation of Imageset from XML specification:
+20/03/2013 10:08:42 (Std) 	---- CEGUI Imageset name: TaharezLook
+20/03/2013 10:08:42 (Std) 	---- Source texture file: TaharezLook.tga in resource group: (Default)
+20/03/2013 10:08:42 (Std) 	Started creation of Font from XML specification:
+20/03/2013 10:08:42 (Std) 	---- CEGUI font name: DejaVuSans-10
+20/03/2013 10:08:42 (Std) 	----       Font type: FreeType
+20/03/2013 10:08:42 (Std) 	----     Source file: DejaVuSans.ttf in resource group: (Default)
+20/03/2013 10:08:42 (Std) 	---- Real point size: 10
+20/03/2013 10:08:42 (Std) 	===== Falagard 'root' element: look and feel parsing begins =====
+20/03/2013 10:08:42 (Std) 	===== Look and feel parsing completed =====
+20/03/2013 10:08:42 (Std) 	No window renderer factories specified for module 'CEGUIFalagardWRBase' - adding all available factories...
+20/03/2013 10:08:42 (Std) 	Created WindowRendererFactory for 'Falagard/Button' WindowRenderers.
+20/03/2013 10:08:42 (Std) 	WindowRendererFactory 'Falagard/Button' added. (01A55550)
+20/03/2013 10:08:42 (Std) 	Created WindowRendererFactory for 'Falagard/Default' WindowRenderers.
+20/03/2013 10:08:42 (Std) 	WindowRendererFactory 'Falagard/Default' added. (01A54E18)
+20/03/2013 10:08:42 (Std) 	Created WindowRendererFactory for 'Falagard/Editbox' WindowRenderers.
+20/03/2013 10:08:42 (Std) 	WindowRendererFactory 'Falagard/Editbox' added. (01A556A0)
+20/03/2013 10:08:42 (Std) 	Created WindowRendererFactory for 'Falagard/FrameWindow' WindowRenderers.
+20/03/2013 10:08:42 (Std) 	WindowRendererFactory 'Falagard/FrameWindow' added. (01A55748)
+20/03/2013 10:08:42 (Std) 	Created WindowRendererFactory for 'Falagard/ItemEntry' WindowRenderers.
+20/03/2013 10:08:42 (Std) 	WindowRendererFactory 'Falagard/ItemEntry' added. (01A54C20)
+20/03/2013 10:08:42 (Std) 	Created WindowRendererFactory for 'Falagard/ListHeader' WindowRenderers.
+20/03/2013 10:08:42 (Std) 	WindowRendererFactory 'Falagard/ListHeader' added. (01A55BE0)
+20/03/2013 10:08:42 (Std) 	Created WindowRendererFactory for 'Falagard/ListHeaderSegment' WindowRenderers.
+20/03/2013 10:08:42 (Std) 	WindowRendererFactory 'Falagard/ListHeaderSegment' added. (01A55940)
+20/03/2013 10:08:42 (Std) 	Created WindowRendererFactory for 'Falagard/Listbox' WindowRenderers.
+20/03/2013 10:08:42 (Std) 	WindowRendererFactory 'Falagard/Listbox' added. (01A54A28)
+20/03/2013 10:08:42 (Std) 	Created WindowRendererFactory for 'Falagard/Menubar' WindowRenderers.
+20/03/2013 10:08:42 (Std) 	WindowRendererFactory 'Falagard/Menubar' added. (01A559E8)
+20/03/2013 10:08:42 (Std) 	Created WindowRendererFactory for 'Falagard/MenuItem' WindowRenderers.
+20/03/2013 10:08:42 (Std) 	WindowRendererFactory 'Falagard/MenuItem' added. (01A55160)
+20/03/2013 10:08:42 (Std) 	Created WindowRendererFactory for 'Falagard/MultiColumnList' WindowRenderers.
+20/03/2013 10:08:42 (Std) 	WindowRendererFactory 'Falagard/MultiColumnList' added. (01A54B78)
+20/03/2013 10:08:42 (Std) 	Created WindowRendererFactory for 'Falagard/MultiLineEditbox' WindowRenderers.
+20/03/2013 10:08:42 (Std) 	WindowRendererFactory 'Falagard/MultiLineEditbox' added. (01A54CC8)
+20/03/2013 10:08:42 (Std) 	Created WindowRendererFactory for 'Falagard/PopupMenu' WindowRenderers.
+20/03/2013 10:08:42 (Std) 	WindowRendererFactory 'Falagard/PopupMenu' added. (01A54D70)
+20/03/2013 10:08:42 (Std) 	Created WindowRendererFactory for 'Falagard/ProgressBar' WindowRenderers.
+20/03/2013 10:08:42 (Std) 	WindowRendererFactory 'Falagard/ProgressBar' added. (01A54EC0)
+20/03/2013 10:08:42 (Std) 	Created WindowRendererFactory for 'Falagard/ScrollablePane' WindowRenderers.
+20/03/2013 10:08:42 (Std) 	WindowRendererFactory 'Falagard/ScrollablePane' added. (01A55208)
+20/03/2013 10:08:42 (Std) 	Created WindowRendererFactory for 'Falagard/Scrollbar' WindowRenderers.
+20/03/2013 10:08:42 (Std) 	WindowRendererFactory 'Falagard/Scrollbar' added. (01A55E80)
+20/03/2013 10:08:42 (Std) 	Created WindowRendererFactory for 'Falagard/Slider' WindowRenderers.
+20/03/2013 10:08:42 (Std) 	WindowRendererFactory 'Falagard/Slider' added. (01A565B8)
+20/03/2013 10:08:42 (Std) 	Created WindowRendererFactory for 'Falagard/Static' WindowRenderers.
+20/03/2013 10:08:42 (Std) 	WindowRendererFactory 'Falagard/Static' added. (01A56510)
+20/03/2013 10:08:42 (Std) 	Created WindowRendererFactory for 'Falagard/StaticImage' WindowRenderers.
+20/03/2013 10:08:42 (Std) 	WindowRendererFactory 'Falagard/StaticImage' added. (01A55DD8)
+20/03/2013 10:08:42 (Std) 	Created WindowRendererFactory for 'Falagard/StaticText' WindowRenderers.
+20/03/2013 10:08:42 (Std) 	WindowRendererFactory 'Falagard/StaticText' added. (01A567B0)
+20/03/2013 10:08:42 (Std) 	Created WindowRendererFactory for 'Falagard/SystemButton' WindowRenderers.
+20/03/2013 10:08:42 (Std) 	WindowRendererFactory 'Falagard/SystemButton' added. (01A56660)
+20/03/2013 10:08:42 (Std) 	Created WindowRendererFactory for 'Falagard/TabButton' WindowRenderers.
+20/03/2013 10:08:42 (Std) 	WindowRendererFactory 'Falagard/TabButton' added. (01A55F28)
+20/03/2013 10:08:42 (Std) 	Created WindowRendererFactory for 'Falagard/TabControl' WindowRenderers.
+20/03/2013 10:08:42 (Std) 	WindowRendererFactory 'Falagard/TabControl' added. (01A56120)
+20/03/2013 10:08:42 (Std) 	Created WindowRendererFactory for 'Falagard/Titlebar' WindowRenderers.
+20/03/2013 10:08:42 (Std) 	WindowRendererFactory 'Falagard/Titlebar' added. (01A56708)
+20/03/2013 10:08:42 (Std) 	Created WindowRendererFactory for 'Falagard/ToggleButton' WindowRenderers.
+20/03/2013 10:08:42 (Std) 	WindowRendererFactory 'Falagard/ToggleButton' added. (01A56270)
+20/03/2013 10:08:42 (Std) 	Created WindowRendererFactory for 'Falagard/Tooltip' WindowRenderers.
+20/03/2013 10:08:42 (Std) 	WindowRendererFactory 'Falagard/Tooltip' added. (01A55FD0)
+20/03/2013 10:08:42 (Std) 	Created WindowRendererFactory for 'Falagard/ItemListbox' WindowRenderers.
+20/03/2013 10:08:42 (Std) 	WindowRendererFactory 'Falagard/ItemListbox' added. (01A56468)
+20/03/2013 10:08:42 (Std) 	Created WindowRendererFactory for 'Falagard/Tree' WindowRenderers.
+20/03/2013 10:08:42 (Std) 	WindowRendererFactory 'Falagard/Tree' added. (01A56078)
+20/03/2013 10:08:42 (Std) 	Creating falagard mapping for type 'TaharezLook/Button' using base type 'CEGUI/PushButton', window renderer 'Falagard/Button' Look'N'Feel 'TaharezLook/Button' and RenderEffect ''. (0023CD10)
+20/03/2013 10:08:42 (Std) 	Creating falagard mapping for type 'TaharezLook/Checkbox' using base type 'CEGUI/Checkbox', window renderer 'Falagard/ToggleButton' Look'N'Feel 'TaharezLook/Checkbox' and RenderEffect ''. (0023CD10)
+20/03/2013 10:08:42 (Std) 	Creating falagard mapping for type 'TaharezLook/ImageButton' using base type 'CEGUI/PushButton', window renderer 'Falagard/Button' Look'N'Feel 'TaharezLook/ImageButton' and RenderEffect ''. (0023CD10)
+20/03/2013 10:08:42 (Std) 	Creating falagard mapping for type 'TaharezLook/RadioButton' using base type 'CEGUI/RadioButton', window renderer 'Falagard/ToggleButton' Look'N'Feel 'TaharezLook/RadioButton' and RenderEffect ''. (0023CD10)
+20/03/2013 10:08:42 (Std) 	Creating falagard mapping for type 'TaharezLook/FrameWindow' using base type 'CEGUI/FrameWindow', window renderer 'Falagard/FrameWindow' Look'N'Feel 'TaharezLook/FrameWindow' and RenderEffect ''. (0023CD10)
+20/03/2013 10:08:42 (Std) 	Creating falagard mapping for type 'TaharezLook/Titlebar' using base type 'CEGUI/Titlebar', window renderer 'Falagard/Titlebar' Look'N'Feel 'TaharezLook/Titlebar' and RenderEffect ''. (0023CD10)
+20/03/2013 10:08:42 (Std) 	Creating falagard mapping for type 'TaharezLook/SystemButton' using base type 'CEGUI/PushButton', window renderer 'Falagard/Button' Look'N'Feel 'TaharezLook/Button' and RenderEffect ''. (0023CD10)
+20/03/2013 10:08:42 (Std) 	Creating falagard mapping for type 'TaharezLook/Editbox' using base type 'CEGUI/Editbox', window renderer 'Falagard/Editbox' Look'N'Feel 'TaharezLook/Editbox' and RenderEffect ''. (0023CD10)
+20/03/2013 10:08:42 (Std) 	Creating falagard mapping for type 'TaharezLook/MultiLineEditbox' using base type 'CEGUI/MultiLineEditbox', window renderer 'Falagard/MultiLineEditbox' Look'N'Feel 'TaharezLook/MultiLineEditbox' and RenderEffect ''. (0023CD10)
+20/03/2013 10:08:42 (Std) 	Creating falagard mapping for type 'TaharezLook/Menubar' using base type 'CEGUI/Menubar', window renderer 'Falagard/Menubar' Look'N'Feel 'TaharezLook/Menubar' and RenderEffect ''. (0023CD10)
+20/03/2013 10:08:42 (Std) 	Creating falagard mapping for type 'TaharezLook/PopupMenu' using base type 'CEGUI/PopupMenu', window renderer 'Falagard/PopupMenu' Look'N'Feel 'TaharezLook/PopupMenu' and RenderEffect ''. (0023CD10)
+20/03/2013 10:08:42 (Std) 	Creating falagard mapping for type 'TaharezLook/MenuItem' using base type 'CEGUI/MenuItem', window renderer 'Falagard/MenuItem' Look'N'Feel 'TaharezLook/MenuItem' and RenderEffect ''. (0023CD10)
+20/03/2013 10:08:42 (Std) 	Creating falagard mapping for type 'TaharezLook/AlternateProgressBar' using base type 'CEGUI/ProgressBar', window renderer 'Falagard/ProgressBar' Look'N'Feel 'TaharezLook/AltProgressBar' and RenderEffect ''. (0023CD10)
+20/03/2013 10:08:42 (Std) 	Creating falagard mapping for type 'TaharezLook/ProgressBar' using base type 'CEGUI/ProgressBar', window renderer 'Falagard/ProgressBar' Look'N'Feel 'TaharezLook/ProgressBar' and RenderEffect ''. (0023CD10)
+20/03/2013 10:08:42 (Std) 	Creating falagard mapping for type 'TaharezLook/VUMeter' using base type 'CEGUI/ProgressBar', window renderer 'Falagard/ProgressBar' Look'N'Feel 'TaharezLook/VUMeter' and RenderEffect ''. (0023CD10)
+20/03/2013 10:08:42 (Std) 	Creating falagard mapping for type 'TaharezLook/VerticalScrollbar' using base type 'CEGUI/Scrollbar', window renderer 'Falagard/Scrollbar' Look'N'Feel 'TaharezLook/VerticalScrollbar' and RenderEffect ''. (0023CD10)
+20/03/2013 10:08:42 (Std) 	Creating falagard mapping for type 'TaharezLook/HorizontalScrollbar' using base type 'CEGUI/Scrollbar', window renderer 'Falagard/Scrollbar' Look'N'Feel 'TaharezLook/HorizontalScrollbar' and RenderEffect ''. (0023CD10)
+20/03/2013 10:08:42 (Std) 	Creating falagard mapping for type 'TaharezLook/VerticalScrollbarThumb' using base type 'CEGUI/Thumb', window renderer 'Falagard/Button' Look'N'Feel 'TaharezLook/VerticalScrollbarThumb' and RenderEffect ''. (0023CD10)
+20/03/2013 10:08:42 (Std) 	Creating falagard mapping for type 'TaharezLook/HorizontalScrollbarThumb' using base type 'CEGUI/Thumb', window renderer 'Falagard/Button' Look'N'Feel 'TaharezLook/HorizontalScrollbarThumb' and RenderEffect ''. (0023CD10)
+20/03/2013 10:08:42 (Std) 	Creating falagard mapping for type 'TaharezLook/LargeVerticalScrollbar' using base type 'CEGUI/Scrollbar', window renderer 'Falagard/Scrollbar' Look'N'Feel 'TaharezLook/LargeVerticalScrollbar' and RenderEffect ''. (0023CD10)
+20/03/2013 10:08:42 (Std) 	Creating falagard mapping for type 'TaharezLook/LargeVerticalScrollbarThumb' using base type 'CEGUI/Thumb', window renderer 'Falagard/Button' Look'N'Feel 'TaharezLook/LargeVerticalScrollbarThumb' and RenderEffect ''. (0023CD10)
+20/03/2013 10:08:42 (Std) 	Creating falagard mapping for type 'TaharezLook/TabButton' using base type 'CEGUI/TabButton', window renderer 'Falagard/TabButton' Look'N'Feel 'TaharezLook/TabButton' and RenderEffect ''. (0023CD10)
+20/03/2013 10:08:42 (Std) 	Creating falagard mapping for type 'TaharezLook/TabControl' using base type 'CEGUI/TabControl', window renderer 'Falagard/TabControl' Look'N'Feel 'TaharezLook/TabControl' and RenderEffect ''. (0023CD10)
+20/03/2013 10:08:42 (Std) 	Creating falagard mapping for type 'TaharezLook/TabContentPane' using base type 'DefaultWindow', window renderer 'Falagard/Default' Look'N'Feel 'TaharezLook/TabContentPane' and RenderEffect ''. (0023CD10)
+20/03/2013 10:08:42 (Std) 	Creating falagard mapping for type 'TaharezLook/TabButtonPane' using base type 'DefaultWindow', window renderer 'Falagard/Default' Look'N'Feel 'TaharezLook/TabButtonPane' and RenderEffect ''. (0023CD10)
+20/03/2013 10:08:42 (Std) 	Creating falagard mapping for type 'TaharezLook/ComboDropList' using base type 'CEGUI/ComboDropList', window renderer 'Falagard/Listbox' Look'N'Feel 'TaharezLook/ComboDropList' and RenderEffect ''. (0023CD10)
+20/03/2013 10:08:42 (Std) 	Creating falagard mapping for type 'TaharezLook/ComboEditbox' using base type 'CEGUI/Editbox', window renderer 'Falagard/Editbox' Look'N'Feel 'TaharezLook/ComboEditbox' and RenderEffect ''. (0023CD10)
+20/03/2013 10:08:42 (Std) 	Creating falagard mapping for type 'TaharezLook/Combobox' using base type 'CEGUI/Combobox', window renderer 'Falagard/Default' Look'N'Feel 'TaharezLook/Combobox' and RenderEffect ''. (0023CD10)
+20/03/2013 10:08:42 (Std) 	Creating falagard mapping for type 'TaharezLook/Listbox' using base type 'CEGUI/Listbox', window renderer 'Falagard/Listbox' Look'N'Feel 'TaharezLook/Listbox' and RenderEffect ''. (0023CD10)
+20/03/2013 10:08:42 (Std) 	Creating falagard mapping for type 'TaharezLook/ListHeader' using base type 'CEGUI/ListHeader', window renderer 'Falagard/ListHeader' Look'N'Feel 'TaharezLook/ListHeader' and RenderEffect ''. (0023CD10)
+20/03/2013 10:08:42 (Std) 	Creating falagard mapping for type 'TaharezLook/ListHeaderSegment' using base type 'CEGUI/ListHeaderSegment', window renderer 'Falagard/ListHeaderSegment' Look'N'Feel 'TaharezLook/ListHeaderSegment' and RenderEffect ''. (0023CD10)
+20/03/2013 10:08:42 (Std) 	Creating falagard mapping for type 'TaharezLook/MultiColumnList' using base type 'CEGUI/MultiColumnList', window renderer 'Falagard/MultiColumnList' Look'N'Feel 'TaharezLook/MultiColumnList' and RenderEffect ''. (0023CD10)
+20/03/2013 10:08:42 (Std) 	Creating falagard mapping for type 'TaharezLook/Slider' using base type 'CEGUI/Slider', window renderer 'Falagard/Slider' Look'N'Feel 'TaharezLook/Slider' and RenderEffect ''. (0023CD10)
+20/03/2013 10:08:42 (Std) 	Creating falagard mapping for type 'TaharezLook/SliderThumb' using base type 'CEGUI/Thumb', window renderer 'Falagard/Button' Look'N'Feel 'TaharezLook/SliderThumb' and RenderEffect ''. (0023CD10)
+20/03/2013 10:08:42 (Std) 	Creating falagard mapping for type 'TaharezLook/ScrollablePane' using base type 'CEGUI/ScrollablePane', window renderer 'Falagard/ScrollablePane' Look'N'Feel 'TaharezLook/ScrollablePane' and RenderEffect ''. (0023CD10)
+20/03/2013 10:08:42 (Std) 	Creating falagard mapping for type 'TaharezLook/Spinner' using base type 'CEGUI/Spinner', window renderer 'Falagard/Default' Look'N'Feel 'TaharezLook/Spinner' and RenderEffect ''. (0023CD10)
+20/03/2013 10:08:42 (Std) 	Creating falagard mapping for type 'TaharezLook/Tooltip' using base type 'CEGUI/Tooltip', window renderer 'Falagard/Tooltip' Look'N'Feel 'TaharezLook/Tooltip' and RenderEffect ''. (0023CD10)
+20/03/2013 10:08:42 (Std) 	Creating falagard mapping for type 'TaharezLook/StaticImage' using base type 'DefaultWindow', window renderer 'Falagard/StaticImage' Look'N'Feel 'TaharezLook/StaticImage' and RenderEffect ''. (0023CD10)
+20/03/2013 10:08:42 (Std) 	Creating falagard mapping for type 'TaharezLook/StaticText' using base type 'DefaultWindow', window renderer 'Falagard/StaticText' Look'N'Feel 'TaharezLook/StaticText' and RenderEffect ''. (0023CD10)
+20/03/2013 10:08:42 (Std) 	Creating falagard mapping for type 'TaharezLook/ItemListbox' using base type 'CEGUI/ItemListbox', window renderer 'Falagard/ItemListbox' Look'N'Feel 'TaharezLook/ItemListbox' and RenderEffect ''. (0023CD10)
+20/03/2013 10:08:42 (Std) 	Creating falagard mapping for type 'TaharezLook/ListboxItem' using base type 'CEGUI/ItemEntry', window renderer 'Falagard/ItemEntry' Look'N'Feel 'TaharezLook/ListboxItem' and RenderEffect ''. (0023CD10)
+20/03/2013 10:08:42 (Std) 	Creating falagard mapping for type 'TaharezLook/GroupBox' using base type 'CEGUI/GroupBox', window renderer 'Falagard/Default' Look'N'Feel 'TaharezLook/GroupBox' and RenderEffect ''. (0023CD10)
+20/03/2013 10:08:42 (Std) 	Creating falagard mapping for type 'TaharezLook/Tree' using base type 'CEGUI/Tree', window renderer 'Falagard/Tree' Look'N'Feel 'TaharezLook/Tree' and RenderEffect ''. (0023CD10)
+20/03/2013 10:08:42 (Std) 	Started creation of Imageset from XML specification:
+20/03/2013 10:08:42 (Std) 	---- CEGUI Imageset name: MadEngine
+20/03/2013 10:08:42 (Std) 	---- Source texture file: MadEngine.png in resource group: (Default)
+20/03/2013 10:08:42 (Std) 	---- Successfully completed loading of GUI layout from 'GUI.layout' ----
+20/03/2013 10:08:42 (Std) 	Attempting to create Imageset 'DejaVuSans-10_auto_glyph_images_ ' with texture only.

@@ -27,7 +27,7 @@ void MadEngine::Start()
     if (GameStates::CurrentState() != GameStates::Uninitialized)
         return;
 
-    _mainWindow.create(sf::VideoMode(1024,768,32),"The Survivor", sf::Style::Fullscreen);
+    _mainWindow.create(sf::VideoMode(1024,768,32),"The Survivor");
     _mainWindow.setFramerateLimit(60);
     _mainWindow.setVerticalSyncEnabled(true);
     _mainWindow.setMouseCursorVisible(false);
@@ -36,6 +36,9 @@ void MadEngine::Start()
     _GUI->initialize();
 
     GameStates::ChangeState(GameStates::Splash);
+
+    bgMusic.openFromFile("Audio//Background//horror_soundscape.ogg");
+    bgMusic.setLoop(true);
 
     MainLoop();
 
@@ -74,7 +77,7 @@ void MadEngine::SplashScreen()
     //Splash Screen
     //-------------------------------------------------------------------------------------------------
 
-    GameStates::ChangeState(GameStates::Menu);
+    GameStates::ChangeState(GameStates::Menu_Main);
 }
 
 void MadEngine::MainMenuScreen()
@@ -156,14 +159,21 @@ void MadEngine::MainLoop()
                 break;
             }
 
-            case GameStates::Menu:
+            case GameStates::Menu_Main:
             {
+                if (bgMusic.getStatus() != sf::Music::Playing)  bgMusic.play();
                 MainMenuScreen();       //Show The Menu Screen
+                break;
+            }
+
+            case GameStates::Menu_Options:
+            {
                 break;
             }
 
             case GameStates::Pause:
             {
+                if (bgMusic.getStatus() != sf::Music::Playing)  bgMusic.play();
                 _mainWorld.Step(0,0,0); //Pause The Simulation
                 Game->Draw();
                 InGameMenuScreen();     //Show The Pause Menu
@@ -183,6 +193,7 @@ void MadEngine::MainLoop()
             }
             case GameStates::Play:
             {
+                if (bgMusic.getStatus() != sf::Music::Paused)  bgMusic.pause();
                 GamePlay();             //Play The Game
                 DebugRender();
                 _mainCamera.setCenter(Game->getPlayerPosition());
@@ -198,7 +209,6 @@ void MadEngine::MainLoop()
             {
                 delete Game;
                 _mainWindow.close();
-                exit(false);
                 break;
             }
         }
@@ -207,8 +217,8 @@ void MadEngine::MainLoop()
 
         _GUI->update(_EventListener);
         _GUI->draw();
-
         _mainWindow.display();
+
 
     }
 }
@@ -293,8 +303,7 @@ sf::RenderWindow MadEngine::_mainWindow;
 sf::View MadEngine::_mainCamera;
 sf::Event MadEngine::_EventListener;
 
-b2Vec2 Gravity(0.f,0.f);
-b2World MadEngine::_mainWorld(Gravity);
+b2World MadEngine::_mainWorld((b2Vec2)Mad::Vector2f(0.f,0.f));
 DebugDraw MadEngine::newDebugDraw;
 
 
@@ -305,3 +314,6 @@ int MadEngine::playerControl;
 GameFactory* MadEngine::Game;
 ContactListener MadEngine::_ContactListener;
 GUIFactory* MadEngine::_GUI;
+
+
+sf::Music MadEngine::bgMusic;

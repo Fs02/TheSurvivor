@@ -3,8 +3,8 @@
 
 #define DEGTORAD (b2_pi /180)
 #define RADTODEG (180/b2_pi)
-#define RATIO 30.f
-#define UNRATIO (1/30.f)
+#define RATIO 100.f
+#define UNRATIO (1/100.f)
 
 //-------------------------------------------------------------------------------------------------
 //Define Player State
@@ -24,6 +24,7 @@
 #define VEHICLE 2
 #define ENEMY 3
 #define H_VEHICLE_SENSOR 4
+#define ENEMY_CENCOR 5
 
 
 #endif // ME_MATH_HPP_INCLUDED

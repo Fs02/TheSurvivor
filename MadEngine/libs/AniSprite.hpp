@@ -26,6 +26,7 @@ public:
 	void SetFrame(int frame);
 	//sets loop speed in fps
 	void SetLoopSpeed(float fps);
+	void SetInvert(bool invert = false);
 	//start looping
 	void Play();
 	void Play(int start, int end);
@@ -37,6 +38,8 @@ public:
 	void setPosition(float x, float y);
 	//set Rotation
 	void setRotation(float angle);
+	//Set Custom Origin
+	void setOrigin(float x, float y);
 	//draw
 	void Draw(sf::RenderWindow* Window);
 private:
@@ -45,6 +48,7 @@ private:
 	sf::Clock clock;
 	float fps;
 	bool isPlaying;
+	bool isInvert;
 	int loopStart;
 	int loopEnd;
 	int currentFrame;

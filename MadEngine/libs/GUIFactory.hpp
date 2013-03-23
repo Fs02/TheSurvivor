@@ -17,8 +17,10 @@ public:
     void draw();
 
     bool Handle_StartButtonClicked( const CEGUI::EventArgs& e);
+    bool Handle_OptionsButtonClicked( const CEGUI::EventArgs& e);
     bool Handle_QuitButtonClicked( const CEGUI::EventArgs& e);
     bool Handle_ResumeButtonClicked( const CEGUI::EventArgs& e);
+    bool Handle_OptionsBackButtonClicked( const CEGUI::EventArgs& e);
 
 private:
     sf::RenderWindow* m_Window;

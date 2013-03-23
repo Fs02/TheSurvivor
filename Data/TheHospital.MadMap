@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<level name="LevelExample" version="1.0">
+	<map type="terrain">
+		<sprite id="Floor" pos-x="-128" pos-y="-128"/>
+		<sprite id="Floor" pos-x="-64" pos-y="-128"/>
+		<sprite id="Floor" pos-x="0" pos-y="-128"/>
+		<sprite id="Floor" pos-x="64" pos-y="-128"/>
+		<sprite id="Floor" pos-x="128" pos-y="-128"/>
+		
+		<sprite id="Floor" pos-x="-128" pos-y="-64"/>
+		<sprite id="Floor" pos-x="-64" pos-y="-64"/>
+		<sprite id="Floor" pos-x="0" pos-y="-64"/>
+		<sprite id="Floor" pos-x="64" pos-y="-64"/>
+		<sprite id="Floor" pos-x="128" pos-y="-64"/>
+		
+		<sprite id="Floor" pos-x="-128" pos-y="0"/>
+		<sprite id="Floor" pos-x="-64" pos-y="0"/>
+		<sprite id="Floor" pos-x="0" pos-y="0"/>
+		<sprite id="Floor" pos-x="64" pos-y="0"/>
+		<sprite id="Floor" pos-x="128" pos-y="0"/>
+		
+		<sprite id="Floor" pos-x="-128" pos-y="64"/>
+		<sprite id="Floor" pos-x="-64" pos-y="64"/>
+		<sprite id="Floor" pos-x="0" pos-y="64"/>
+		<sprite id="Floor" pos-x="64" pos-y="64"/>
+		<sprite id="Floor" pos-x="128" pos-y="64"/>
+		
+		<sprite id="Floor" pos-x="-128" pos-y="128"/>
+		<sprite id="Floor" pos-x="-64" pos-y="128"/>
+		<sprite id="Floor" pos-x="0" pos-y="128"/>
+		<sprite id="Floor" pos-x="64" pos-y="128"/>
+		<sprite id="Floor" pos-x="128" pos-y="128"/>
+	</map>
+</level>
+

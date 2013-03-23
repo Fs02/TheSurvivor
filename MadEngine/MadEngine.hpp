@@ -19,6 +19,7 @@
 #define MADENGINE_HPP_INCLUDED
 
 #include "stdafx.hpp"
+#include "System.hpp"
 #include "libs/GameFactory.hpp"
 #include "libs/GUIFactory.hpp"
 #include "libs/DebugDraw.hpp"
@@ -62,6 +63,8 @@ private:
 
     static GameFactory* Game;
     static GUIFactory* _GUI;
+
+    static sf::Music bgMusic;
 };
 
 #endif // MADENGINE_HPP_INCLUDED

@@ -7,28 +7,16 @@ GameFactory::GameFactory(b2World* World, sf::RenderWindow* Window)
     m_World     = World;
     m_Window    = Window;
 
-    m_SpriteFactory.loadSprite("data//Map1texture.xml");
+    m_SpriteFactory.loadSprite("data//TheHospital.MadTexturePack");
+    m_SpriteFactory.newSprite("SOLDIER","Character//soldiersheet.png");
 
     currentLevel        = new Level;
     currentLevel->setPhysicWorld(m_World);
-    currentLevel->setRenderWindow(m_Window);
+currentLevel->setRenderWindow(m_Window);
     currentLevel->setSpriteFactory(&m_SpriteFactory);
-    currentLevel->loadLevel("data//level.xml");
+    currentLevel->loadLevel("data//TheHospital.MadMap");
 
-    Vehicle* newVehicle = new Vehicle(World, m_SpriteFactory.getSprite("DEATHCAR"), m_SpriteFactory.getSprite("TIRE"));
-    m_VehicleList.push_back(newVehicle);
-
-    newVehicle          = new Vehicle(World, m_SpriteFactory.getSprite("HUMMER"), m_SpriteFactory.getSprite("TIRE"), b2Vec2(1.f, 2.3f));
-    m_VehicleList.push_back(newVehicle);
-
-    Player              = new Character(World, Window, m_SpriteFactory.getSprite("EXAMPLECHAR"));
-    AICharacter* newAI  = new AICharacter(World, Window, m_SpriteFactory.getSprite("EXAMPLECHAR"));
-    //newAI->setTransform(5,-3,0);
-    m_AICharacter.push_back(newAI);
-
-    newAI  = new AICharacter(World, Window, m_SpriteFactory.getSprite("EXAMPLECHAR"));
-    //newAI->setTransform(3,-2,0);
-    m_AICharacter.push_back(newAI);
+    Player              = new Character(World, Window, m_SpriteFactory.getSprite("SOLDIER"),128,128);
 }
 
 GameFactory::~GameFactory()

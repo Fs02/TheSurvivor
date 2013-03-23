@@ -4,7 +4,7 @@
 class GameStates
 {
 public:
-    enum States{Uninitialized, Splash, Pause, Resume, Menu, Load, Play, Exit};
+    enum States{Uninitialized, Splash, Pause, Resume, Menu_Main, Menu_Options, Load, Play, Exit};
 
     static void ChangeState(States state);
     static States CurrentState();

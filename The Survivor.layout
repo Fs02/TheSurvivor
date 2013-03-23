@@ -1,118 +1,28 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <CodeBlocks_layout_file>
 	<ActiveTarget name="Debug" />
-	<File name="Entity\AICharacter.cpp" open="0" top="0" tabpos="3">
-		<Cursor position="209" topLine="0" />
+	<File name="Entity\Character.cpp" open="1" top="0" tabpos="4">
+		<Cursor position="0" topLine="0" />
 	</File>
-	<File name="Entity\AICharacter.hpp" open="0" top="0" tabpos="4">
-		<Cursor position="157" topLine="0" />
+	<File name="Entity\Character.hpp" open="1" top="0" tabpos="5">
+		<Cursor position="1324" topLine="27" />
 	</File>
-	<File name="Entity\Bullet.cpp" open="0" top="0" tabpos="1">
-		<Cursor position="420" topLine="0" />
+	<File name="MadEngine\Common\Vector2.hpp" open="1" top="1" tabpos="6">
+		<Cursor position="2629" topLine="90" />
 	</File>
-	<File name="Entity\Bullet.hpp" open="0" top="0" tabpos="0">
-		<Cursor position="295" topLine="0" />
+	<File name="MadEngine\MadEngine.cpp" open="1" top="0" tabpos="1">
+		<Cursor position="2061" topLine="29" />
 	</File>
-	<File name="Entity\Character.cpp" open="0" top="0" tabpos="2">
-		<Cursor position="1956" topLine="67" />
+	<File name="MadEngine\MadEngine.hpp" open="1" top="0" tabpos="2">
+		<Cursor position="821" topLine="0" />
 	</File>
-	<File name="Entity\Character.hpp" open="0" top="0" tabpos="1">
-		<Cursor position="422" topLine="7" />
+	<File name="MadEngine\System.hpp" open="1" top="0" tabpos="3">
+		<Cursor position="100" topLine="0" />
 	</File>
-	<File name="Entity\Vehicle.cpp" open="0" top="0" tabpos="7">
-		<Cursor position="11850" topLine="255" />
-	</File>
-	<File name="Entity\Vehicle.hpp" open="0" top="0" tabpos="6">
-		<Cursor position="796" topLine="0" />
-	</File>
-	<File name="Level\Level1.hpp" open="0" top="0" tabpos="3">
-		<Cursor position="466" topLine="0" />
-	</File>
-	<File name="MadEngine\Global.hpp" open="0" top="0" tabpos="7">
-		<Cursor position="861" topLine="0" />
-	</File>
-	<File name="MadEngine\MadEngine.cpp" open="1" top="1" tabpos="2">
-		<Cursor position="1191" topLine="1" />
-	</File>
-	<File name="MadEngine\MadEngine.hpp" open="1" top="0" tabpos="1">
-		<Cursor position="1129" topLine="25" />
-	</File>
-	<File name="MadEngine\libs\AniSprite.cpp" open="0" top="0" tabpos="5">
-		<Cursor position="182" topLine="0" />
+	<File name="MadEngine\libs\AniSprite.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="0" topLine="119" />
 	</File>
 	<File name="MadEngine\libs\AniSprite.hpp" open="0" top="0" tabpos="0">
-		<Cursor position="1184" topLine="28" />
-	</File>
-	<File name="MadEngine\libs\ContactListener.cpp" open="0" top="0" tabpos="6">
-		<Cursor position="1205" topLine="12" />
-	</File>
-	<File name="MadEngine\libs\ContactListener.hpp" open="0" top="0" tabpos="5">
-		<Cursor position="385" topLine="0" />
-	</File>
-	<File name="MadEngine\libs\DebugDraw.cpp" open="0" top="0" tabpos="20">
-		<Cursor position="697" topLine="2" />
-	</File>
-	<File name="MadEngine\libs\DebugDraw.hpp" open="0" top="0" tabpos="0">
-		<Cursor position="1825" topLine="16" />
-	</File>
-	<File name="MadEngine\libs\GUI.cpp" open="0" top="0" tabpos="6">
-		<Cursor position="3151" topLine="87" />
-	</File>
-	<File name="MadEngine\libs\GUI.hpp" open="0" top="0" tabpos="2">
-		<Cursor position="367" topLine="12" />
-	</File>
-	<File name="MadEngine\libs\GUIFactory.cpp" open="1" top="0" tabpos="4">
-		<Cursor position="2205" topLine="58" />
-	</File>
-	<File name="MadEngine\libs\GUIFactory.hpp" open="1" top="0" tabpos="3">
-		<Cursor position="534" topLine="0" />
-	</File>
-	<File name="MadEngine\libs\GameFactory.cpp" open="0" top="0" tabpos="5">
-		<Cursor position="26" topLine="0" />
-	</File>
-	<File name="MadEngine\libs\GameFactory.hpp" open="0" top="0" tabpos="0">
-		<Cursor position="726" topLine="3" />
-	</File>
-	<File name="MadEngine\libs\GameStates.cpp" open="1" top="0" tabpos="5">
-		<Cursor position="261" topLine="0" />
-	</File>
-	<File name="MadEngine\libs\GameStates.hpp" open="0" top="0" tabpos="0">
-		<Cursor position="281" topLine="0" />
-	</File>
-	<File name="MadEngine\libs\Level.cpp" open="0" top="0" tabpos="3">
-		<Cursor position="2520" topLine="40" />
-	</File>
-	<File name="MadEngine\libs\Level.hpp" open="0" top="0" tabpos="2">
-		<Cursor position="24" topLine="0" />
-	</File>
-	<File name="MadEngine\libs\Object.hpp" open="0" top="0" tabpos="6">
-		<Cursor position="268" topLine="0" />
-	</File>
-	<File name="MadEngine\libs\SpriteFactory.cpp" open="0" top="0" tabpos="3">
-		<Cursor position="822" topLine="26" />
-	</File>
-	<File name="MadEngine\libs\SpriteFactory.hpp" open="0" top="0" tabpos="2">
-		<Cursor position="347" topLine="0" />
-	</File>
-	<File name="MadEngine\libs\StaticObject.cpp" open="0" top="0" tabpos="5">
-		<Cursor position="243" topLine="0" />
-	</File>
-	<File name="MadEngine\libs\StaticObject.hpp" open="0" top="0" tabpos="4">
-		<Cursor position="540" topLine="1" />
-	</File>
-	<File name="MadEngine\stdafx.hpp" open="0" top="0" tabpos="4">
-		<Cursor position="193" topLine="0" />
-	</File>
-	<File name="The Survivor.cpp" open="0" top="0" tabpos="23">
-		<Cursor position="33" topLine="0" />
-	</File>
-	<File name="libs\rapidxml\rapidxml.hpp" open="0" top="0" tabpos="0">
-		<Cursor position="50661" topLine="1003" />
-	</File>
-	<File name="libs\rapidxml\rapidxml_iterators.hpp" open="0" top="0" tabpos="0">
-		<Cursor position="442" topLine="7" />
-	</File>
-	<File name="path\path.cpp" open="0" top="0" tabpos="6">
-		<Cursor position="19" topLine="0" />
+		<Cursor position="0" topLine="31" />
 	</File>
 </CodeBlocks_layout_file>

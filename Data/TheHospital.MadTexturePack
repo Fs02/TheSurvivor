@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<texture_pack name="Map1Texture" path="level\\" version="1.0">
+	<texture id="Floor" filename="floor.png"/>
+</texture_pack>

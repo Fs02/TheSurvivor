@@ -24,12 +24,20 @@ bool GUIFactory::initialize()
 	    Button                          = (CEGUI::PushButton*)GUIWindow->getChild("DefaultWindow/Menu")->getChild("DefaultWindow/Menu/Quit");
 	    Button->subscribeEvent(CEGUI::PushButton::EventClicked, CEGUI::Event::Subscriber(&GUIFactory::Handle_QuitButtonClicked, this));
 
+	    Button                          = (CEGUI::PushButton*)GUIWindow->getChild("DefaultWindow/Menu")->getChild("DefaultWindow/Menu/Options");
+	    Button->subscribeEvent(CEGUI::PushButton::EventClicked, CEGUI::Event::Subscriber(&GUIFactory::Handle_OptionsButtonClicked, this));
+
 	    //Pause Menu
 	    Button                          = (CEGUI::PushButton*)GUIWindow->getChild("DefaultWindow/Pause")->getChild("DefaultWindow/Pause/Resume");
 	    Button->subscribeEvent(CEGUI::PushButton::EventClicked, CEGUI::Event::Subscriber(&GUIFactory::Handle_ResumeButtonClicked, this));
 
 	    Button                          = (CEGUI::PushButton*)GUIWindow->getChild("DefaultWindow/Pause")->getChild("DefaultWindow/Pause/Quit");
 	    Button->subscribeEvent(CEGUI::PushButton::EventClicked, CEGUI::Event::Subscriber(&GUIFactory::Handle_QuitButtonClicked, this));
+
+	    //Options Menu
+	    Button                          = (CEGUI::PushButton*)GUIWindow->getChild("DefaultWindow/Options")->getChild("DefaultWindow/Options/Back");
+	    Button->subscribeEvent(CEGUI::PushButton::EventClicked, CEGUI::Event::Subscriber(&GUIFactory::Handle_OptionsBackButtonClicked, this));
+
 	}
 	catch(CEGUI::Exception& e)
 	{
@@ -53,13 +61,31 @@ void GUIFactory::updateState()
         return;
     switch(GameStates::CurrentState())
     {
-        case GameStates::Menu:
+        case GameStates::Menu_Main:
         {
             GUIWindow->getChild("DefaultWindow/Menu")->activate();
             GUIWindow->getChild("DefaultWindow/Menu")->show();
 
             GUIWindow->getChild("DefaultWindow/Options")->deactivate();
             GUIWindow->getChild("DefaultWindow/Options")->hide();
+
+            GUIWindow->getChild("DefaultWindow/Loading")->deactivate();
+            GUIWindow->getChild("DefaultWindow/Loading")->hide();
+
+            GUIWindow->getChild("DefaultWindow/Pause")->deactivate();
+            GUIWindow->getChild("DefaultWindow/Pause")->hide();
+
+            m_GUI.enableCursor();
+            break;
+        }
+
+        case GameStates::Menu_Options:
+        {
+            GUIWindow->getChild("DefaultWindow/Menu")->deactivate();
+            GUIWindow->getChild("DefaultWindow/Menu")->hide();
+
+            GUIWindow->getChild("DefaultWindow/Options")->activate();
+            GUIWindow->getChild("DefaultWindow/Options")->show();
 
             GUIWindow->getChild("DefaultWindow/Loading")->deactivate();
             GUIWindow->getChild("DefaultWindow/Loading")->hide();
@@ -140,6 +166,12 @@ bool GUIFactory::Handle_StartButtonClicked(const CEGUI::EventArgs& e)
     return true;
 }
 
+bool GUIFactory::Handle_OptionsButtonClicked(const CEGUI::EventArgs& e)
+{
+    GameStates::ChangeState(GameStates::Menu_Options);
+    return true;
+}
+
 bool GUIFactory::Handle_QuitButtonClicked( const CEGUI::EventArgs& e)
 {
     GameStates::ChangeState(GameStates::Exit);
@@ -149,5 +181,11 @@ bool GUIFactory::Handle_QuitButtonClicked( const CEGUI::EventArgs& e)
 bool GUIFactory::Handle_ResumeButtonClicked( const CEGUI::EventArgs& e)
 {
     GameStates::ChangeState(GameStates::Resume);
+    return true;
+}
+
+bool GUIFactory::Handle_OptionsBackButtonClicked( const CEGUI::EventArgs& e)
+{
+    GameStates::ChangeState(GameStates::Menu_Main);
     return true;
 }

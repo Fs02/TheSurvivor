@@ -292,7 +292,7 @@
 1360500480 source:e:\dropbox\project\the survivor\entity\anisprite.cpp
 	"AniSprite.h"
 
-1363701088 source:e:\dropbox\project\the survivor\madengine\madengine.cpp
+1364054761 source:e:\dropbox\project\the survivor\madengine\madengine.cpp
 	"MadEngine.hpp"
 
 1361288568 e:\dropbox\project\the survivor\madengine\madengine.h
@@ -353,7 +353,7 @@
 1361156078 source:e:\dropbox\project\the survivor\madengine\lib\spritefactory.cpp
 	"SpriteFactory.h"
 
-1363164140 source:e:\dropbox\project\the survivor\entity\character.cpp
+1363970146 source:e:\dropbox\project\the survivor\entity\character.cpp
 	"Character.hpp"
 
 1362881853 source:e:\dropbox\project\the survivor\entity\vehicle.cpp
@@ -388,7 +388,7 @@
 1360508273 e:\dropbox\project\the survivor\madengine\libs\anisprite.h
 	"../stdafx.h"
 
-1361290115 source:e:\dropbox\project\the survivor\madengine\libs\anisprite.cpp
+1363950179 source:e:\dropbox\project\the survivor\madengine\libs\anisprite.cpp
 	"AniSprite.hpp"
 
 1361290122 source:e:\dropbox\project\the survivor\madengine\libs\contactlistener.cpp
@@ -459,12 +459,12 @@
 	<iostream>
 	"Global.hpp"
 
-1362495573 e:\dropbox\project\the survivor\madengine\global.hpp
+1364019033 e:\dropbox\project\the survivor\madengine\global.hpp
 
 1362793297 e:\dropbox\project\the survivor\madengine\libs\spritefactory.hpp
 	"../stdafx.hpp"
 
-1363176976 e:\dropbox\project\the survivor\entity\character.hpp
+1363970107 e:\dropbox\project\the survivor\entity\character.hpp
 	"../MadEngine/stdafx.hpp"
 	"Vehicle.hpp"
 	"Bullet.hpp"
@@ -473,11 +473,12 @@
 1361290021 e:\dropbox\project\the survivor\entity\vehicle.hpp
 	"../MadEngine/stdafx.hpp"
 
-1361290027 e:\dropbox\project\the survivor\madengine\libs\anisprite.hpp
+1363950101 e:\dropbox\project\the survivor\madengine\libs\anisprite.hpp
 	"../stdafx.hpp"
 
-1363687587 e:\dropbox\project\the survivor\madengine\madengine.hpp
+1364026663 e:\dropbox\project\the survivor\madengine\madengine.hpp
 	"stdafx.hpp"
+	"System.hpp"
 	"libs/GameFactory.hpp"
 	"libs/GUIFactory.hpp"
 	"libs/DebugDraw.hpp"
@@ -536,7 +537,7 @@
 	"Level.hpp"
 	"../../Level/Level1.hpp"
 
-1363701233 source:e:\dropbox\project\the survivor\madengine\libs\gamefactory.cpp
+1363957785 source:e:\dropbox\project\the survivor\madengine\libs\gamefactory.cpp
 	"GameFactory.hpp"
 
 1362668449 e:\dropbox\project\the survivor\madengine\libs\object.hpp
@@ -1638,18 +1639,37 @@
 	<OpenGL/gl.h>
 	<OpenGL/glu.h>
 
-1363699881 e:\dropbox\project\the survivor\madengine\libs\guifactory.hpp
+1363784753 e:\dropbox\project\the survivor\madengine\libs\guifactory.hpp
 	"../stdafx.hpp"
 	"GUI.hpp"
 	"GameStates.hpp"
 
-1363700190 source:e:\dropbox\project\the survivor\madengine\libs\guifactory.cpp
+1363784805 source:e:\dropbox\project\the survivor\madengine\libs\guifactory.cpp
 	"../stdafx.hpp"
 	"GUIFactory.hpp"
 	"GameStates.hpp"
 
-1363698495 e:\dropbox\project\the survivor\madengine\libs\gamestates.hpp
+1363784356 e:\dropbox\project\the survivor\madengine\libs\gamestates.hpp
 
 1363687536 source:e:\dropbox\project\the survivor\madengine\libs\gamestates.cpp
 	"GameStates.hpp"
+
+1364019098 source:e:\dropbox\project\the survivor\entity\zombie.cpp
+	"Zombie.hpp"
+
+1363969650 e:\dropbox\project\the survivor\entity\zombie.hpp
+	"../MadEngine/stdafx.hpp"
+	"Character.hpp"
+
+1364026078 e:\dropbox\project\the survivor\madengine\utility\vector2.h
+	"../stdafx.hpp"
+
+1364026078 e:\dropbox\project\the survivor\madengine\common\vector2.h
+	"../stdafx.hpp"
+
+1364026758 e:\dropbox\project\the survivor\madengine\system.hpp
+	"Common/Vector2.hpp"
+
+1364054810 e:\dropbox\project\the survivor\madengine\common\vector2.hpp
+	"../stdafx.hpp"
 
