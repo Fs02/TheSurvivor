@@ -1,0 +1,26 @@
+MadEngine Milestone
+===================
+[x] Create Vector System for MadEngine Math Utility(2D)
+    [x] Convert Ability to SFML and Box2d Vector
+    [x] Ability to Calculate Vector Length(norm)
+    [x] Ability to Convert Vector to be unit Vector and return the length
+    [x] Overloading operator
+	[x] Negate operator "-"
+	[x] Add Operator "+"
+	[x] Substract Operator "-"
+	[x] Addition Operator "+="
+	[x] Subtraction Overator "-="
+	[x] Scalar Multiply Overator "*="
+	[x] Scalar Divide Operator "/="
+	[x] Asignment operator for SFML Vector and Box2D Vector
+    	[x] Casting Functionality to SFML Vector and Box2D Vector
+[ ] Create Standalone Vector converter function for MadEngine Math Utility
+[ ] Convert All Vector variable(Getter & Setter) to MadEngine System Vector/b2dVec2
+[ ] Create Static Resource Manager for Texture and Sound, Replace Sprite Factory
+[ ] Optimize the use of Pointer and References
+[ ] Optimize The Game Object
+    [ ] Create Abstract Base Class For Object
+    [ ] Create Virtual Character Class from Object Base CLass
+    [ ] Create Soldier Class from Character Base Class
+    [ ] Create Zombie Class from Character Base Class
+[ ] Create Static Entity Manager
