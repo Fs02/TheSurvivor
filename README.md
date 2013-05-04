@@ -6,4 +6,6 @@ this is my first project and because of that, i'll realy appreciated if someone 
 
 Description
 ===========
-ON PROGRESS - All Assets we use come from googling and it's for experimental use only
+DEAD - All source code now being heavily refactored.
+
+we'll back soon
