@@ -8,4 +8,4 @@ Description
 ===========
 DEAD - All source code now being heavily refactored.
 
-we'll back soon
+Project Moved to :  https://github.com/MadTrial/Volge-TheSurvivor
